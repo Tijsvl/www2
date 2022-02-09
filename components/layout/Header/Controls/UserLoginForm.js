@@ -1,97 +1,96 @@
-import Link from 'next/link';
-import React, { useState, useRef, useContext } from 'react';
+import Link from 'next/link'
+import React, { useState, useRef, useContext } from 'react'
 
-import AuthContext from '../../../../store/auth-context';
-import { validateLength } from '../../../../helpers/Helpers';
-import classes from './UserLoginForm.module.scss';
+import AuthContext from '../../../../store/auth-context'
+import { validateLength } from '../../../../helpers/Helpers'
+import classes from './UserLoginForm.module.scss'
 
 const AuthForm = () => {
-  const authCtx = useContext(AuthContext);
-  const [isLogin, setIsLogin] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
-  const [inviteCode, setInviteCode] = useState('');
+  const authCtx = useContext(AuthContext)
+  const [isLogin, setIsLogin] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
+  const [inviteCode, setInviteCode] = useState('')
 
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(null)
 
-  const emailInputRef = useRef();
-  const passwordInputRef = useRef();
-  const inviteInputRef = useRef();
-  const [emailInput, setEmailInput] = useState({ error: true, message: null });
+  const emailInputRef = useRef()
+  const passwordInputRef = useRef()
+  const inviteInputRef = useRef()
+  const [emailInput, setEmailInput] = useState({ error: true, message: null })
   const [passwordInput, setPasswordInput] = useState({
     error: true,
-    message: null,
-  });
+    message: null
+  })
 
   const emailInputHandler = (e) => {
-    const input = e;
-    setEmailInput(validateLength('Email', input, 6, 64));
-    const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    const input = e
+    setEmailInput(validateLength('Email', input, 6, 64))
+    const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
     if (!reg.test(e.target.value.trim())) {
       setEmailInput({
         error: true,
-        message: 'Email invalid',
-      });
+        message: 'Email invalid'
+      })
     } else {
-      setEmailInput({ error: false });
+      setEmailInput({ error: false })
     }
-  };
+  }
 
-  const passwordInputHandler = (input) => setPasswordInput(validateLength('Password', input, 6, 16));
-  const inviteInputHandler = (input) => setInviteCode(inviteInputRef.current.value.toUpperCase());
-  const switchAuthModeHandler = () => setIsLogin((prevState) => !prevState);
+  const passwordInputHandler = (input) => setPasswordInput(validateLength('Password', input, 6, 16))
+  const inviteInputHandler = (input) => setInviteCode(inviteInputRef.current.value.toUpperCase())
+  const switchAuthModeHandler = () => setIsLogin((prevState) => !prevState)
 
   const submitHandler = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    const enteredEmail = emailInputRef.current.value;
-    const enteredPassword = passwordInputRef.current.value;
+    const enteredEmail = emailInputRef.current.value
+    const enteredPassword = passwordInputRef.current.value
 
-    let enteredInvite = '';
-    enteredInvite = inviteCode.toUpperCase();
+    let enteredInvite = ''
+    enteredInvite = inviteCode.toUpperCase()
 
-    setError(null);
+    setError(null)
 
-    if (!isLogin && enteredInvite !== 'LETMEIN') return setError('INVALID_CODE');
+    if (!isLogin && enteredInvite !== process.env.NEXT_PUBLIC_LOGIN_CODE) return setError('INVALID_CODE')
 
-    const API_KEY = 'AIzaSyBbwMetFdtukzm13QLs2tBPs5w9HVEw8tM';
-    let url;
+    let url
 
-    setIsLoading(true);
+    setIsLoading(true)
     isLogin
-      ? (url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`)
-      : (url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`);
+      ? (url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.NEXT_PUBLIC_LOGIN_API}`)
+      : (url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${process.env.NEXT_PUBLIC_LOGIN_API}`)
 
     fetch(url, {
       method: 'POST',
       body: JSON.stringify({
         email: enteredEmail,
         password: enteredPassword,
-        returnSecureToken: true,
+        returnSecureToken: true
       }),
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' }
     })
       .then((res) => {
-        setIsLoading(false);
+        setIsLoading(false)
         if (res.ok) {
-          return res.json();
+          return res.json()
         } else {
           return res.json().then((data) => {
-            let errorMessage = 'Authentication failed.';
+            let errorMessage = 'Authentication failed.'
             if (data && data.error && data.error.message)
-              errorMessage = data.error.message.replace('WEAK_PASSWORD : ', '');
+              errorMessage = data.error.message.replace('WEAK_PASSWORD : ', '')
 
-            throw new Error(errorMessage);
-          });
+            throw new Error(errorMessage)
+          })
         }
       })
       .then((data) => {
-        const expirationTime = new Date(new Date().getTime() + +data.expiresIn * 10000);
-        authCtx.login(data.idToken, data.email, expirationTime.toISOString());
+        const expirationTime = new Date(new Date().getTime() + +data.expiresIn * 10000)
+        authCtx.login(data.idToken, data.email, expirationTime.toISOString())
       })
       .catch((error) => {
-        setError(error.message);
-      });
-  };
+        setError(error.message)
+      })
+  }
 
   return (
     <section className={classes.authForm}>
@@ -168,7 +167,7 @@ const AuthForm = () => {
         )}
       </form>
     </section>
-  );
-};
+  )
+}
 
-export default AuthForm;
+export default AuthForm
