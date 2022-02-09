@@ -1,0 +1,31 @@
+.index {
+  padding: 4rem;
+  margin: 0 0 4rem 0;
+  background: var(--light-3);
+  text-align: center;
+
+  @media screen and (max-width: 50rem) {
+    padding: 4rem 1rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin: 5rem 0 2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 auto -2rem;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-large);
+
+    @media screen and (max-width: 40rem) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

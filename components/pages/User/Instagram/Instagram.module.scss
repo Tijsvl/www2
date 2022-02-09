@@ -1,0 +1,136 @@
+.dragndrop {
+  color: #262626;
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 935px;
+    gap: 28px;
+    margin: 0.1rem auto 0;
+    transition: gap 0.3s ease-out;
+
+    @media screen and (max-width: 50em) {
+      gap: 3px;
+    }
+
+    li[draggable='false'] {
+      pointer-events: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    li:not(.disabled) img:hover {
+      opacity: 0.3;
+    }
+  }
+
+  img {
+    width: 100%;
+    vertical-align: bottom;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: all 0.5s ease-out;
+
+    &:not(.disabled img) {
+      cursor: grab;
+    }
+  }
+}
+
+.droparea {
+  display: flex;
+  background: #eaeaea;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.info {
+  text-align: center;
+  margin: 8rem auto 6rem;
+  font-size: 1.5rem;
+
+  a {
+    text-shadow: 0 0 0.5px rgb(0, 0, 0);
+
+    &:hover {
+      text-shadow: 0 0 1px rgb(0, 0, 0);
+    }
+  }
+}
+
+.ui {
+  max-width: 935px;
+  margin: 0 auto;
+  pointer-events: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-top: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+
+  @media screen and (max-width: 50em) {
+    justify-content: space-evenly;
+    padding: 0 1.5rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -1px;
+    border-top: 1px solid hsl(0 0% 0%/0);
+    text-transform: uppercase;
+    height: 50px;
+    font-weight: 600;
+    color: #8e8e8e;
+    font-size: 1.125rem;
+    letter-spacing: 0.12rem;
+
+    @media screen and (max-width: 50em) {
+      height: 45px;
+    }
+
+    span {
+      @media screen and (max-width: 50em) {
+        display: none;
+      }
+    }
+
+    &.active {
+      position: relative;
+      color: #262626;
+      border-top: 1px solid currentColor;
+
+      @media screen and (max-width: 50em) {
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: #0095f6;
+          mix-blend-mode: lighten;
+        }
+
+        border-top-color: hsl(0 0% 0%/0);
+      }
+    }
+
+    img {
+      margin-right: 0.5rem;
+
+      @media screen and (max-width: 50em) {
+        height: 24px;
+        margin: 0;
+      }
+    }
+  }
+}

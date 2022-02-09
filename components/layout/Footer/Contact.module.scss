@@ -1,0 +1,13 @@
+.contact {
+  li {
+    display: inline-block;
+
+    a {
+      padding: 0.25rem;
+    }
+
+    &:not(:last-of-type)::after {
+      content: '\00A0 -\00A0';
+    }
+  }
+}

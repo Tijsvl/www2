@@ -1,0 +1,70 @@
+.organizer {
+  p {
+    text-align: center;
+    margin: 10rem auto 2rem;
+    // padding: 2rem;
+    font-size: 1.5rem;
+
+    a {
+      text-shadow: 0 0 0.5px rgb(0, 0, 0);
+
+      &:hover {
+        text-shadow: 0 0 1px rgb(0, 0, 0);
+      }
+    }
+  }
+}
+
+.feed {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 935px;
+  gap: 28px;
+  margin: 3rem 0 0 0;
+  transition: gap 0.3s ease-out;
+
+  @media screen and (max-width: 50em) {
+    gap: 3px;
+  }
+
+  img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    overflow: hidden;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  div {
+    position: relative;
+    transition: opacity 0.3s ease-out, filter 0.3s ease-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      cursor: grab;
+      // pointer-events: none;
+    }
+
+    // &:focus,
+    // &:active {
+    //   opacity: 0.1;
+    //   cursor: grabbing;
+    // }
+  }
+
+  div.import {
+    background: var(--light-1);
+    outline: inset 1px solid var(--light-4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &[data-drag='true'] {
+      background: var(--light-2);
+    }
+  }
+}

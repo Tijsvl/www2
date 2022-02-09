@@ -1,0 +1,63 @@
+.modal {
+  > div {
+    animation: modalFadeIn 0.5s ease-out forwards;
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    background-color: hsl(var(--black-value) / 0);
+    opaciy: 0;
+  }
+  to {
+    background-color: hsl(var(--black-value) / 0.5);
+    opaciy: 1;
+  }
+}
+
+.item {
+  text-align: center;
+  margin: 0;
+  transition: background 0.3s ease-out, box-shadow 0.3s ease-out,
+    transform 0.15s ease-out;
+
+  picture {
+    position: relative;
+    width: 100%;
+    display: block;
+
+    @supports (aspect-ratio: 1) {
+      aspect-ratio: 16 / 9;
+    }
+
+    @supports not (aspect-ratio: 1) {
+      height: 30rem;
+      @media screen and (max-width: 50em) {
+        height: calc(50vw / 1.777);
+      }
+    }
+  }
+
+  picture {
+    transition: filter 0.3s ease-out;
+  }
+
+  &:hover {
+    picture {
+      filter: var(--hover-filter);
+    }
+    box-shadow: 0 0 3rem hsl(0 0% 0%/0.2);
+    transform: scale(1.01);
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 1.75rem;
+    margin: 0.75rem 0 0 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+    padding: 0 0 2rem 0;
+  }
+}

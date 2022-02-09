@@ -1,0 +1,101 @@
+.shop {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-large);
+  text-align: center;
+  margin: 8rem auto 6rem;
+
+  @media screen and (max-width: 50em) {
+    margin: 6em auto 4rem;
+  }
+
+  a {
+    position: relative;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    padding: 0 0 2rem;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.6s;
+    overflow: hidden;
+
+    picture {
+      position: relative;
+      display: block;
+      @supports (aspect-ratio: 1) {
+        aspect-ratio: 3 / 2;
+      }
+      @supports not (aspect-ratio: 1) {
+        height: calc(50vw / 3 * 2);
+      }
+      transition: all 0.3s ease-out;
+
+      &.large {
+        @supports (aspect-ratio: 1) {
+          aspect-ratio: 1;
+        }
+        @supports not (aspect-ratio: 1) {
+          height: 50vw;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.02);
+      // background: var(--light-3);
+      box-shadow: 0 0 3rem hsl(0 0% 0%/0.2);
+      transform: scale(1.01);
+    }
+    &:last-child {
+      grid-area: span 1 / span 2;
+      width: 50%;
+      margin: auto;
+    }
+
+    .title {
+      margin: 2rem 0 1rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .price {
+      margin: 0 0 0.5rem;
+    }
+
+    .info {
+      font-style: oblique;
+    }
+
+    .badge {
+      position: absolute;
+      top: 0.9rem;
+      left: 0.9rem;
+      background: var(--light-3);
+      padding: 0.3rem 1rem;
+      border-radius: 1.25rem;
+      font-weight: 400;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+    }
+
+    &:hover svg {
+      opacity: 1;
+    }
+
+    svg {
+      fill: var(--light-3-fixed);
+      position: absolute;
+      width: 2.25rem;
+      aspect-ratio: 1;
+      inset: 1.25rem 1.25rem auto auto;
+      filter: drop-shadow(0 0 0.5rem hsl(var(--black-value-5-fixed) / 0.3));
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+      will-change: opacity;
+    }
+  }
+}

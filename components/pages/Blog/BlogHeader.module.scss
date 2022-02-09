@@ -1,0 +1,103 @@
+.header {
+  text-align: center;
+
+  h1 {
+    font-size: 5rem;
+    margin: 0 auto;
+    text-align: center;
+
+    @media screen and (max-width: 50rem) {
+      margin: 6rem auto 0;
+      padding: 0 2rem;
+      line-height: 1.2;
+    }
+  }
+
+  .image {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 3rem 0;
+    transition: aspect-ratio 0.3s ease-out;
+
+    @supports not (aspect-ratio: 1) {
+      height: 0;
+      padding-top: 50%;
+    }
+
+    @media screen and (max-width: 40em) {
+      @supports (aspect-ratio: 1) {
+        aspect-ratio: 2 / 1 !important;
+      }
+    }
+  }
+
+  time {
+    display: block;
+    margin: 0 0 4rem;
+    font-size: 2rem;
+    text-decoration: italic;
+    color: var(--light-5);
+  }
+
+  ul {
+    @media screen and (max-width: 50rem) {
+      padding: 3.5rem;
+    }
+  }
+
+  p,
+  ul {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 70ch;
+    font-size: 2rem;
+    line-height: 1.6;
+
+    a {
+      font-weight: 600;
+    }
+
+    & + p {
+      margin-top: 1rem;
+    }
+
+    & + ul {
+      margin-top: 2rem;
+    }
+  }
+
+  aside {
+    text-align: center;
+    margin: 6rem auto;
+
+    @media screen and (max-width: 50rem) {
+      margin: 2rem auto;
+    }
+
+    a {
+      font-size: 2rem;
+      transition: transform 0.3s ease-out;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      picture {
+        position: relative;
+        display: inline-block;
+        width: 7rem;
+        // aspect-ratio: 1;
+        margin: 0 0 0.5rem 0;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 0 1rem hsl(var(--dark-value) / 0.1),
+          0 0 0.25rem hsl(var(--dark-value) / 0.1);
+      }
+    }
+  }
+}

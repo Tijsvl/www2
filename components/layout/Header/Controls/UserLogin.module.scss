@@ -1,0 +1,72 @@
+.user {
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .wrapper {
+    text-align: left;
+    margin: 1.5rem 1.5rem 3rem;
+
+    @media screen and (max-width: 50rem) {
+      margin: 0.25rem 0.25rem 0.75rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  svg {
+    height: var(--icon-size);
+    width: var(--icon-size);
+    fill: var(--light-5);
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      fill: var(--dark);
+
+      @media screen and (max-width: 50rem) {
+        transform: none;
+        transform: contrast(1.75);
+        filter: none;
+      }
+    }
+
+    &[data-status='user'] {
+      fill: var(--dark);
+    }
+  }
+
+  .form {
+    border-radius: 0.5rem;
+    position: absolute;
+    top: calc(100% + 1rem);
+    right: 0;
+    background: var(--light);
+    border: 0.1rem solid var(--dark-1);
+    box-shadow: 0 0 0.5rem hsl(var(--black-value-fixed) / 0.1),
+      0 0 1rem hsl(var(--black-value-fixed) / 0.1);
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top right;
+    overflow: hidden;
+    pointer-events: none;
+    @media screen and (max-width: 50em) {
+      transform-origin: center top;
+      top: calc(100% + 1.5rem);
+      right: -9.25rem;
+    }
+  }
+
+  .form.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: revert;
+  }
+}

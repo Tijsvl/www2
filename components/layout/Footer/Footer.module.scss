@@ -1,0 +1,26 @@
+.footer {
+  font-size: 1.15rem;
+  color: var(--dark-1);
+  margin: 7.5rem 0 5rem 0;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 1.25rem 0;
+  }
+
+  a {
+    color: var(--light-5);
+
+    &:hover {
+      color: var(--dark-4);
+    }
+  }
+}

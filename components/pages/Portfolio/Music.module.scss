@@ -1,0 +1,35 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-large);
+  margin-bottom: 4rem;
+
+  li {
+    a {
+      background-color: var(--light-3);
+      font-size: 1.4rem;
+      width: 3.5rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 300;
+      transition: transform 0.6s ease-out, box-shadow 0.6s ease-out, font-weight 0.6s ease-out;
+      will-change: transform;
+
+      &.active {
+        font-weight: 500;
+        background-color: var(--dark);
+        color: var(--light);
+      }
+
+      &:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 2rem hsl(var(--black-value-fixed) / 0.1);
+        font-weight: 500;
+        transition: transform 0.15s ease-out, box-shadow 0.6s ease-out, font-weight 0.15s ease-out;
+      }
+    }
+  }
+}

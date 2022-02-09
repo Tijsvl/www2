@@ -1,0 +1,81 @@
+.colorScheme {
+  z-index: 99999;
+  width: var(--icon-size);
+  height: var(--icon-size);
+
+  .outer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 100%;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 50%;
+      background: var(--light);
+      transition: all 0.3s ease-out;
+    }
+
+    &::before {
+      border: 0.4rem solid var(--light-5);
+      @media screen and (max-width: 50em) {
+        border: 0.3rem solid var(--light-5);
+      }
+    }
+
+    &::after {
+      background: var(--light-5);
+      transform: translateX(60%);
+      &:hover {
+        transform: translateX(40%);
+      }
+    }
+  }
+
+  &.light {
+    .outer {
+      &::after {
+        transform: translateX(-60%);
+      }
+    }
+
+    &:hover {
+      .outer {
+        &::before {
+          border: 0.3rem solid var(--dark);
+        }
+        &::after {
+          transform: translateX(-40%);
+          background: var(--dark);
+        }
+      }
+    }
+  }
+
+  &.dark {
+    .outer {
+      &::after {
+        transform: translateX(60%);
+      }
+    }
+
+    &:hover {
+      .outer {
+        &::before {
+          border: 0.3rem solid var(--dark);
+        }
+        &::after {
+          transform: translateX(40%);
+          background: var(--dark);
+        }
+      }
+    }
+  }
+}

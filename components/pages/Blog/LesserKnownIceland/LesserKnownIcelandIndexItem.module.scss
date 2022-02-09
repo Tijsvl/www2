@@ -1,0 +1,65 @@
+.item {
+  position: relative;
+  width: 100%;
+  @supports (aspect-ratio: 1) {
+    aspect-ratio: 2 / 1;
+  }
+  @supports not (aspect-ratio: 1) {
+    height: 15rem;
+  }
+  overflow: hidden;
+  transition: filter 0.15s ease-out;
+
+  &:hover {
+    filter: var(--hover-filter);
+  }
+
+  picture {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: filter 0.15s ease-out;
+  }
+
+  h5 {
+    z-index: 200;
+    outline: 0.1rem solid var(--dark);
+    outline-offset: -0.1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-shadow: 0.2rem 0.2rem 1rem var(--black-fixed),
+      0.2rem 0.2rem 1rem var(--black-fixed), 0 0 5rem var(--black-fixed);
+    background: linear-gradient(
+      0deg,
+      hsl(var(--dark-5-value-fixed) / 0.4) 0%,
+      hsl(var(--dark-5-value-fixed) / 0.325) 5%,
+      hsl(var(--dark-5-value-fixed) / 0.275) 10%,
+      hsl(var(--dark-5-value-fixed) / 0.25) 20%,
+      hsl(var(--dark-5-value-fixed) / 0.125) 35%,
+      hsl(var(--dark-5-value-fixed) / 0) 45%
+    );
+
+    a {
+      position: absolute;
+      color: var(--light-fixed);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      line-height: 1;
+      padding-bottom: 1.25rem;
+      font-size: 2.5rem;
+
+      @media screen and (max-width: 50rem) {
+        font-size: 2rem;
+      }
+    }
+  }
+}

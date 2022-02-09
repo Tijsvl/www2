@@ -1,0 +1,47 @@
+.loaderContainer {
+  width: 100%;
+  margin: 6rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.loading {
+  position: relative;
+  display: block;
+  height: 12rem;
+  width: 12rem;
+  margin: 0 auto;
+  animation: LoadingSpinner 2s infinite cubic-bezier(0.11, -0.1, 0.95, 1.12);
+  mix-blend-mode: darken;
+}
+
+.loadingMessage {
+  text-align: center;
+  font-size: 2rem;
+  animation: loadingPulser 2s infinite cubic-bezier(0.11, -0.1, 0.95, 1.12);
+  margin: 0 auto;
+}
+
+@keyframes LoadingSpinner {
+  from {
+    transform: scale(0.75) rotateY(0deg);
+  }
+  to {
+    transform: scale(0.75) rotateY(360deg);
+  }
+}
+
+@keyframes loadingPulser {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}

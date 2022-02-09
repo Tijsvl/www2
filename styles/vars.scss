@@ -1,0 +1,126 @@
+html {
+  --white-value: 0 0% 100%;
+  --white: hsl(var(--white-value));
+  --light-value: 0 0% 99%;
+  --light: hsl(var(--light-value));
+  --light-1: hsl(0 0% 97%);
+  --light-2: hsl(0 0% 94%);
+  --light-3: hsl(0 0% 93%);
+  --light-4-value: 0 0% 73%;
+  --light-4: hsl(var(--light-4-value));
+  --light-5: hsl(0 0% 60%);
+  --dark-1: hsl(0 0% 40%);
+  --dark-2: hsl(0 0% 30%);
+  --dark-5-value: 0 0% 3%;
+  --dark-5: hsl(var(--dark-5-value));
+  --dark-value: 0 0% 7%;
+  --dark: hsl(var(--dark-value));
+  --black-value: 0 0% 0%;
+  --black: hsl(var(--black-value));
+
+  --green-value: 122 61% 44%;
+  --green: hsl(var(--green-value));
+  --red-value: 0 100% 34%;
+  --red-value: 5 93% 51%;
+  --red: hsl(var(--red-value));
+
+  // fixed colors
+  --light-fixed: hsl(0 0% 99%);
+  --light-3-fixed: hsl(0 0% 93%);
+  --dark-5-value-fixed: 0 0% 3%;
+  --dark-5-fixed: hsl(var(--dark-5-value-fixed));
+  --black-value-fixed: 0 0% 0%;
+  --black-fixed: hsl(var(--black-value-fixed));
+
+  --gradient-black-value: 0 0% 0%;
+  --gradient-black: hsl(var(--gradient-black-value));
+
+  // gradients
+  --smooth-gradient: linear-gradient(
+    0deg,
+    hsl(0, 0%, 0%) 0%,
+    hsla(0, 0%, 0%, 0.738) 19%,
+    hsla(0, 0%, 0%, 0.541) 34%,
+    hsla(0, 0%, 0%, 0.382) 47%,
+    hsla(0, 0%, 0%, 0.278) 56.5%,
+    hsla(0, 0%, 0%, 0.194) 65%,
+    hsla(0, 0%, 0%, 0.126) 73%,
+    hsla(0, 0%, 0%, 0.075) 80.2%,
+    hsla(0, 0%, 0%, 0.042) 86.1%,
+    hsla(0, 0%, 0%, 0.021) 91%,
+    hsla(0, 0%, 0%, 0.008) 95.2%,
+    hsla(0, 0%, 0%, 0.002) 98.2%,
+    hsla(0, 0%, 0%, 0) 100%
+  );
+  --smooth-gradient-50: linear-gradient(
+    0deg,
+    hsl(0, 0%, 0%) 0%,
+    hsl(0, 0%, 0%, 0.738) 9.5%,
+    hsl(0, 0%, 0%, 0.541) 17%,
+    hsl(0, 0%, 0%, 0.382) 23.5%,
+    hsl(0, 0%, 0%, 0.278) 28.25%,
+    hsl(0, 0%, 0%, 0.194) 32.5%,
+    hsl(0, 0%, 0%, 0.126) 36.5%,
+    hsl(0, 0%, 0%, 0.075) 40.1%,
+    hsl(0, 0%, 0%, 0.042) 40.55%,
+    hsl(0, 0%, 0%, 0.021) 45.5%,
+    hsl(0, 0%, 0%, 0.008) 47.6%,
+    hsl(0, 0%, 0%, 0.002) 49.1%,
+    hsl(0, 0%, 0%, 0) 50%
+  );
+  --smooth-gradient-25: linear-gradient(
+    0deg,
+    hsl(0, 0%, 0%) 0%,
+    hsla(0, 0%, 0%, 0.738) 4.75%,
+    hsla(0, 0%, 0%, 0.541) 8.5%,
+    hsla(0, 0%, 0%, 0.382) 11.75%,
+    hsla(0, 0%, 0%, 0.278) 14.125%,
+    hsla(0, 0%, 0%, 0.194) 16.25%,
+    hsla(0, 0%, 0%, 0.126) 18.25%,
+    hsla(0, 0%, 0%, 0.075) 20.05%,
+    hsla(0, 0%, 0%, 0.042) 21.525%,
+    hsla(0, 0%, 0%, 0.021) 22.75%,
+    hsla(0, 0%, 0%, 0.008) 23.8%,
+    hsla(0, 0%, 0%, 0.002) 24.55%,
+    hsla(0, 0%, 0%, 0) 25%
+  );
+
+  // flex & grid gaps
+  --gap-extra-large: clamp(1rem, 3.5vw, 5rem);
+  --gap-large: clamp(1rem, 1.25vw, 3rem);
+  --gap-medium: clamp(0.5rem, 1vw, 2rem);
+  --gap-small: clamp(0.15rem, 0.65vw, 0.75rem);
+
+  --theme-light-visibility: inline-block;
+  --theme-dark-visibility: none;
+
+  --hover-filter: brightness(1.2) saturate(110%);
+}
+
+html.dark {
+  --white-value: (0 0% 0%);
+  --white: hsl(var(--white-value));
+  --light-value: 0 0% 7%;
+  --light: hsl(var(--light-value));
+  --light-1: hsl(0 0% 3%);
+  --light-2: hsl(0 0% 7%);
+  --light-3: hsl(0 0% 15%);
+  --light-4: hsl(0 0% 20%);
+  --light-5: hsl(0 0% 50%);
+  --dark-1: hsl(0 0% 60%);
+  --dark-2: hsl(0 0% 40%);
+  --dark-5-value: 0 0% 97%;
+  --dark-5: hsl(var(--dark-5-value));
+  --dark: hsl(0 0% 99%);
+  --black-value: 0 0% 100%;
+  --black: hsl(var(--black-value));
+
+  --green-value: 122 61% 44%;
+  --green: hsl(var(--green-value));
+  // --red-value: 0 80% 50%;
+  --red-value: 5 93% 51%;
+  --red: hsl(var(--red-value));
+
+  --theme-light-visibility: none;
+  --theme-dark-visibility: inline-block;
+}

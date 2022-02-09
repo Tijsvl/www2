@@ -1,0 +1,41 @@
+.controls {
+  --icon-size: 3rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  z-index: 999999;
+
+  > div {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    margin-left: var(--gap-medium);
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 0.3s ease-out;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  .controls {
+    --icon-size: 2rem;
+    position: fixed;
+    top: 2.75rem;
+    right: 7.75rem;
+
+    > div {
+      margin-left: var(--gap-large);
+    }
+  }
+}

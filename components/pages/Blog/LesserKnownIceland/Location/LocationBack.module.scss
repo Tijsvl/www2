@@ -1,0 +1,21 @@
+.back {
+  font-size: 2.5rem;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-out;
+
+  @media screen and (min-width: 50rem) {
+    margin-bottom: 3rem;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:first-of-type {
+    margin-top: 3rem;
+  }
+
+  &::before {
+    content: '\2190\00a0';
+  }
+}

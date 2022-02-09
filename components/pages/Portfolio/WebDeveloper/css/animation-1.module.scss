@@ -1,0 +1,112 @@
+.options {
+  margin: 0 auto 3rem;
+  background: var(--light-3);
+
+  h2 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 1.5rem;
+    background: var(--light);
+  }
+
+  > div {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+
+    button {
+      padding: 0.5em 1.25em;
+      background: var(--light);
+      border: 2px solid var(--dark);
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+p.instructions,
+p.note {
+  margin: 0 auto;
+  background: var(--light-1);
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+/* ANIMATION */
+
+.animation {
+  width: 100%;
+  aspect-ratio: 1;
+  margin: 3rem auto;
+  --background: var(--light-3);
+  --css-primary: #db1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: background-color 0.6s ease-out, border-color 0.6s ease-out, filter 0.6s ease-out;
+  border: 1px solid transparent;
+}
+
+.animationBackground {
+  background: var(--background);
+  border: 1px solid var(--dark-1);
+}
+
+.loader {
+  font-size: 10px;
+  position: relative;
+  width: 100%;
+  width: calc(100% / 3);
+  aspect-ratio: 1;
+}
+
+.loader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1;
+  transform: rotate(calc(36deg * var(--i)));
+  pointer-events: none;
+}
+
+.loader span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5em;
+  width: 8%;
+  aspect-ratio: 1;
+  background: transparent;
+  border-radius: 50%;
+  border: 0.5em solid var(--css-primary);
+  box-shadow: 0 0 2px var(--css-primary), -2.5vw -2.5vw 0 var(--css-primary),
+    -2.5vw -2.5vw 20px var(--css-primary), 2.5vw 2.5vw 0 var(--css-primary),
+    2.5vw 2.5vw 20px var(--css-primary), 2.5vw -2.5vw 0 var(--css-primary),
+    2.5vw -2.5vw 20px var(--css-primary), -2.5vw 2.5vw 0 var(--css-primary),
+    -2.5vw 2.5vw 20px var(--css-primary);
+  animation: animate 5s linear infinite;
+  animation-delay: calc(-0.25s * var(--i));
+  transform-origin: 20px;
+  transition: transform-origin 2s, box-shadow 2s;
+}
+
+.loader:hover span::before {
+  transform-origin: 15rem;
+  box-shadow: 0 0 2px var(--css-primary), -20vw -20vw 0 var(--css-primary),
+    -20vw -20vw 20px var(--css-primary), 20vw 20vw 0 var(--css-primary), 20vw 20vw 20px var(--css-primary),
+    20vw -20vw 0 var(--css-primary), 20vw -20vw 20px var(--css-primary), -20vw 20vw 0 var(--css-primary),
+    -20vw 20vw 20px var(--css-primary);
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}

@@ -1,0 +1,141 @@
+.info {
+  margin: -3rem auto 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  li {
+    h2 {
+      display: inline-block;
+      border-bottom: 1px solid currentColor;
+      transition: box-shadow 0.15s ease-out, text-shadow 0.15s ease-out;
+
+      &:hover {
+        box-shadow: 0 0.1rem currentColor;
+        text-shadow: 0 0 0.075rem currentColor;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.overview {
+  &.index {
+    text-align: center;
+  }
+
+  background: var(--light-3);
+  margin: 3rem auto;
+  padding: 6rem;
+  max-width: 80rem;
+
+  @media screen and (max-width: 50rem) {
+    padding: 3.5rem;
+  }
+
+  h2 {
+    font-weight: 600;
+    margin: 0 0 1rem;
+    font-size: 2rem;
+
+    &:not(:first-of-type) {
+      margin: 4rem 0 1rem;
+    }
+  }
+
+  li {
+    font-size: 1.5rem;
+    margin: 0.75rem 0 0;
+
+    &.approval {
+      @media screen and (max-width: 50rem) {
+        padding: 0;
+        margin: 1rem 0 0 0;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      @media screen and (max-width: 40rem) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .row {
+    transition: background 0.3s ease-out;
+
+    &.countries {
+      font-size: 1.25rem;
+    }
+
+    a {
+      display: block;
+      transition: color 0.3s ease-out;
+    }
+
+    &:hover {
+      background: var(--light);
+    }
+
+    time {
+      display: inline-block;
+      margin-right: 0.75em;
+      padding: 0.25em 1em;
+      letter-spacing: 0;
+      color: var(--light-3);
+      background: var(--dark);
+      text-align: center;
+      font-family: monospace;
+      @media screen and (max-width: 50rem) {
+        display: block;
+        width: max-content;
+        margin: 0 0 0.5rem;
+        // text-align: left;
+      }
+    }
+    &.approval time {
+      @media screen and (max-width: 50rem) {
+        display: inline-block;
+        width: max-content;
+        margin: 0 0.75rem 0 0;
+        padding: 0.25em 0.75em;
+      }
+    }
+  }
+}
+
+.approval .small {
+  @media screen and (max-width: 40rem) {
+    display: none;
+  }
+}
+
+.approval [data-status] {
+  position: absolute;
+  right: 0;
+  float: right;
+  width: 12ch;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+  outline: 10px solid var(--light-3);
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-weight: bold;
+}
+
+.approval [data-status='new'] {
+  background: var(--light-4);
+  background: var(--red);
+}
+
+.approval [data-status='ready'] {
+  background: var(--green);
+  color: var(--light-1);
+}

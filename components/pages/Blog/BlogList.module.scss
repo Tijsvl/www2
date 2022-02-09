@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+.blog {
+  font-family: 'Crimson Text', serif;
+  line-height: 1.6;
+
+  h1 {
+    max-width: 24ch;
+    margin: 0 auto;
+
+    @media screen and (max-width: 50rem) {
+      margin: 4rem auto 2rem;
+    }
+  }
+}
+
+.blogList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-extra-large);
+  transition: gap 0.1s ease-out;
+}
+
+@media screen and (max-width: 62.5rem) {
+  .blogList {
+    gap: var(--gap-medium);
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  .blogList {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+}
