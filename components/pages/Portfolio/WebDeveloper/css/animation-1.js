@@ -1,14 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import classes from './animation-1.module.scss'
 
 const CSSPage = () => {
-  const [overflow, setOverflow] = useState(true)
+  const [overflow, setOverflow] = useState(false)
   const [color, setColor] = useState(false)
   const [background, setBackground] = useState(false)
 
-  const overflowHandler = () => setOverflow(!overflow)
+  const overflowHandler = () => (
+    setOverflow(!overflow), setBackground(!background)
+  )
   const colorHandler = () => setColor(!color)
-  const hoverHandler = () => setBackground(!background)
+  // const hoverHandler = () => setBackground(!background)
+
+  useEffect(() => {
+    document.addEventListener('keypress', (e) => {
+      e.key === 'o' && setOverflow(!overflow)
+      e.key === 'o' && setBackground(!background)
+      e.key === 'c' && setColor(!color)
+    })
+  })
 
   return (
     <section>
@@ -18,10 +28,14 @@ const CSSPage = () => {
         <h2>Options</h2>
         <div>
           <div>
-            <button onClick={overflowHandler}>{!overflow ? 'Show' : 'Hide'} Overflow</button>
+            <button onClick={overflowHandler}>
+              {!overflow ? 'Show' : 'Hide'} Overflow (o)
+            </button>
           </div>
           <div>
-            <button onClick={colorHandler}>{!color ? 'Color' : 'Black & White'}</button>
+            <button onClick={colorHandler}>
+              {!color ? 'Color' : 'Black & White'} (c)
+            </button>
           </div>
         </div>
       </div>
@@ -29,11 +43,20 @@ const CSSPage = () => {
       <p className={classes.instructions}>Hover over/tap on the center</p>
 
       <div
-        className={`${classes.animation} ${!background && classes.animationBackground}`}
-        id='animation'
-        style={{ overflow: overflow ? 'visible' : 'hidden', filter: color ? 'grayscale(0)' : 'grayscale(1)' }}
+        className={`${classes.animation} ${
+          !background && classes.animationBackground
+        }`}
+        id="animation"
+        style={{
+          overflow: overflow ? 'visible' : 'hidden',
+          filter: color ? 'grayscale(0)' : 'grayscale(1)'
+        }}
       >
-        <div className={classes.loader} onMouseEnter={hoverHandler} onMouseLeave={hoverHandler}>
+        <div
+          className={classes.loader}
+          // onMouseEnter={hoverHandler}
+          // onMouseLeave={hoverHandler}
+        >
           <span style={{ '--i': 1 }}></span>
           <span style={{ '--i': 2 }}></span>
           <span style={{ '--i': 3 }}></span>
@@ -51,9 +74,9 @@ const CSSPage = () => {
         Inspired by:
         <br />
         <a
-          href='https://www.udemy.com/course/infinity-creative-css-animation-course/'
-          target='_blank'
-          rel='noreferrer'
+          href="https://www.udemy.com/course/infinity-creative-css-animation-course/"
+          target="_blank"
+          rel="noreferrer"
         >
           www.udemy.com/course/infinity-creative-css-animation-course/
         </a>
