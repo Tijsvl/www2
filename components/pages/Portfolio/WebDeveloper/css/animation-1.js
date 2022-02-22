@@ -1,24 +1,37 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import useKeyPress from '../../../../../hooks/useKeyPress'
 import classes from './animation-1.module.scss'
 
 const CSSPage = () => {
   const [overflow, setOverflow] = useState(false)
-  const [color, setColor] = useState(false)
+  const [color, setColor] = useState(true)
   const [background, setBackground] = useState(false)
 
-  const overflowHandler = () => (
-    setOverflow(!overflow), setBackground(!background)
-  )
-  const colorHandler = () => setColor(!color)
-  // const hoverHandler = () => setBackground(!background)
+  const overflowHandler = () => {
+    setOverflow(!overflow)
+    setBackground(!background)
+  }
+  const colorHandler = () => {
+    setColor(!color)
+  }
 
-  useEffect(() => {
-    document.addEventListener('keypress', (e) => {
-      e.key === 'o' && setOverflow(!overflow)
-      e.key === 'o' && setBackground(!background)
-      e.key === 'c' && setColor(!color)
-    })
-  })
+  const hotkeyInterval = 600 // ms
+  let overflowTime = Date.now()
+  let colorTime = Date.now()
+  const onKeyPress = (e) => {
+    if (e.key === 'o' && Date.now() - overflowTime > hotkeyInterval) {
+      console.log(`${hotkeyInterval / 1000} second passed`)
+      overflowHandler()
+      overflowTime = Date.now()
+    }
+    if (e.key === 'c' && Date.now() - colorTime > hotkeyInterval) {
+      console.log(`${hotkeyInterval / 1000} second passed`)
+      setColor(!color)
+      colorTime = Date.now()
+    }
+  }
+
+  useKeyPress(['o', 'c'], onKeyPress)
 
   return (
     <section>
