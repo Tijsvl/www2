@@ -4,7 +4,7 @@ import classes from './animation-1.module.scss'
 
 const CSSPage = () => {
   const [overflow, setOverflow] = useState(false)
-  const [color, setColor] = useState(true)
+  const [color, setColor] = useState(false)
   const [background, setBackground] = useState(false)
 
   const overflowHandler = () => {
