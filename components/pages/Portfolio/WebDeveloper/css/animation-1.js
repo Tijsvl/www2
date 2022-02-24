@@ -26,7 +26,7 @@ const CSSPage = () => {
     }
     if (e.key === 'c' && Date.now() - colorTime > hotkeyInterval) {
       console.log(`${hotkeyInterval / 1000} second passed`)
-      setColor(!color)
+      colorHandler()
       colorTime = Date.now()
     }
   }
@@ -42,7 +42,7 @@ const CSSPage = () => {
         <div>
           <div>
             <button onClick={overflowHandler}>
-              {!overflow ? 'Show' : 'Hide'} Overflow (o)
+              {!overflow ? 'Allow' : 'Hide'} Overflow (o)
             </button>
           </div>
           <div>

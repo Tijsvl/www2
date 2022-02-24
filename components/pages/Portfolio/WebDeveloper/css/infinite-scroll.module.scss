@@ -1,0 +1,135 @@
+.options {
+  margin: 0 auto 3rem;
+  background: var(--light-3);
+
+  h2 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 1.5rem;
+    background: var(--light);
+  }
+
+  > div {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+
+    button {
+      padding: 0.5em 1.25em;
+      background: var(--light);
+      border: 2px solid var(--dark);
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+p.instructions,
+p.note {
+  margin: 0 auto;
+  background: var(--light-1);
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.animation {
+  width: 100%;
+  margin: 3rem auto;
+  --background: var(--light-3);
+  --css-primary: #099109;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  border: 1px solid transparent;
+  margin: clamp(5rem, 10vw, 10rem) auto;
+}
+
+/* ANIMATION */
+
+.animationBackground {
+  background: var(--background);
+  border: 1px solid var(--dark-1);
+  padding: 5vw 0;
+}
+
+.partner_banner {
+  --background: #030303ff;
+  --background-alpha: #03030300;
+  --speed: 30s; /* 30 seconds */
+  position: relative;
+  background: var(--background);
+  /*   outline: 3px solid red; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 100%);
+  overflow: hidden;
+  padding: 2em 0;
+}
+
+.partner_banner::before,
+.partner_banner::after {
+  --deg: 90deg;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 0 90% 0 0;
+  background: var(--background);
+  background: linear-gradient(
+    var(--deg),
+    var(--background) 0%,
+    var(--background-alpha) 100%
+  );
+  z-index: 999;
+}
+
+.partner_banner::after {
+  inset: 0 0 0 90%;
+  --deg: -90deg;
+}
+
+.partner_banner > div {
+  display: grid;
+  /* Works for images/logos of equal size */
+  /*   grid-template-columns: repeat(6, 1fr); */
+  /* Size each item individually, must add up to 100% */
+  grid-template-columns: 22% 13% 18% 14% 19% 14%;
+  place-items: center;
+  animation: banner var(--speed) infinite linear;
+}
+
+/* Uncomment to pause on hover */
+.partner_banner:hover > div {
+  animation-play-state: paused;
+}
+
+.partner_banner > div > * {
+  min-width: 100%;
+  opacity: 0.6;
+  transition: all 0.3s ease-out;
+  padding: 0 clamp(1.5rem, 3vw, 3.5rem);
+  display: flex;
+}
+
+.partner_banner > div > *:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@-webkit-keyframes banner {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes banner {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

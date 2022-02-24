@@ -31,8 +31,6 @@ p.note {
   padding: 1rem 2rem;
 }
 
-/* ANIMATION */
-
 .animation {
   width: 100%;
   aspect-ratio: 1;
@@ -43,10 +41,11 @@ p.note {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transition: background-color 0.6s ease-out, border-color 0.6s ease-out,
-    filter 0.6s ease-out;
+  transition: all 0.6s ease-in-out;
   border: 1px solid transparent;
 }
+
+/* ANIMATION */
 
 .animationBackground {
   background: var(--background);
@@ -76,8 +75,8 @@ p.note {
   position: absolute;
   top: 0;
   left: 0;
-  width: 2.5em;
-  width: 8%;
+  // width: 2.5em;
+  // width: 8%;
   aspect-ratio: 1;
   background: transparent;
   border-radius: 50%;
@@ -90,11 +89,13 @@ p.note {
   animation: animate 5s linear infinite;
   animation-delay: calc(-0.25s * var(--i));
   transform-origin: 20px;
-  transition: transform-origin 2s, box-shadow 2s;
+  transition: transform-origin 2s cubic-bezier(0.1, 0.55, 0.34, 1),
+    box-shadow 2s cubic-bezier(0.1, 0.55, 0.34, 1);
 }
 
 .loader:hover span::before {
-  transform-origin: 15rem;
+  transform-origin: 25rem;
+  transform-origin: 0;
   box-shadow: 0 0 2px var(--css-primary), -20vw -20vw 0 var(--css-primary),
     -20vw -20vw 20px var(--css-primary), 20vw 20vw 0 var(--css-primary),
     20vw 20vw 20px var(--css-primary), 20vw -20vw 0 var(--css-primary),
