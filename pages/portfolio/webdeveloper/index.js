@@ -43,7 +43,7 @@ const WebDeveloperPage = () => {
               />
             </a>
           </Link>
-          <h2>HTML5/CSS Only Infinite Scroll Banner</h2>
+          <h2>HTML5/CSS Infinite Scroll Banner</h2>
         </div>
       </WebDeveloper>
     </section>
