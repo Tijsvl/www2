@@ -7,7 +7,7 @@ import Hedgequarters from './Hedgequarters'
 const Footer = () => {
   return (
     <footer className={classes.footer}>
-      <nav aria-label='tertiary-navigation' id='tertiary-navigation'>
+      <nav aria-label='Footer Navigation' id='tertiary-navigation'>
         <Socials />
         <Archive />
         <Contact />

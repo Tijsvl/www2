@@ -25,18 +25,18 @@ const Header = () => {
         <Link href='/'>
           <a className={classes.logo} onClick={menuHide}>
             <span className={classes.flash + ' theme-light'}>
-              <Image layout='fill' src='/img/style/logo.gif' alt='Tijsvl logo' title='Tijsvl logo' />
+              <Image layout='fill' src='/img/style/logo.gif' alt='Tijsvl Home' />
             </span>
             <span className={classes.flash + ' theme-dark'}>
-              <Image layout='fill' src='/img/style/logo-dark.gif' alt='Tijsvl logo' title='Tijsvl logo' />
+              <Image layout='fill' src='/img/style/logo-dark.gif' alt='Tijsvl Home' />
             </span>
             TIJSVL
           </a>
         </Link>
-        <nav className={classes.nav} id='primary-navigation' aria-label='primary-navigation'>
+        <nav className={classes.nav} id='primary-navigation' aria-label='Main Navigation'>
           <button
             aria-controls='primary-navigation'
-            aria-expanded={menu === 'show' ? 'false' : 'true'}
+            aria-expanded={menu === 'show' ? 'true' : 'false'}
             className={(menu === 'show' ? classes.hide : classes.show) + ' ' + classes.hamburger}
             onClick={menuHandler}
           >

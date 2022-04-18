@@ -1,23 +1,23 @@
-import Link from 'next/link';
-import { useEffect, useState, useContext } from 'react';
+import Link from 'next/link'
+import { useEffect, useState, useContext } from 'react'
 
-import AuthContext from '../../../../store/auth-context';
-import LoginForm from './UserLoginForm';
-import UserQuickMenu from './UserQuickMenu';
-import classes from './UserLogin.module.scss';
+import AuthContext from '../../../../store/auth-context'
+import LoginForm from './UserLoginForm'
+import UserQuickMenu from './UserQuickMenu'
+import classes from './UserLogin.module.scss'
 
 const User = () => {
-  const { isLoggedIn } = useContext(AuthContext);
-  const [loginForm, setLoginForm] = useState(false);
+  const { isLoggedIn } = useContext(AuthContext)
+  const [loginForm, setLoginForm] = useState(false)
 
-  const onClickHandler = (e) => (e.preventDefault(), setLoginForm(!loginForm));
+  const onClickHandler = (e) => (e.preventDefault(), setLoginForm(!loginForm))
 
   useEffect(() => {
     window.addEventListener('mousedown', (e) => {
-      const controlUser = document.getElementById('controlUser');
-      !controlUser.contains(e.target) && setLoginForm(false);
-    });
-  }, []);
+      const controlUser = document.getElementById('controlUser')
+      !controlUser.contains(e.target) && setLoginForm(false)
+    })
+  }, [])
 
   return (
     <div suppressHydrationWarning={true}>
@@ -25,7 +25,7 @@ const User = () => {
         <span suppressHydrationWarning={true}>
           <div className={classes.user} id='controlUser' data-status='user'>
             <Link href='/profile'>
-              <a onClick={onClickHandler}>
+              <a onClick={onClickHandler} role='button'>
                 <svg data-status='user'>
                   <use xlinkHref='/img/style/sprite.svg#icon-login'></use>
                 </svg>
@@ -54,7 +54,7 @@ const User = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default User;
+export default User
