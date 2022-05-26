@@ -8,18 +8,18 @@ const InstagramPost = (props) => {
           <div>
             <img src='/img/fouteskipakken.jpg' />
           </div>
-          <div>fouteskipakkenpartyteam</div>
+          <div>{props.account}</div>
           <div>
             <img src='/assets/instagram/icon-dots.svg' />
           </div>
         </div>
         <div className={classes.post__photo}>
           <a
-            href={`https://tijsvl.net/Qlibpk7E/_tmp/fouteskipakken-kwintsheul/${props.image}.jpg`}
+            href={`https://tijsvl.net/Qlibpk7E/instagram-preview/${props.account}-${props.location}/${props.image}.jpg`}
             target='_blank'
           >
             <img
-              src={`https://tijsvl.net/Qlibpk7E/_tmp/fouteskipakken-kwintsheul/${props.image}_small.jpg`}
+              src={`https://tijsvl.net/Qlibpk7E/instagram-preview/${props.account}-${props.location}/${props.image}_small.jpg`}
             />
           </a>
         </div>
@@ -49,7 +49,7 @@ const InstagramPost = (props) => {
           </div>
         </div>
         <div className={classes.post__description}>
-          <strong>fouteskipakkenpartyteam</strong> BEST FUCKIN' PARTY ❤️🔥❤️🔥
+          <strong>${props.account}</strong> BEST FUCKIN' PARTY ❤️🔥❤️🔥
           <div>View all 12 comments</div>
           <div>3 hours ago</div>
         </div>
