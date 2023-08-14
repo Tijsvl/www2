@@ -14,7 +14,7 @@ const GalleryPage = () => {
   return (
     <div>
       <ul>
-        {GALLERIES.map(({ artist }) => (
+        {GALLERIES_INFO.map(({ artist }) => (
           <li>{artist}</li>
         ))}
       </ul>
