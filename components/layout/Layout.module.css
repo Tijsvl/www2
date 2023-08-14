@@ -4,4 +4,11 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  transition: unset;
+}
+
+.container[full-width] {
+  width: 1900px;
+  max-width: calc(100vw - 6rem);
+  transition: width 0.5s ease-in-out, max-width 0.5s ease-in-out;
 }

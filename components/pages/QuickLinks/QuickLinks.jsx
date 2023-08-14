@@ -15,9 +15,9 @@ const QuickLinks = () => {
       <h1 className={classes.title}>Quick Links</h1>
       <ul className={classes.quicklinks}>
         <li className={classes.gallery}>
-          <a href="/gallery/scowl">
+          <a href="/galleries/drain-20230812">
             <div className={classes.image}>
-              <img src="https://tijsvl.net/static/drain-20230812/default-low.jpg" alt="Live Photo" />
+              <img src="https://tijsvl.net/static/gallery/drain-20230812/default-low.jpg" alt="Live Photo" />
             </div>
             <div className={classes.info}>
               <span className={classes.artist}>Drain</span>
