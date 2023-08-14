@@ -1,0 +1,88 @@
+.quicklinks {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  gap: 1.5rem;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+
+  a {
+    background-color: rgba(0, 0, 0, 0.075);
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1;
+    padding: 1.5rem 0;
+    text-align: center;
+    text-wrap: balance;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease-out;
+    overflow: hidden;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .gallery a {
+    position: relative;
+    display: flex;
+    padding: 0;
+    line-height: 1.5;
+
+    .image {
+      height: 9rem;
+      width: 12rem;
+      background-color: rgba(0, 0, 0, 0.2);
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        will-change: filter;
+        transition: filter 0.3s ease-out;
+      }
+    }
+
+    &:hover img {
+      filter: brightness(1.1);
+    }
+
+    .info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem 2rem;
+    }
+
+    .artist {
+      letter-spacing: 0.2em;
+    }
+
+    .detail {
+      font-size: 1.4rem;
+      font-weight: 300;
+      text-transform: none;
+    }
+
+    .tag {
+      position: absolute;
+      inset: auto 2rem 1.6rem auto;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--light-4);
+
+      @media screen and (max-width: 400px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.title {
+  margin-bottom: 3rem;
+  margin-top: -1rem;
+}
