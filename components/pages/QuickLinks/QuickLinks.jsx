@@ -14,7 +14,7 @@ const QuickLinks = () => {
   return (
     <>
       <Head>
-        <title>@tijsvl | Privacy</title>
+        <title>@tijsvl | Quick Links</title>
         <meta property="og:title" content="Quick Links" />
         <meta name="twitter:title" content="Quick Links" />
         <meta property="og:description" content="Quick Links to current content on tijsvl.net" />
