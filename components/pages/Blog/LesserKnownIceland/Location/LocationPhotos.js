@@ -1,83 +1,76 @@
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
-import useWindowDimensions from '../../../../../hooks/useWindowSize';
-import Modal from '../../../../UI/Modal';
+import useWindowDimensions from '../../../../../hooks/useWindowSize'
+import Modal from '../../../../UI/Modal'
 
-import classes from './LocationPhotos.module.scss';
+import classes from './LocationPhotos.module.scss'
 
 const LocationPhotos = (props) => {
   const [modal, setModal] = useState({
     open: false,
     current: null,
     title: null,
-    photos: null,
-  });
-
-  let width = 3000;
-  typeof window !== 'undefined' && (width = useWindowDimensions().width);
+    photos: null
+  })
+  const [width, widthSet] = useState(3000)
 
   useEffect(() => {
-    const html = document.querySelector('html');
-    modal.open ? html.classList.add('modal') : html.classList.remove('modal');
-  }, [modal]);
+    widthSet(window.innerWidth)
+    const html = document.querySelector('html')
+    modal.open ? html.classList.add('modal') : html.classList.remove('modal')
+  }, [modal])
 
   const openModal = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     setModal({
       open: true,
       current: e.target.dataset.img,
       title: e.target.dataset.title,
-      photos: props.photos,
-    });
-    e.target.blur();
-  };
+      photos: props.photos
+    })
+    e.target.blur()
+  }
 
   const closeModal = (e) => {
-    e.preventDefault();
-    setModal({ open: false });
-  };
+    e.preventDefault()
+    setModal({ open: false })
+  }
 
   useEffect(() => {
     document.addEventListener('keydown', function (e) {
-      e.key === 'Escape' && setModal({ open: false });
-    });
-  });
+      e.key === 'Escape' && setModal({ open: false })
+    })
+  })
 
   return (
     <section className={classes.photos}>
       {props.photos.map((photo) => (
         <div key={photo.img}>
-          <a
-            className={classes.photoItem}
-            onClick={openModal}
-            href={`/blogs/lesser-known-iceland/content/${photo.img}-1500.jpg`}
-            target='_blank'
-            rel='noreferrer'
-          >
+          <a className={classes.photoItem} onClick={openModal} href={`/blogs/lesser-known-iceland/content/${photo.img}-1500.jpg`} target="_blank" rel="noreferrer">
             {width >= 601 && (
               <Image
-                layout='fill'
+                layout="fill"
                 src={`/blogs/lesser-known-iceland/content/${photo.img}-1000.jpg`}
                 blurDataURL={`/blogs/lesser-known-iceland/content/${photo.img}-blur.jpg`}
-                placeholder='blur'
+                placeholder="blur"
                 title={props.title}
                 alt={props.title}
-                objectFit='cover'
+                objectFit="cover"
                 data-img={props.photos.map((e) => e.img).indexOf(photo.img)}
                 data-title={props.title}
               />
             )}
             {width >= 0 && width < 601 && (
               <Image
-                layout='fill'
+                layout="fill"
                 src={`/blogs/lesser-known-iceland/content/${photo.img}-500.jpg`}
                 blurDataURL={`/blogs/lesser-known-iceland/content/${photo.img}-blur.jpg`}
-                placeholder='blur'
+                placeholder="blur"
                 title={props.title}
                 alt={props.title}
-                objectFit='cover'
+                objectFit="cover"
                 data-img={props.photos.map((e) => e.img).indexOf(photo.img)}
                 data-title={props.title}
               />
@@ -85,11 +78,9 @@ const LocationPhotos = (props) => {
           </a>
         </div>
       ))}
-      {modal.open && (
-        <Modal closeModal={closeModal} current={+modal.current} title={modal.title} photos={modal.photos} />
-      )}
+      {modal.open && <Modal closeModal={closeModal} current={+modal.current} title={modal.title} photos={modal.photos} />}
     </section>
-  );
-};
+  )
+}
 
-export default LocationPhotos;
+export default LocationPhotos

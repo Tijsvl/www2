@@ -1,14 +1,14 @@
-import { useContext } from 'react';
+import { useContext } from 'react'
 
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 
-import AuthContext from '../../store/auth-context';
-import Instagram from '../../components/pages/User/Instagram/Instagram';
+import AuthContext from '../../store/auth-context'
+import Instagram from '../../components/pages/User/Instagram/Instagram'
 
-const tijsvlPage = () => {
-  const { isLoggedIn } = useContext(AuthContext);
+const TijsvlPage = () => {
+  const { isLoggedIn } = useContext(AuthContext)
 
-  if (!isLoggedIn) return <div className="error-message">Not Logged In.</div>;
+  if (!isLoggedIn) return <div className="error-message">Not Logged In.</div>
 
   return (
     <>
@@ -16,7 +16,7 @@ const tijsvlPage = () => {
         <Instagram account="tijsvl" />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default tijsvlPage;
+export default TijsvlPage

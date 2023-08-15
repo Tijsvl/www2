@@ -1,12 +1,13 @@
-import { useRouter } from 'next/router';
-import Image from 'next/image';
-import Link from 'next/link';
-import Modal from 'react-modal';
+import { useRouter } from 'next/router'
+import Image from 'next/image'
+import Link from 'next/link'
+import Modal from 'react-modal'
 
-import ViewVideo from './ViewVideo';
-import classes from './VideoItem.module.scss';
+import ViewVideo from './ViewVideo'
+import classes from './VideoItem.module.scss'
+import { useEffect } from 'react'
 
-Modal.setAppElement('#__next');
+Modal.setAppElement('#__next')
 const modalStyle = {
   content: {
     top: '20%',
@@ -20,64 +21,41 @@ const modalStyle = {
     border: '1px solid var(--light)',
     borderRadius: '0'
   }
-};
+}
 
 const VideoItem = (props) => {
-  const router = useRouter();
+  const router = useRouter()
+  const [width, widthSet] = useState(3000)
+  const [height, heightSet] = useState(3000)
 
-  let openModal = true;
-  const width = props.width;
-  const height = props.height;
-  if (width < 800 || height < 600) openModal = false;
+  useEffect(() => {
+    widthSet(window.innerWidth)
+    heightSet(window.Height)
+  }, [])
 
-  const title = props.artist + ' - ' + props.title;
-  const image = `/img/videography__${props.slug}.jpg`;
-  const imageBlur = `/img/videography__${props.slug}-blur.jpg`;
+  let openModal = true
+  if (width < 800 || height < 600) openModal = false
+
+  const title = props.artist + ' - ' + props.title
+  const image = `/img/videography__${props.slug}.jpg`
+  const imageBlur = `/img/videography__${props.slug}-blur.jpg`
 
   return (
     <>
-      <Link
-        href={
-          openModal
-            ? `/portfolio/videography/?id=${props.slug}`
-            : `/portfolio/videography/${props.slug}`
-        }
-        as={`/portfolio/videography/${props.slug}`}
-      >
+      <Link href={openModal ? `/portfolio/videography/?id=${props.slug}` : `/portfolio/videography/${props.slug}`} as={`/portfolio/videography/${props.slug}`}>
         <a className={classes.item}>
           <picture>
-            <Image
-              layout="fill"
-              src={image}
-              blurDataURL={imageBlur}
-              alt={title}
-              title={title}
-              objectFit="cover"
-              placeholder="blur"
-            />
+            <Image layout="fill" src={image} blurDataURL={imageBlur} alt={title} title={title} objectFit="cover" placeholder="blur" />
           </picture>
           <h2>{props.artist}</h2>
           <p>{props.title}</p>
         </a>
       </Link>
-      <Modal
-        isOpen={router.query.id === props.slug}
-        onRequestClose={() => router.push('/portfolio/videography')}
-        style={modalStyle}
-        portalClassName={classes.modal}
-      >
-        <ViewVideo
-          artist={props.artist}
-          title={props.title}
-          slug={props.slug}
-          source={props.source}
-          credits={props.credits}
-          image={image}
-          dimensions={props.dimensions}
-        />
+      <Modal isOpen={router.query.id === props.slug} onRequestClose={() => router.push('/portfolio/videography')} style={modalStyle} portalClassName={classes.modal}>
+        <ViewVideo artist={props.artist} title={props.title} slug={props.slug} source={props.source} credits={props.credits} image={image} dimensions={props.dimensions} />
       </Modal>
     </>
-  );
-};
+  )
+}
 
-export default VideoItem;
+export default VideoItem

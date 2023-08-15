@@ -4,13 +4,10 @@ import AuthContext from '../../store/auth-context'
 
 const UserSettingsPage = () => {
   const { isLoggedIn } = useContext(AuthContext)
-  if (!isLoggedIn) return <div className='error-message'>Not Logged In</div>
-
   const [onOff, setOnOff] = useState(false)
 
   const onOffHandler = () => {
     setOnOff(!onOff)
-    console.log(onOff)
   }
 
   // TODO: Add 'Turn PC ON/OFF' button
@@ -23,6 +20,8 @@ const UserSettingsPage = () => {
   // Change button to visualize that the PC has been turned on and add option turn off PC
   // Show directory listing for PC
 
+  if (!isLoggedIn) return <div className="error-message">Not Logged In</div>
+
   return (
     <>
       <Head>
@@ -34,7 +33,7 @@ const UserSettingsPage = () => {
         <h2>Browse PC</h2>
 
         <form>
-          <input id='desired_state' value={onOff.toString()} />
+          <input id="desired_state" value={onOff.toString()} />
         </form>
       </section>
     </>

@@ -14,8 +14,8 @@ const GalleryPage = () => {
   return (
     <div>
       <ul>
-        {GALLERIES_INFO.map(({ artist }) => (
-          <li>{artist}</li>
+        {GALLERIES_INFO.map(({ artist }, idx) => (
+          <li key={idx}>{artist}</li>
         ))}
       </ul>
     </div>
