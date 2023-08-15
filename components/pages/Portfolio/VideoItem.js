@@ -5,7 +5,7 @@ import Modal from 'react-modal'
 
 import ViewVideo from './ViewVideo'
 import classes from './VideoItem.module.scss'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 Modal.setAppElement('#__next')
 const modalStyle = {
