@@ -24,6 +24,8 @@
         max-height: 320px;
         transition: filter 0.1s ease;
         object-fit: cover;
+        pointer-events: none;
+        user-select: none;
       }
     }
   }
