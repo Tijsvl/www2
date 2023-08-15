@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -5,7 +6,6 @@ import Modal from 'react-modal'
 
 import ViewVideo from './ViewVideo'
 import classes from './VideoItem.module.scss'
-import { useEffect, useState } from 'react'
 
 Modal.setAppElement('#__next')
 const modalStyle = {

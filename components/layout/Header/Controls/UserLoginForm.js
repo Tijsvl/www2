@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import React, { useState, useRef, useContext } from 'react'
+import Link from 'next/link'
 
 import AuthContext from '../../../../store/auth-context'
 import { validateLength } from '../../../../helpers/Helpers'
@@ -76,8 +76,7 @@ const AuthForm = () => {
         } else {
           return res.json().then((data) => {
             let errorMessage = 'Authentication failed.'
-            if (data && data.error && data.error.message)
-              errorMessage = data.error.message.replace('WEAK_PASSWORD : ', '')
+            if (data && data.error && data.error.message) errorMessage = data.error.message.replace('WEAK_PASSWORD : ', '')
 
             throw new Error(errorMessage)
           })
@@ -96,49 +95,30 @@ const AuthForm = () => {
     <section className={classes.authForm}>
       <h1>{isLogin ? 'Login' : 'Sign up'}</h1>
       <form onSubmit={submitHandler} className={classes.form + ' ' + classes.login}>
-        <label htmlFor='email'>
-          Your email*{' '}
-          {emailInput.error && (
-            <span className={emailInput.message ? classes.red : ''}>{emailInput.message}</span>
-          )}
-        </label>
+        <label htmlFor="email">Your email* {emailInput.error && <span className={emailInput.message ? classes.red : ''}>{emailInput.message}</span>}</label>
         <input
-          type='email'
-          id='email'
-          placeholder='email@domain.com'
-          minLength='6'
-          maxLength='64'
+          type="email"
+          id="email"
+          placeholder="email@domain.com"
+          minLength="6"
+          maxLength="64"
           onBlur={emailInputHandler}
           onChange={emailInputHandler}
           ref={emailInputRef}
           required
         />
-        <label htmlFor='password'>
-          Your password{' '}
-          {passwordInput.error && (
-            <span className={passwordInput.message ? classes.red : ''}>{passwordInput.message}</span>
-          )}
-        </label>
-        <input
-          type='password'
-          id='password'
-          minLength='6'
-          maxLength='64'
-          onBlur={passwordInputHandler}
-          onChange={passwordInputHandler}
-          ref={passwordInputRef}
-          required
-        />
+        <label htmlFor="password">Your password {passwordInput.error && <span className={passwordInput.message ? classes.red : ''}>{passwordInput.message}</span>}</label>
+        <input type="password" id="password" minLength="6" maxLength="64" onBlur={passwordInputHandler} onChange={passwordInputHandler} ref={passwordInputRef} required />
         {!isLogin && (
           <>
-            <label htmlFor='code'>Invitation Code</label>
+            <label htmlFor="code">Invitation Code</label>
             <input
               className={classes.code}
-              type='text'
-              id='code'
-              name='code'
-              minLength='6'
-              maxLength='10'
+              type="text"
+              id="code"
+              name="code"
+              minLength="6"
+              maxLength="10"
               onBlur={inviteInputHandler}
               onChange={inviteInputHandler}
               ref={inviteInputRef}
@@ -150,17 +130,17 @@ const AuthForm = () => {
         {!isLogin && error === 'INVALID_CODE' && <p className={classes.message}>Invalid code.</p>}
         {isLogin && error && <p className={classes.message}>Invalid email/password combination.</p>}
         {!isLoading && (
-          <button type='submit' className={classes.submit}>
+          <button type="submit" className={classes.submit}>
             {isLogin ? 'Login' : 'Create Account'}
           </button>
         )}
         {isLoading && <p className={classes.message}>One moment please...</p>}
-        <button type='button' onClick={switchAuthModeHandler} className={classes.toggle}>
+        <button type="button" onClick={switchAuthModeHandler} className={classes.toggle}>
           {isLogin ? 'Create new account' : 'Already have an account?'}
         </button>
         {isLogin && (
           <div className={classes.forgot + ' disable-link'}>
-            <Link href='/forgot-password'>
+            <Link href="/forgot-password">
               <a>Forgot password?</a>
             </Link>
           </div>
