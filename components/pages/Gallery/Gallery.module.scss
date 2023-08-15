@@ -16,6 +16,10 @@
         filter: brightness(1.1);
       }
 
+      a {
+        display: block;
+      }
+
       img {
         max-height: 320px;
         transition: filter 0.1s ease;

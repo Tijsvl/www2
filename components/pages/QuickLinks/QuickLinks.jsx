@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import Link from 'next/link'
 import { useEffect } from 'react'
@@ -31,15 +32,17 @@ const QuickLinks = () => {
       <ul className={classes.quicklinks}>
         <li className={classes.gallery}>
           <Link href="/gallery/drain-20230812">
-            <div className={classes.image}>
-              <img src="https://tijsvl.net/static/galleries/drain-20230812/default-low.jpg" alt="Live Photo" />
-            </div>
-            <div className={classes.info}>
-              <span className={classes.artist}>Drain</span>
-              <span className={classes.detail}>Tells Bells Festival</span>
-              <span className={classes.detail}>August 14, 2023</span>
-            </div>
-            <span className={classes.tag}>Gallery</span>
+            <a>
+              <div className={classes.image}>
+                <img src="https://tijsvl.net/static/galleries/drain-20230812/default-low.jpg" alt="Live Photo" />
+              </div>
+              <div className={classes.info}>
+                <span className={classes.artist}>Drain</span>
+                <span className={classes.detail}>Tells Bells Festival</span>
+                <span className={classes.detail}>August 14, 2023</span>
+              </div>
+              <span className={classes.tag}>Gallery</span>
+            </a>
           </Link>
         </li>
       </ul>

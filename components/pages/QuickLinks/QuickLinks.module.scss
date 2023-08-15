@@ -8,7 +8,6 @@
   margin: 0 auto;
 
   a {
-    background-color: rgba(0, 0, 0, 0.075);
     display: block;
     font-size: 1.6rem;
     line-height: 1;
@@ -17,13 +16,8 @@
     text-wrap: balance;
     text-transform: uppercase;
     font-weight: 600;
-    border-radius: 2rem;
     transition: background-color 0.3s ease-out;
     overflow: hidden;
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.1);
-    }
   }
 
   .gallery a {
@@ -36,6 +30,8 @@
       height: 9rem;
       width: 12rem;
       background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 2rem 0 0 2rem;
+      overflow: hidden;
 
       img {
         height: 100%;
@@ -50,12 +46,22 @@
       filter: brightness(1.1);
     }
 
+    &:hover .info {
+      background-color: rgba(0, 0, 0, 0.025);
+      border-color: rgba(0, 0, 0, 0.075);
+    }
+
     .info {
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       padding: 1rem 2rem;
+      border: 1px solid rgba(0, 0, 0, 0);
+      border-left: 0;
+      background-color: rgba(0, 0, 0, 0.075);
+      border-radius: 0 2rem 2rem 0;
+      transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
     }
 
     .artist {

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",
@@ -20,5 +21,9 @@
     "react-modal": "^3.14.3",
     "sass": "^1.40.1",
     "sharp": "^0.29.3"
+  },
+  "devDependencies": {
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.16"
   }
 }
