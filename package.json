@@ -1,6 +1,6 @@
 {
   "name": "tijsvl.net",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -17,7 +17,6 @@
     "react-comparison-slider": "^1.1.0",
     "react-cookie-consent": "^7.2.1",
     "react-dom": "17.0.2",
-    "react-html-parser": "^2.0.2",
     "react-modal": "^3.14.3",
     "sass": "^1.40.1",
     "sharp": "^0.29.3"

@@ -1,15 +1,13 @@
-import ReactHtmlParser from 'react-html-parser';
+import classes from './LocationText.module.scss'
 
-import classes from './LocationText.module.scss';
-
-const LocationText = (props) => {
+const LocationText = ({ text, note, footnote }) => {
   return (
     <div className={classes.text}>
-      {props.text && <div className={classes.main}>{ReactHtmlParser(props.text)}</div>}
-      {props.note && <aside className={classes.note}>{ReactHtmlParser(props.note)}</aside>}
-      {props.footnote && <aside className={classes.footnote}>{ReactHtmlParser(props.footnote)}</aside>}
+      {text && <div className={classes.main} dangerouslySetInnerHTML={{ __html: text }} />}
+      {note && <aside className={classes.note} dangerouslySetInnerHTML={{ __html: note }} />}
+      {footnote && <aside className={classes.footnote} dangerouslySetInnerHTML={{ __html: footnote }} />}
     </div>
-  );
-};
+  )
+}
 
-export default LocationText;
+export default LocationText

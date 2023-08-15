@@ -1,84 +1,83 @@
-import Image from 'next/image';
+import Image from 'next/image'
+import React from 'react'
 
-import ReactHtmlParser from 'react-html-parser';
-
-import classes from './LocationHeader.module.scss';
+import classes from './LocationHeader.module.scss'
 
 const LocationHeader = (props) => {
-  let accessible = true;
+  let accessible = true
 
   const location = (
     <>
       <strong>{props.title}:</strong>{' '}
-      <a href={`https://maps.google.com/?q=${props.location}`} target='_blank' rel='noreferrer'>
+      <a href={`https://maps.google.com/?q=${props.location}`} target="_blank" rel="noreferrer">
         {props.location.replace(' ', '').replace(',', ', ')}
       </a>
     </>
-  );
+  )
 
   const parking = props.parking != -1 && (
     <>
       &nbsp;{' - '}
       <strong>Parking:</strong>{' '}
-      <a href={`https://maps.google.com/?q=${props.parking}`} target='_blank' rel='noreferrer'>
+      <a href={`https://maps.google.com/?q=${props.parking}`} target="_blank" rel="noreferrer">
         {props.parking.replace(' ', '').replace(',', ', ')}
       </a>
     </>
-  );
+  )
 
-  let gravelRoad;
+  let gravelRoad
   if (props.gravelRoad == -1) {
-    gravelRoad = 'Not accessible.';
-    accessible = false;
+    gravelRoad = 'Not accessible.'
+    accessible = false
   } else if (props.gravelRoad == 0) {
-    gravelRoad = 'Accessible with any type of vehicle';
+    gravelRoad = 'Accessible with any type of vehicle'
   } else {
     gravelRoad = (
       <>
         <strong>Gravel road:</strong> {props.gravelRoad / 1000 + 'km'}
       </>
-    );
+    )
   }
 
-  const gravelTime = <> (about {props.gravelTime} minutes)</>;
+  const gravelTime = <> (about {props.gravelTime} minutes)</>
 
-  let hike;
+  let hike
   if (props.hikingDistance == -1) {
-    hike = 'Not accessible.';
-    accessible = false;
+    hike = 'Not accessible.'
+    accessible = false
   } else if (props.hikingDistance == 0) {
-    hike = 'No hike';
+    hike = 'No hike'
   } else {
-    hike = <>{props.hikingDistance / 1000 + 'km'}</>;
+    hike = <>{props.hikingDistance / 1000 + 'km'}</>
   }
 
-  const hikingTime = <> (about {props.hikingTime} minutes)</>;
+  const hikingTime = <> (about {props.hikingTime} minutes)</>
 
-  let vehicle;
-  props.vehicle !== 'any' && props.vehicle != -1 && (vehicle = ' - ' + props.vehicle + ' recommended');
+  let vehicle
+  props.vehicle !== 'any' && props.vehicle != -1 && (vehicle = ' - ' + props.vehicle + ' recommended')
 
-  let difficulty;
+  let difficulty
 
   props.hikingDifficulty > 0 &&
     (difficulty = (
       <>
         {' -'}&nbsp; <strong>Difficulty:</strong> {props.hikingDifficulty}/5
       </>
-    ));
+    ))
 
-  let entranceFee;
+  let entranceFee
   if (props.entranceFee == 0) {
     entranceFee = (
       <>
         <strong>Entrance fee:</strong> Free!
       </>
-    );
+    )
   } else if (props.entranceFee > 0) {
     entranceFee = (
       <>
         <strong>Entrance fee:</strong> {props.entranceFee} ISK
       </>
-    );
+    )
   }
 
   return (
@@ -87,25 +86,19 @@ const LocationHeader = (props) => {
       <h2>{props.title}</h2>
       <div className={classes.headerImage}>
         <Image
-          layout='fill'
+          layout="fill"
           src={`/blogs/lesser-known-iceland/content/${props.slug}__${props.cover}.jpg`}
           blurDataURL={`/blogs/lesser-known-iceland/content/${props.slug}__${props.cover}-blur.jpg`}
-          placeholder='blur'
+          placeholder="blur"
           alt={props.title}
           title={props.title}
-          objectFit='cover'
+          objectFit="cover"
         />
       </div>
       <ul className={classes.details}>
         <li>
           <div className={classes.icon}>
-            <Image
-              layout='fill'
-              className={classes.icon}
-              src='/blogs/lesser-known-iceland/gps.svg'
-              alt={props.title + 'GPS coordinates'}
-              title={props.title + 'GPS coordinates'}
-            />
+            <Image layout="fill" className={classes.icon} src="/blogs/lesser-known-iceland/gps.svg" alt={props.title + 'GPS coordinates'} title={props.title + 'GPS coordinates'} />
           </div>
           {props.location && location}
           {props.parking && parking}
@@ -113,9 +106,9 @@ const LocationHeader = (props) => {
         <li>
           <div className={classes.icon}>
             <Image
-              layout='fill'
+              layout="fill"
               className={classes.icon}
-              src='/blogs/lesser-known-iceland/gravel.svg'
+              src="/blogs/lesser-known-iceland/gravel.svg"
               alt={props.title + 'driving instructions'}
               title={props.title + 'driving instructions'}
             />
@@ -127,9 +120,9 @@ const LocationHeader = (props) => {
         <li>
           <div className={classes.icon}>
             <Image
-              layout='fill'
+              layout="fill"
               className={classes.icon}
-              src='/blogs/lesser-known-iceland/hike.svg'
+              src="/blogs/lesser-known-iceland/hike.svg"
               alt={props.title + 'hiking instructions'}
               title={props.title + 'hiking instructions'}
             />
@@ -141,19 +134,14 @@ const LocationHeader = (props) => {
         {accessible && (
           <li>
             <div className={classes.icon}>
-              <Image
-                layout='fill'
-                src='/blogs/lesser-known-iceland/money.svg'
-                alt={`${props.title} entrance fee`}
-                title={`${props.title} entrance fee`}
-              />
+              <Image layout="fill" src="/blogs/lesser-known-iceland/money.svg" alt={`${props.title} entrance fee`} title={`${props.title} entrance fee`} />
             </div>
-            {entranceFee} {ReactHtmlParser(props.entranceNote)}
+            {entranceFee} <React.Fragment dangerouslySetInnerHTML={{ __html: props.entranceNote }} />
           </li>
         )}
       </ul>
     </header>
-  );
-};
+  )
+}
 
-export default LocationHeader;
+export default LocationHeader

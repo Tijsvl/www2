@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import ReactHtmlParser from 'react-html-parser';
+import React from 'react'
+import Image from 'next/image'
 
-import classes from './BlogHeader.module.scss';
+import classes from './BlogHeader.module.scss'
 
 const BlogHeader = (props) => {
   return (
@@ -9,16 +9,13 @@ const BlogHeader = (props) => {
       <h1>{props.title}</h1>
 
       {props.image && (
-        <picture
-          className={classes.image}
-          style={{ aspectRatio: props.aspectRatio ? props.aspectRatio : '3 / 1' }}
-        >
+        <picture className={classes.image} style={{ aspectRatio: props.aspectRatio ? props.aspectRatio : '3 / 1' }}>
           <Image
-            layout='fill'
-            objectFit='cover'
+            layout="fill"
+            objectFit="cover"
             src={`/blogs/${props.slug}/${props.image}-2000.jpg`}
             blurDataURL={`/blogs/${props.slug}/${props.image}-blur.jpg`}
-            placeholder='blur'
+            placeholder="blur"
             objectPosition={props.objectPosition}
             alt={props.title}
             title={props.title}
@@ -26,16 +23,16 @@ const BlogHeader = (props) => {
         </picture>
       )}
       <time dateTime={props.date_updated}>Last updated: {props.date_updated}</time>
-      {ReactHtmlParser(props.intro)}
+      <React.Fragment dangerouslySetInnerHTML={{ __html: props.intro }} />
       <aside>
-        <a href={props.author_insta} target='_blank' rel='noreferrer'>
+        <a href={props.author_insta} target="_blank" rel="noreferrer">
           <picture>
             {props.author_insta_image && (
               <Image
-                layout='fill'
+                layout="fill"
                 src={`/img/${props.author_insta_image}`}
                 blurDataURL={`/img/${props.author_insta_image.replace('.jpg', '-blur.jpg')}`}
-                placeholder='blur'
+                placeholder="blur"
                 alt={props.author}
                 title={props.author}
               />
@@ -45,7 +42,7 @@ const BlogHeader = (props) => {
         </a>
       </aside>
     </div>
-  );
-};
+  )
+}
 
-export default BlogHeader;
+export default BlogHeader
