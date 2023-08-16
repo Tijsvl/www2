@@ -18,13 +18,13 @@ const QuickLinks = () => {
       <h1 className={classes.title}>Quick Links</h1>
       <ul className={classes.quicklinks}>
         <li className={classes.gallery}>
-          <Link href="/gallery/drain-20230812">
+          <Link href="/gallery/stick-to-your-guns-20230812">
             <a>
               <div className={classes.image}>
-                <img src="https://tijsvl.net/static/galleries/drain-20230812/default-low.jpg" alt="Live Photo" />
+                <img src="https://tijsvl.net/static/galleries/stick-to-your-guns-20230812/default-low.jpg" alt="Live Photo" />
               </div>
               <div className={classes.info}>
-                <span className={classes.artist}>Drain</span>
+                <span className={classes.artist}>Stick To Your Guns</span>
                 <span className={classes.detail}>Tells Bells Festival</span>
                 <span className={classes.detail}>August 14, 2023</span>
               </div>
@@ -33,13 +33,13 @@ const QuickLinks = () => {
           </Link>
         </li>
         <li className={classes.gallery}>
-          <Link href="/gallery/stick-to-your-guns-20230812">
+          <Link href="/gallery/drain-20230812">
             <a>
               <div className={classes.image}>
-                <img src="https://tijsvl.net/static/galleries/stick-to-your-guns-20230812/default-low.jpg" alt="Live Photo" />
+                <img src="https://tijsvl.net/static/galleries/drain-20230812/default-low.jpg" alt="Live Photo" />
               </div>
               <div className={classes.info}>
-                <span className={classes.artist}>Stick To Your Guns</span>
+                <span className={classes.artist}>Drain</span>
                 <span className={classes.detail}>Tells Bells Festival</span>
                 <span className={classes.detail}>August 14, 2023</span>
               </div>
