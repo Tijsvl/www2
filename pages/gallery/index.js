@@ -7,6 +7,15 @@ export const GALLERIES_INFO = [
     city: 'Vilmar',
     date: '20230812',
     prettyDate: 'August 12, 2023'
+  },
+  {
+    slug: 'stick-to-your-guns-20230812',
+    artist: 'Drain',
+    country: 'Germany',
+    location: 'Tells Bells Festival',
+    city: 'Vilmar',
+    date: '20230812',
+    prettyDate: 'August 12, 2023'
   }
 ]
 
