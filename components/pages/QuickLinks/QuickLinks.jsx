@@ -18,6 +18,21 @@ const QuickLinks = () => {
       <h1 className={classes.title}>Quick Links</h1>
       <ul className={classes.quicklinks}>
         <li className={classes.gallery}>
+          <Link href="/gallery/deez-nuts-20230812">
+            <a>
+              <div className={classes.image}>
+                <img src="https://tijsvl.net/static/galleries/deez-nuts-20230812/default-low.jpg" alt="Live Photo" />
+              </div>
+              <div className={classes.info}>
+                <span className={classes.artist}>Deez Nuts</span>
+                <span className={classes.detail}>Tells Bells Festival</span>
+                <span className={classes.detail}>August 12, 2023</span>
+              </div>
+              <span className={classes.tag}>Gallery</span>
+            </a>
+          </Link>
+        </li>
+        <li className={classes.gallery}>
           <Link href="/gallery/stick-to-your-guns-20230812">
             <a>
               <div className={classes.image}>
