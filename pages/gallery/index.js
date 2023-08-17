@@ -10,7 +10,7 @@ export const GALLERIES_INFO = [
   },
   {
     slug: 'stick-to-your-guns-20230812',
-    artist: 'Drain',
+    artist: 'Stick To Your Guns',
     country: 'Germany',
     location: 'Tells Bells Festival',
     city: 'Vilmar',
