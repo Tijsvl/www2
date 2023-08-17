@@ -26,7 +26,7 @@ const QuickLinks = () => {
               <div className={classes.info}>
                 <span className={classes.artist}>Stick To Your Guns</span>
                 <span className={classes.detail}>Tells Bells Festival</span>
-                <span className={classes.detail}>August 14, 2023</span>
+                <span className={classes.detail}>August 12, 2023</span>
               </div>
               <span className={classes.tag}>Gallery</span>
             </a>
@@ -41,7 +41,7 @@ const QuickLinks = () => {
               <div className={classes.info}>
                 <span className={classes.artist}>Drain</span>
                 <span className={classes.detail}>Tells Bells Festival</span>
-                <span className={classes.detail}>August 14, 2023</span>
+                <span className={classes.detail}>August 12, 2023</span>
               </div>
               <span className={classes.tag}>Gallery</span>
             </a>
