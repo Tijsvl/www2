@@ -37,7 +37,7 @@ const GalleryPage = () => {
         {GALLERIES_INFO.map(({ artist, slug, country, location, city, prettyDate }) => (
           <li key={slug}>
             <Link href={`/gallery/${slug}`}>
-              {prettyData} - {artist} @ {location}, {city}, {country}
+              {prettyDate} - {artist} @ {location}, {city}, {country}
             </Link>
           </li>
         ))}
