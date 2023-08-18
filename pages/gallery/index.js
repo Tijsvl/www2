@@ -1,10 +1,12 @@
+import Link from 'next/link';
+
 export const GALLERIES_INFO = [
   {
     slug: 'drain-20230812',
     artist: 'Drain',
     country: 'Germany',
     location: 'Tells Bells Festival',
-    city: 'Vilmar',
+    city: 'Villmar',
     date: '20230812',
     prettyDate: 'August 12, 2023'
   },
@@ -13,7 +15,7 @@ export const GALLERIES_INFO = [
     artist: 'Stick To Your Guns',
     country: 'Germany',
     location: 'Tells Bells Festival',
-    city: 'Vilmar',
+    city: 'Villmar',
     date: '20230812',
     prettyDate: 'August 12, 2023'
   },
@@ -22,7 +24,7 @@ export const GALLERIES_INFO = [
     artist: 'Deez Nuts',
     country: 'Germany',
     location: 'Tells Bells Festival',
-    city: 'Vilmar',
+    city: 'Villmar',
     date: '20230812',
     prettyDate: 'August 12, 2023'
   }
@@ -32,8 +34,8 @@ const GalleryPage = () => {
   return (
     <div>
       <ul>
-        {GALLERIES_INFO.map(({ artist }, idx) => (
-          <li key={idx}>{artist}</li>
+        {GALLERIES_INFO.map(({ slug, artist, country, location, city, prettyDate }, idx) => (
+          <li key={slug}><Link><a href={`/gallery/${slug}`}>{prettyDate} | <strong>{artist}</strong> @ {location}, {city}, {country}</a></Link></li>
         ))}
       </ul>
     </div>
