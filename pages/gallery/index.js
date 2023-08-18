@@ -33,7 +33,7 @@ const GalleryPage = () => {
     <div>
       <ul>
         {GALLERIES_INFO.map(({ slug, artist, prettyDate }, idx) => (
-          <li key={slug}>{prettyDate} | <strong>{artist}</strong></a></li>
+          <li key={slug}>{prettyDate} | <strong>{artist}</strong></li>
         ))}
       </ul>
     </div>
