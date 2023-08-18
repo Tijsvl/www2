@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export const GALLERIES_INFO = [
   {
     slug: 'drain-20230812',
@@ -35,7 +33,7 @@ const GalleryPage = () => {
     <div>
       <ul>
         {GALLERIES_INFO.map(({ slug, artist, prettyDate }, idx) => (
-          <li key={slug}><Link><a href={`/gallery/${slug}`}>{prettyDate} | <strong>{artist}</strong></a></Link></li>
+          <li key={slug}>{prettyDate} | <strong>{artist}</strong></a></li>
         ))}
       </ul>
     </div>
