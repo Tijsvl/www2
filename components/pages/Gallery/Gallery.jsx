@@ -16,7 +16,7 @@ const Gallery = ({ gallery, photos }) => {
     }
   }, [])
 
-  const { artist, country, location, city, date, prettyDate } = GALLERIES_INFO.find((g) => g.slug === gallery)
+  const { artist, country, location, city, date, prettyDate, slug } = GALLERIES_INFO.find((g) => g.slug === gallery)
 
   const title = `${artist} / ${location}, ${city}, ${country}`
 
