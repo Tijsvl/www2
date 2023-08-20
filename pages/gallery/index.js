@@ -41,7 +41,7 @@ const GalleryPage = () => {
   return (
     <div>
       <ul>
-        {GALLERIES_INFO.map(({ slug, artist, prettyDate }, idx) => (
+        {GALLERIES_INFO.map(({ slug, artist, prettyDate }) => (
           <li key={slug}>
             <a href={`/gallery/${slug}`}>
               {prettyDate} | <strong>{artist}</strong>
