@@ -25,6 +25,15 @@ export const GALLERIES_INFO = [
     city: 'Villmar',
     date: '20230812',
     prettyDate: 'August 12, 2023'
+  },
+  {
+    slug: 'pennywise-20230812',
+    artist: 'Pennywise',
+    country: 'Germany',
+    location: 'Tells Bells Festival',
+    city: 'Villmar',
+    date: '20230812',
+    prettyDate: 'August 12, 2023'
   }
 ]
 
@@ -33,7 +42,11 @@ const GalleryPage = () => {
     <div>
       <ul>
         {GALLERIES_INFO.map(({ slug, artist, prettyDate }, idx) => (
-          <li key={slug}><a href={`/gallery/${slug}`}>{prettyDate} | <strong>{artist}</strong></a></li>
+          <li key={slug}>
+            <a href={`/gallery/${slug}`}>
+              {prettyDate} | <strong>{artist}</strong>
+            </a>
+          </li>
         ))}
       </ul>
     </div>
