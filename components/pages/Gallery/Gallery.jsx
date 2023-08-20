@@ -26,12 +26,11 @@ const Gallery = ({ gallery, photos }) => {
         <title>@tijsvl | {title}</title>
         <meta property="og:title" content={`@tijsvl | ${title}`} />
         <meta name="twitter:title" content={`@tijsvl | ${title}`} />
-        <meta property="og:description" content={` Full gallery of ${title}`} />
-        <meta name="twitter:description" content={` Full gallery of ${title}`} />
-        <meta name="description" content={` Full gallery of ${title}`} />
-        <meta property="og:image" content={`hhttps://tijsvl.net/static/galleries/${slug}/default-high.jpg`} />
-
-        <meta name="twitter:image" content="hhttps://tijsvl.net/static/galleries/${slug}/default-low.jpg" />
+        <meta property="og:description" content={`Full gallery of ${title}`} />
+        <meta name="twitter:description" content={`Full gallery of ${title}`} />
+        <meta name="description" content={`Full gallery of ${title}`} />
+        <meta property="og:image" content={`https://tijsvl.net/static/galleries/${slug}/default-high.jpg`} />
+        <meta name="twitter:image" content={`https://tijsvl.net/static/galleries/${slug}/default-high.jpg`} />
         <link rel="canonical" href={`https://tijsvl.net/gallery/${slug}`} />
         <meta property="og:url" content={`https://tijsvl.net/gallery/${slug}`} />
         <meta name="twitter:url" content={`https://tijsvl.net/gallery/${slug}`} />
