@@ -17,6 +17,24 @@ const QuickLinks = () => {
       <h1 className={classes.title}>Quick Links</h1>
       <ul className={classes.quicklinks}>
         <li className={classes.gallery}>
+          <Link href="/gallery/death-before-dishonor-20230812">
+            <a>
+              <div className={classes.image}>
+                <img
+                  src="https://tijsvl.net/static/galleries/death-before-dishonor-20230812/default-low.jpg"
+                  alt="Live Photo of Death Before Dishonor at Tells Bells festival 2023"
+                />
+              </div>
+              <div className={classes.info}>
+                <span className={classes.artist}>Death Before Dishonor</span>
+                <span className={classes.detail}>Tells Bells Festival</span>
+                <span className={classes.detail}>August 12, 2023</span>
+              </div>
+              <span className={classes.tag}>Gallery</span>
+            </a>
+          </Link>
+        </li>
+        <li className={classes.gallery}>
           <Link href="/gallery/scowl-20230812">
             <a>
               <div className={classes.image}>

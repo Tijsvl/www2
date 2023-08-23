@@ -43,6 +43,15 @@ export const GALLERIES_INFO = [
     city: 'Villmar',
     date: '20230812',
     prettyDate: 'August 12, 2023'
+  },
+  {
+    slug: 'death-before-dishonor-20230812',
+    artist: 'Death Before Dishonor',
+    country: 'Germany',
+    location: 'Tells Bells Festival',
+    city: 'Villmar',
+    date: '20230812',
+    prettyDate: 'August 12, 2023'
   }
 ]
 
