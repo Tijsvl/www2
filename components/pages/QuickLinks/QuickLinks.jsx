@@ -17,6 +17,21 @@ const QuickLinks = () => {
       <h1 className={classes.title}>Quick Links</h1>
       <ul className={classes.quicklinks}>
         <li className={classes.gallery}>
+          <Link href="/gallery/scowl-20230813">
+            <a>
+              <div className={classes.image}>
+                <img src="https://tijsvl.net/static/galleries/scowl-20230813/default-low.jpg" alt="Live Photo of Scowl at Blue Collar Hotel, Eindhoven 2023" />
+              </div>
+              <div className={classes.info}>
+                <span className={classes.artist}>Scowl</span>
+                <span className={classes.detail}>Blue Collar Hotel, Eindhoven</span>
+                <span className={classes.detail}>August 13, 2023</span>
+              </div>
+              <span className={classes.tag}>Gallery</span>
+            </a>
+          </Link>
+        </li>
+        <li className={classes.gallery}>
           <Link href="/gallery/death-before-dishonor-20230812">
             <a>
               <div className={classes.image}>

@@ -52,6 +52,15 @@ export const GALLERIES_INFO = [
     city: 'Villmar',
     date: '20230812',
     prettyDate: 'August 12, 2023'
+  },
+  {
+    slug: 'scowl-20230813',
+    artist: 'Scowl',
+    country: 'The Netherlands',
+    location: 'Blue Collar Hotel',
+    city: 'Eindhoven',
+    date: '20230813',
+    prettyDate: 'August 13, 2023'
   }
 ]
 
