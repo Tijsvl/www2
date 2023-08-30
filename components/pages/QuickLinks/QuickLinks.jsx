@@ -17,6 +17,21 @@ const QuickLinks = () => {
       <h1 className={classes.title}>Quick Links</h1>
       <ul className={classes.quicklinks}>
         <li className={classes.gallery}>
+          <Link href="/gallery/stick-to-your-guns-20230813">
+            <a>
+              <div className={classes.image}>
+                <img src="https://tijsvl.net/static/galleries/stick-to-your-guns-20230813/default-low.jpg" alt="Live Photo of Stick To Your Guns at The Dome, London 2023" />
+              </div>
+              <div className={classes.info}>
+                <span className={classes.artist}>Stick To Your Guns</span>
+                <span className={classes.detail}>The Dome, London</span>
+                <span className={classes.detail}>August 22, 2023</span>
+              </div>
+              <span className={classes.tag}>Gallery</span>
+            </a>
+          </Link>
+        </li>
+        <li className={classes.gallery}>
           <Link href="/gallery/scowl-20230813">
             <a>
               <div className={classes.image}>

@@ -61,6 +61,15 @@ export const GALLERIES_INFO = [
     city: 'Eindhoven',
     date: '20230813',
     prettyDate: 'August 13, 2023'
+  },
+  {
+    slug: 'stick-to-your-guns-20230822',
+    artist: 'Stick To Your Guns',
+    country: 'England',
+    location: 'The Dome',
+    city: 'London',
+    date: '20230822',
+    prettyDate: 'August 22, 2023'
   }
 ]
 
