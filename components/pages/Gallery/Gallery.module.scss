@@ -38,23 +38,34 @@
     }
   }
 
+  h1 > * {
+    display: block;
+    text-wrap: balance;
+  }
+
   .artist {
     font-size: 5rem;
     text-align: center;
-    text-wrap: balance;
     margin-bottom: 0;
     text-transform: uppercase;
     font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    font-weight: 800;
+
+    @media (width >= 600px) {
+      font-weight: 600;
+    }
   }
 
-  .location {
-    font-size: 2rem;
+  .venue {
+    font-size: 3rem;
+    margin-bottom: 0.2rem;
   }
 
-  .location,
   .date {
     text-align: center;
-    text-wrap: balance;
+    font-size: 1.6rem;
     font-weight: 300;
   }
 }

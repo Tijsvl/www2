@@ -35,17 +35,15 @@ const Gallery = ({ gallery, photos }) => {
         <meta property="og:url" content={`https://tijsvl.net/gallery/${slug}`} />
         <meta name="twitter:url" content={`https://tijsvl.net/gallery/${slug}`} />
       </Head>
-      <section className={classes.gallery}>
-        <h1 className={classes.artist}>{artist}</h1>
-        <h2 className={classes.location}>
-          {location}, {city}
-        </h2>
-        <h2 className={classes.location}>
-          {city}, {country}
-        </h2>
-        <h2 className={classes.date}>
-          <time>{prettyDate}</time>
-        </h2>
+      <article className={classes.gallery}>
+        <h1>
+          <span class={classes.artist}>{artist}</span>
+          <span class={classes.venue}>
+            {location}, {city}, {country}
+          </span>
+          <time class={classes.date}>{prettyDate}</time>
+        </h1>
+
         <div>
           <ul>
             {photos.map((photo) => (
@@ -66,7 +64,7 @@ const Gallery = ({ gallery, photos }) => {
             ))}
           </ul>
         </div>
-      </section>
+      </article>
     </>
   )
 }
