@@ -65,7 +65,7 @@ const List = () => {
           <li className={classes.head}>DJI Phantom Pro 4</li>
         </ul>
 
-        <h4>Retired Gear</h4>
+        <h3>Retired Gear</h3>
         <ul>
           <li className={classes.head}>Nikon D800</li>
           <li>Nikon 24-120mm ƒ/3.5-5.6G ED-IF AF-S VR NIKKOR</li>
