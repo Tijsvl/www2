@@ -1,4 +1,4 @@
-import classes from './List.module.scss';
+import classes from './List.module.scss'
 
 const List = () => {
   return (
@@ -50,11 +50,14 @@ const List = () => {
         <ul>
           <li className={classes.head}>Canon EOS 5D Mark III</li>
           <li className={classes.head}>Canon EOS 5D Mark IV</li>
-          <li>Samyang 12mm f/2.8 ED AS NCS Fish-eye</li>
-          <li>Canon EF 16-35mm f/2.8L II USM</li>
-          <li>Canon EF 50mm f/1.8 STM</li>
-          <li>Canon EF 24-105mm f/3.5-5.6 IS STM</li>
-          <li>Canon EF 135mm f/2.0 L USM</li>
+          <li>Samyang 12mm f/2.8 Fish-eye</li>
+          <li>Samyang 14mm f/2.8</li>
+          <li>Canon 16-35mm f/2.8L USM II</li>
+          <li>Canon 24mm f/1.4L USM II</li>
+          <li>Canon 24-105mm f/3.5-5.6 IS STM</li>
+          <li>Canon 50mm f/1.8 STM</li>
+          <li>Canon 85mm f/1.8 USM</li>
+          <li>Canon 135mm f/2.0L USM</li>
           <li className={classes.head}>Olympus OM20</li>
           <li>Ozeck 28mm f/2.8 797141</li>
           <li>Zuiko 75-150mm f/4 138160</li>
@@ -62,7 +65,7 @@ const List = () => {
           <li className={classes.head}>DJI Phantom Pro 4</li>
         </ul>
 
-        <h3>Retired Gear</h3>
+        <h4>Retired Gear</h4>
         <ul>
           <li className={classes.head}>Nikon D800</li>
           <li>Nikon 24-120mm f/3.5-5.6G ED-IF AF-S VR NIKKOR</li>
@@ -77,7 +80,7 @@ const List = () => {
         </ul>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default List;
+export default List
