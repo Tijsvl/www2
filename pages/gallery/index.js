@@ -70,6 +70,15 @@ export const GALLERIES_INFO = [
     city: 'London',
     date: '20230822',
     prettyDate: 'August 22, 2023'
+  },
+  {
+    slug: 'knocked-loose-20230824',
+    artist: 'Knocked Loose',
+    country: 'England',
+    location: 'The Dome',
+    city: 'London',
+    date: '20230824',
+    prettyDate: 'August 24, 2023'
   }
 ]
 
