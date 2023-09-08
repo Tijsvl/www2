@@ -10,8 +10,8 @@ const Biography = () => {
         <picture>
           <Image
             layout="fill"
-            src="/img/about__tijsvl-2000.jpg"
-            blurDataURL="/img/about__tijsvl-blur.jpg"
+            src="/img/about__tijsvl_2-2000.jpg"
+            blurDataURL="/img/about__tijsvl_2-blur.jpg"
             alt="tijsvl | Tijs van Leur"
             title="tijsvl | Tijs van Leur"
             objectFit="cover"
@@ -21,11 +21,7 @@ const Biography = () => {
         <figcaption>
           <strong>Tijs van Leur</strong>
           <br />
-          Iceland 2021, photo by
-          <a href="https://instagram.com/vyarazlatilova" target="_blank" rel="noreferrer">
-            {' '}
-            @vyarazlatilova
-          </a>
+          London 2023, photo by Villy
         </figcaption>
       </figure>
       <div>
