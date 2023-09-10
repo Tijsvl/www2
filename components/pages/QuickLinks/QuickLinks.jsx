@@ -13,10 +13,23 @@ const QuickLinks = () => {
   }, [])
 
   return (
-    <>
+    <a>
       <h1 className={classes.title}>Quick Links</h1>
       <ul className={classes.quicklinks}>
-        <li className={classes.gallery}>
+        <li className={`${classes.link} ${classes.video}`}>
+          <a href="https://www.youtube.com/watch?v=TkK23M94qqw">
+            <div className={classes.image}>
+              <img src="https://tijsvl.net/static/thumbnails/stick-to-your-guns-20230812-low.jpg" alt="Live Photo of Knocked Loose at The Dome, London 2023" />
+            </div>
+            <div className={classes.info}>
+              <span className={classes.artist}>Stick To Your Guns</span>
+              <span className={classes.detail}>Tells Bells Festival</span>
+              <span className={classes.detail}>August 12, 2023</span>
+              <span className={classes.tag}>Video</span>
+            </div>
+          </a>
+        </li>
+        <li className={`${classes.link} ${classes.gallery}`}>
           <Link href="/gallery/knocked-loose-20230824">
             <a>
               <div className={classes.image}>
@@ -26,12 +39,12 @@ const QuickLinks = () => {
                 <span className={classes.artist}>Knocked Loose</span>
                 <span className={classes.detail}>The Dome, London</span>
                 <span className={classes.detail}>August 24, 2023</span>
+                <span className={classes.tag}>Gallery</span>
               </div>
-              <span className={classes.tag}>Gallery</span>
             </a>
           </Link>
         </li>
-        <li className={classes.gallery}>
+        <li className={`${classes.link} ${classes.gallery}`}>
           <Link href="/gallery/stick-to-your-guns-20230822">
             <a>
               <div className={classes.image}>
@@ -41,12 +54,12 @@ const QuickLinks = () => {
                 <span className={classes.artist}>Stick To Your Guns</span>
                 <span className={classes.detail}>The Dome, London</span>
                 <span className={classes.detail}>August 22, 2023</span>
+                <span className={classes.tag}>Gallery</span>
               </div>
-              <span className={classes.tag}>Gallery</span>
             </a>
           </Link>
         </li>
-        <li className={classes.gallery}>
+        <li className={`${classes.link} ${classes.gallery}`}>
           <Link href="/gallery/scowl-20230813">
             <a>
               <div className={classes.image}>
@@ -56,12 +69,12 @@ const QuickLinks = () => {
                 <span className={classes.artist}>Scowl</span>
                 <span className={classes.detail}>Blue Collar Hotel, Eindhoven</span>
                 <span className={classes.detail}>August 13, 2023</span>
+                <span className={classes.tag}>Gallery</span>
               </div>
-              <span className={classes.tag}>Gallery</span>
             </a>
           </Link>
         </li>
-        <li className={classes.gallery}>
+        <li className={`${classes.link} ${classes.gallery}`}>
           <Link href="/gallery/death-before-dishonor-20230812">
             <a>
               <div className={classes.image}>
@@ -74,12 +87,12 @@ const QuickLinks = () => {
                 <span className={classes.artist}>Death Before Dishonor</span>
                 <span className={classes.detail}>Tells Bells Festival</span>
                 <span className={classes.detail}>August 12, 2023</span>
+                <span className={classes.tag}>Gallery</span>
               </div>
-              <span className={classes.tag}>Gallery</span>
             </a>
           </Link>
         </li>
-        <li className={classes.gallery}>
+        <li className={`${classes.link} ${classes.gallery}`}>
           <Link href="/gallery/scowl-20230812">
             <a>
               <div className={classes.image}>
@@ -89,12 +102,12 @@ const QuickLinks = () => {
                 <span className={classes.artist}>Scowl</span>
                 <span className={classes.detail}>Tells Bells Festival</span>
                 <span className={classes.detail}>August 12, 2023</span>
+                <span className={classes.tag}>Gallery</span>
               </div>
-              <span className={classes.tag}>Gallery</span>
             </a>
           </Link>
         </li>
-        <li className={classes.gallery}>
+        <li className={`${classes.link} ${classes.gallery}`}>
           <Link href="/gallery/pennywise-20230812">
             <a>
               <div className={classes.image}>
@@ -104,12 +117,12 @@ const QuickLinks = () => {
                 <span className={classes.artist}>Pennywise</span>
                 <span className={classes.detail}>Tells Bells Festival</span>
                 <span className={classes.detail}>August 12, 2023</span>
+                <span className={classes.tag}>Gallery</span>
               </div>
-              <span className={classes.tag}>Gallery</span>
             </a>
           </Link>
         </li>
-        <li className={classes.gallery}>
+        <li className={`${classes.link} ${classes.gallery}`}>
           <Link href="/gallery/deez-nuts-20230812">
             <a>
               <div className={classes.image}>
@@ -119,12 +132,12 @@ const QuickLinks = () => {
                 <span className={classes.artist}>Deez Nuts</span>
                 <span className={classes.detail}>Tells Bells Festival</span>
                 <span className={classes.detail}>August 12, 2023</span>
+                <span className={classes.tag}>Gallery</span>
               </div>
-              <span className={classes.tag}>Gallery</span>
             </a>
           </Link>
         </li>
-        <li className={classes.gallery}>
+        <li className={`${classes.link} ${classes.gallery}`}>
           <Link href="/gallery/stick-to-your-guns-20230812">
             <a>
               <div className={classes.image}>
@@ -134,12 +147,12 @@ const QuickLinks = () => {
                 <span className={classes.artist}>Stick To Your Guns</span>
                 <span className={classes.detail}>Tells Bells Festival</span>
                 <span className={classes.detail}>August 12, 2023</span>
+                <span className={classes.tag}>Gallery</span>
               </div>
-              <span className={classes.tag}>Gallery</span>
             </a>
           </Link>
         </li>
-        <li className={classes.gallery}>
+        <li className={`${classes.link} ${classes.gallery}`}>
           <Link href="/gallery/drain-20230812">
             <a>
               <div className={classes.image}>
@@ -149,13 +162,13 @@ const QuickLinks = () => {
                 <span className={classes.artist}>Drain</span>
                 <span className={classes.detail}>Tells Bells Festival</span>
                 <span className={classes.detail}>August 12, 2023</span>
+                <span className={classes.tag}>Gallery</span>
               </div>
-              <span className={classes.tag}>Gallery</span>
             </a>
           </Link>
         </li>
       </ul>
-    </>
+    </a>
   )
 }
 
