@@ -1,50 +1,37 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
-import { MongoClient } from 'mongodb';
+import { MongoClient } from 'mongodb'
 
-import Blog from '../../../components/pages/Blog/Blog';
-import BlogHeader from '../../../components/pages/Blog/BlogHeader';
-import PhotoProcessItem from '../../../components/pages/Blog/HowIEditMyPhotos/PhotoProcessItem';
+import Blog from '../../../components/pages/Blog/Blog'
+import BlogHeader from '../../../components/pages/Blog/BlogHeader'
+import PhotoProcessItem from '../../../components/pages/Blog/HowIEditMyPhotos/PhotoProcessItem'
 
 const HowIEditMyPhotosPage = (props) => {
-  const blog = props.blog[0];
+  const blog = props.blog[0]
 
   return (
     <>
       <Head>
         <title>@tijsvl | {blog.title}</title>
-        <meta property="og:title" content="@tijsvl | {blog.title}" />
-        <meta name="twitter:title" content="@tijsvl | {blog.title}" />
+        <meta property='og:title' content={`@tijsvl | ${blog.title}`} />
+        <meta name='twitter:title' content={`@tijsvl | ${blog.title}`} />
         <meta
-          property="og:description"
-          content="Watch over my shoulder and learn my secrets! From time to time I will add a photo to Lightroom Discover revealing step by step how I edit my photos from its original shot to the final product."
+          property='og:description'
+          content='Watch over my shoulder and learn my secrets! From time to time I will add a photo to Lightroom Discover revealing step by step how I edit my photos from its original shot to the final product.'
         />
         <meta
-          name="twitter:description"
-          content="Watch over my shoulder and learn my secrets! From time to time I will add a photo to Lightroom Discover revealing step by step how I edit my photos from its original shot to the final product."
+          name='twitter:description'
+          content='Watch over my shoulder and learn my secrets! From time to time I will add a photo to Lightroom Discover revealing step by step how I edit my photos from its original shot to the final product.'
         />
         <meta
-          name="description"
-          content="Watch over my shoulder and learn my secrets! From time to time I will add a photo to Lightroom Discover revealing step by step how I edit my photos from its original shot to the final product."
+          name='description'
+          content='Watch over my shoulder and learn my secrets! From time to time I will add a photo to Lightroom Discover revealing step by step how I edit my photos from its original shot to the final product.'
         />
-        <meta
-          property="og:image"
-          content={`https://tijsvl.vercel.app/blogs/${blog.slug}/${blog.image}-2000.jpg`}
-        />
-
-        <meta
-          name="twitter:image"
-          content={`https://tijsvl.vercel.app/blogs/${blog.slug}/${blog.image}-2000.jpg`}
-        />
-        <link rel="canonical" href={`https://tijsvl.net/blog/${blog.slug}`} />
-        <meta
-          property="og:url"
-          content={`https://tijsvl.net/blog/${blog.slug}`}
-        />
-        <meta
-          name="twitter:url"
-          content={`https://tijsvl.net/blog/${blog.slug}`}
-        />
+        <meta property='og:image' content={`https://www.tijsvl.com/blogs/${blog.slug}/${blog.image}-2000.jpg`} />
+        <meta name='twitter:image' content={`https://www.tijsvl.com/blogs/${blog.slug}/${blog.image}-2000.jpg`} />
+        <link rel='canonical' href={`https://www.tijsvl.com/blog/${blog.slug}`} />
+        <meta property='og:url' content={`https://www.tijsvl.com/blog/${blog.slug}`} />
+        <meta name='twitter:url' content={`https://www.tijsvl.com/blog/${blog.slug}`} />
       </Head>
       <Blog>
         <BlogHeader
@@ -78,21 +65,17 @@ const HowIEditMyPhotosPage = (props) => {
         ))}
       </Blog>
     </>
-  );
-};
+  )
+}
 
 export const getStaticProps = async () => {
-  const client = await MongoClient.connect(
-    `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_KEY}@cluster0.lkq1v.mongodb.net/tijsvl?retryWrites=true&w=majority`
-  );
-  const db = client.db();
+  const client = await MongoClient.connect(`mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_KEY}@cluster0.lkq1v.mongodb.net/tijsvl?retryWrites=true&w=majority`)
+  const db = client.db()
 
-  const collection = db.collection('blogs');
-  const documents = await collection
-    .find({ slug: 'how-i-edit-my-photos' })
-    .toArray();
+  const collection = db.collection('blogs')
+  const documents = await collection.find({ slug: 'how-i-edit-my-photos' }).toArray()
 
-  client.close();
+  client.close()
 
   return {
     props: {
@@ -109,11 +92,11 @@ export const getStaticProps = async () => {
         content: doc.content,
         author: doc.author,
         author_insta: doc.author_insta,
-        author_insta_image: doc.author_insta_image,
-      })),
+        author_insta_image: doc.author_insta_image
+      }))
     },
-    revalidate: 600, // Number of seconds React waits to revalidate (if page is visited)
-  };
-};
+    revalidate: 600 // Number of seconds React waits to revalidate (if page is visited)
+  }
+}
 
-export default HowIEditMyPhotosPage;
+export default HowIEditMyPhotosPage

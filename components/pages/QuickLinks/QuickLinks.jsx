@@ -17,9 +17,9 @@ const QuickLinks = () => {
       <h1 className={classes.title}>Quick Links</h1>
       <ul className={classes.quicklinks}>
         <li className={`${classes.link} ${classes.video}`}>
-          <a href="https://www.youtube.com/watch?v=TkK23M94qqw">
+          <a href='https://www.youtube.com/watch?v=TkK23M94qqw'>
             <div className={classes.image}>
-              <img src="https://tijsvl.net/static/thumbnails/stick-to-your-guns-20230812-low.jpg" alt="Live Photo of Knocked Loose at The Dome, London 2023" />
+              <img src='https://www.tijsvl.com/static/thumbnails/stick-to-your-guns-20230812-low.jpg' alt='Live Photo of Knocked Loose at The Dome, London 2023' />
             </div>
             <div className={classes.info}>
               <span className={classes.artist}>Stick To Your Guns</span>
@@ -30,10 +30,10 @@ const QuickLinks = () => {
           </a>
         </li>
         <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/knocked-loose-20230824">
+          <Link href='/gallery/knocked-loose-20230824'>
             <a>
               <div className={classes.image}>
-                <img src="https://tijsvl.net/static/galleries/knocked-loose-20230824/default-low.jpg" alt="Live Photo of Knocked Loose at The Dome, London 2023" />
+                <img src='https://www.tijsvl.com/static/galleries/knocked-loose-20230824/default-low.jpg' alt='Live Photo of Knocked Loose at The Dome, London 2023' />
               </div>
               <div className={classes.info}>
                 <span className={classes.artist}>Knocked Loose</span>
@@ -45,10 +45,10 @@ const QuickLinks = () => {
           </Link>
         </li>
         <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/stick-to-your-guns-20230822">
+          <Link href='/gallery/stick-to-your-guns-20230822'>
             <a>
               <div className={classes.image}>
-                <img src="https://tijsvl.net/static/galleries/stick-to-your-guns-20230822/default-low.jpg" alt="Live Photo of Stick To Your Guns at The Dome, London 2023" />
+                <img src='https://www.tijsvl.com/static/galleries/stick-to-your-guns-20230822/default-low.jpg' alt='Live Photo of Stick To Your Guns at The Dome, London 2023' />
               </div>
               <div className={classes.info}>
                 <span className={classes.artist}>Stick To Your Guns</span>
@@ -60,10 +60,10 @@ const QuickLinks = () => {
           </Link>
         </li>
         <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/scowl-20230813">
+          <Link href='/gallery/scowl-20230813'>
             <a>
               <div className={classes.image}>
-                <img src="https://tijsvl.net/static/galleries/scowl-20230813/default-low.jpg" alt="Live Photo of Scowl at Blue Collar Hotel, Eindhoven 2023" />
+                <img src='https://www.tijsvl.com/static/galleries/scowl-20230813/default-low.jpg' alt='Live Photo of Scowl at Blue Collar Hotel, Eindhoven 2023' />
               </div>
               <div className={classes.info}>
                 <span className={classes.artist}>Scowl</span>
@@ -75,12 +75,12 @@ const QuickLinks = () => {
           </Link>
         </li>
         <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/death-before-dishonor-20230812">
+          <Link href='/gallery/death-before-dishonor-20230812'>
             <a>
               <div className={classes.image}>
                 <img
-                  src="https://tijsvl.net/static/galleries/death-before-dishonor-20230812/default-low.jpg"
-                  alt="Live Photo of Death Before Dishonor at Tells Bells festival 2023"
+                  src='https://www.tijsvl.com/static/galleries/death-before-dishonor-20230812/default-low.jpg'
+                  alt='Live Photo of Death Before Dishonor at Tells Bells festival 2023'
                 />
               </div>
               <div className={classes.info}>
@@ -93,10 +93,10 @@ const QuickLinks = () => {
           </Link>
         </li>
         <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/scowl-20230812">
+          <Link href='/gallery/scowl-20230812'>
             <a>
               <div className={classes.image}>
-                <img src="https://tijsvl.net/static/galleries/scowl-20230812/default-low.jpg" alt="Live Photo of Scowl at Tells Bells festival 2023" />
+                <img src='https://www.tijsvl.com/static/galleries/scowl-20230812/default-low.jpg' alt='Live Photo of Scowl at Tells Bells festival 2023' />
               </div>
               <div className={classes.info}>
                 <span className={classes.artist}>Scowl</span>
@@ -108,10 +108,10 @@ const QuickLinks = () => {
           </Link>
         </li>
         <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/pennywise-20230812">
+          <Link href='/gallery/pennywise-20230812'>
             <a>
               <div className={classes.image}>
-                <img src="https://tijsvl.net/static/galleries/pennywise-20230812/default-low.jpg" alt="Live Photo of Pennywise at Tells Bells festival 2023" />
+                <img src='https://www.tijsvl.com/static/galleries/pennywise-20230812/default-low.jpg' alt='Live Photo of Pennywise at Tells Bells festival 2023' />
               </div>
               <div className={classes.info}>
                 <span className={classes.artist}>Pennywise</span>
@@ -123,10 +123,10 @@ const QuickLinks = () => {
           </Link>
         </li>
         <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/deez-nuts-20230812">
+          <Link href='/gallery/deez-nuts-20230812'>
             <a>
               <div className={classes.image}>
-                <img src="https://tijsvl.net/static/galleries/deez-nuts-20230812/default-low.jpg" alt="Live Photo of Deez Nuts at Tells Bells festival 2023" />
+                <img src='https://www.tijsvl.com/static/galleries/deez-nuts-20230812/default-low.jpg' alt='Live Photo of Deez Nuts at Tells Bells festival 2023' />
               </div>
               <div className={classes.info}>
                 <span className={classes.artist}>Deez Nuts</span>
@@ -138,10 +138,13 @@ const QuickLinks = () => {
           </Link>
         </li>
         <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/stick-to-your-guns-20230812">
+          <Link href='/gallery/stick-to-your-guns-20230812'>
             <a>
               <div className={classes.image}>
-                <img src="https://tijsvl.net/static/galleries/stick-to-your-guns-20230812/default-low.jpg" alt="Live Photo of Sticky To Your Guns at Tells Bells festival 2023" />
+                <img
+                  src='https://www.tijsvl.com/static/galleries/stick-to-your-guns-20230812/default-low.jpg'
+                  alt='Live Photo of Sticky To Your Guns at Tells Bells festival 2023'
+                />
               </div>
               <div className={classes.info}>
                 <span className={classes.artist}>Stick To Your Guns</span>
@@ -153,10 +156,10 @@ const QuickLinks = () => {
           </Link>
         </li>
         <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/drain-20230812">
+          <Link href='/gallery/drain-20230812'>
             <a>
               <div className={classes.image}>
-                <img src="https://tijsvl.net/static/galleries/drain-20230812/default-low.jpg" alt="Live Photo of Drain at Tells Bells festival 2023" />
+                <img src='https://www.tijsvl.com/static/galleries/drain-20230812/default-low.jpg' alt='Live Photo of Drain at Tells Bells festival 2023' />
               </div>
               <div className={classes.info}>
                 <span className={classes.artist}>Drain</span>

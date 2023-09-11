@@ -10,17 +10,17 @@ const BlogPage = (props) => {
     <>
       <Head>
         <title>@tijsvl | Blog</title>
-        <meta property="og:title" content="@tijsvl | Blog" />
-        <meta name="twitter:title" content="@tijsvl | Blog" />
-        <meta property="og:description" content="How I Edit My Photos, Lesser Known Iceland, Lesser Known Bulgaria and more blogs bij @tijsvl" />
-        <meta name="twitter:description" content="How I Edit My Photos, Lesser Known Iceland, Lesser Known Bulgaria and more blogs bij @tijsvl" />
-        <meta name="description" content="How I Edit My Photos, Lesser Known Iceland, Lesser Known Bulgaria and more blogs bij @tijsvl" />
-        <meta property="og:image" content="https://tijsvl.vercel.app/blogs/how-i-edit-my-photos/header-2000.jpg" />
-        <meta property="og:image:alt" content="https://tijsvl.vercel.app/blogs/lesser-known-iceland/header-2000.jpg" />
-        <meta name="twitter:image" content="https://tijsvl.vercel.app/blogs/how-i-edit-my-photos/header-2000.jpg" />
-        <link rel="canonical" href="https://tijsvl.net/blog" />
-        <meta property="og:url" content="https://tijsvl.net/blog" />
-        <meta name="twitter:url" content="https://tijsvl.net/blog" />
+        <meta property='og:title' content='@tijsvl | Blog' />
+        <meta name='twitter:title' content='@tijsvl | Blog' />
+        <meta property='og:description' content='How I Edit My Photos, Lesser Known Iceland, Lesser Known Bulgaria and more blogs bij @tijsvl' />
+        <meta name='twitter:description' content='How I Edit My Photos, Lesser Known Iceland, Lesser Known Bulgaria and more blogs bij @tijsvl' />
+        <meta name='description' content='How I Edit My Photos, Lesser Known Iceland, Lesser Known Bulgaria and more blogs bij @tijsvl' />
+        <meta property='og:image' content='https://tijsvl.vercel.app/blogs/how-i-edit-my-photos/header-2000.jpg' />
+        <meta property='og:image:alt' content='https://tijsvl.vercel.app/blogs/lesser-known-iceland/header-2000.jpg' />
+        <meta name='twitter:image' content='https://tijsvl.vercel.app/blogs/how-i-edit-my-photos/header-2000.jpg' />
+        <link rel='canonical' href='https://www.tijsvl.com/blog' />
+        <meta property='og:url' content='https://www.tijsvl.com/blog' />
+        <meta name='twitter:url' content='https://www.tijsvl.com/blog' />
       </Head>
       <BlogList blogs={blogs} />
     </>

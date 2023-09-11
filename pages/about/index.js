@@ -1,8 +1,8 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
-import Biography from '../../components/pages/About/Biography';
-import List from '../../components/pages/About/List';
-import ContactForm from '../../components/pages/Contact/Form';
+import Biography from '../../components/pages/About/Biography'
+import List from '../../components/pages/About/List'
+import ContactForm from '../../components/pages/Contact/Form'
 
 const AboutPage = () => {
   return (
@@ -26,9 +26,9 @@ const AboutPage = () => {
         <meta property='og:image' content='https://tijsvl.vercel.app/img/about__tijsvl-2000.jpg' />
 
         <meta name='twitter:image' content='https://tijsvl.vercel.app/img/about__tijsvl-2000.jpg' />
-        <link rel='canonical' href='https://tijsvl.net/about' />
-        <meta property='og:url' content='https://tijsvl.net/about' />
-        <meta name='twitter:url' content='https://tijsvl.net/about' />
+        <link rel='canonical' href='https://www.tijsvl.com/about' />
+        <meta property='og:url' content='https://www.tijsvl.com/about' />
+        <meta name='twitter:url' content='https://www.tijsvl.com/about' />
       </Head>
       <section>
         <h1>About</h1>
@@ -37,7 +37,7 @@ const AboutPage = () => {
         <ContactForm included={true} />
       </section>
     </>
-  );
-};
+  )
+}
 
-export default AboutPage;
+export default AboutPage

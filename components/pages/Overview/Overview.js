@@ -1,6 +1,6 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
-import classes from './Overview.module.scss';
+import classes from './Overview.module.scss'
 
 const Overview = () => {
   return (
@@ -11,26 +11,22 @@ const Overview = () => {
         <ul className={classes.main}>
           <li>
             <h2>
-              <Link href="/overview/on-this-day">On This Day</Link>
+              <Link href='/overview/on-this-day'>On This Day</Link>
             </h2>
           </li>
           <li>
             <h2>
-              <Link href="/overview/artists">All Artists</Link>
+              <Link href='/overview/artists'>All Artists</Link>
             </h2>
           </li>
           <li>
             <h2>
-              <Link href="/overview/countries">Countries</Link>
+              <Link href='/overview/countries'>Countries</Link>
             </h2>
           </li>
           <li>
             <h2>
-              <a
-                href="https://tijsvl.net/archive"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href='https://tijsvl.net/archive' target='_blank' rel='noreferrer'>
                 Archive
               </a>
             </h2>
@@ -38,7 +34,7 @@ const Overview = () => {
         </ul>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Overview;
+export default Overview
