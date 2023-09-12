@@ -6,11 +6,6 @@ import LoadingSpinner from '../components/UI/LoadingSpinner'
 import MusicPage from './portfolio/music/4'
 
 const Index = () => {
-  // useEffect(() => {
-  //   const random = '/portfolio/music/' + Math.floor(Math.random() * 4)
-  //   Router.pathname == '/' && Router.push(`${random}`, '/', { shallow: false })
-  // })
-
   return (
     <>
       <Head>
