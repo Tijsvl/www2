@@ -48,14 +48,14 @@ const Gallery = ({ gallery, photos }) => {
           <ul>
             {photos.map((photo) => (
               <li key={photo}>
-                {/* https://www.tijsvl.com/static/galleries/download.php?gallery=${gallery}&image=${photo} */}
-                <Link href={`https://www.tijsvl.com/static/galleries/${gallery}/h/${photo}`}>
+                {/* https://tijsvl.net/static/galleries/download.php?gallery=${gallery}&image=${photo} */}
+                <Link href={`https://tijsvl.net/static/galleries/${gallery}/h/${photo}`}>
                   <a target='_blank' download>
                     <img
                       loading='lazy'
-                      srcSet={`${`https://www.tijsvl.com/static/galleries/${gallery}/l/${photo}`} 600w, ${`https://www.tijsvl.com/static/galleries/${gallery}/m/${photo}`} 1200w, ${`https://www.tijsvl.com/static/galleries/${gallery}/h/${photo}`} 2400w`}
+                      srcSet={`${`https://tijsvl.net/static/galleries/${gallery}/l/${photo}`} 600w, ${`https://tijsvl.net/static/galleries/${gallery}/m/${photo}`} 1200w, ${`https://tijsvl.net/static/galleries/${gallery}/h/${photo}`} 2400w`}
                       sizes={`(max-width: 600px) 300px, (max-width: 1200px) 600px, 1200px`}
-                      src={`https://www.tijsvl.com/static/galleries/${gallery}/l/${photo}`}
+                      src={`https://tijsvl.net/static/galleries/${gallery}/l/${photo}`}
                       alt={artist + ' live at ' + location + ', ' + country + ' on ' + prettyDate}
                     />
                   </a>
