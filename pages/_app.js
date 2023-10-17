@@ -53,6 +53,8 @@ function MyApp({ Component, pageProps }) {
         <meta name='twitter:url' content='https://www.tijsvl.com/' />
         <meta name='description' content="On tour with your favorite band or at home coding what you'll never see." />
         <link rel='canonical' href='https://www.tijsvl.com/' />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6060589550732180"
+     crossorigin="anonymous"></script>
       </Head>
       <Layout>
         <Component {...pageProps} />
