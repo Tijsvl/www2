@@ -1,13 +1,13 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
-import LocationHeader from './Location/LocationHeader';
-import classes from './LesserKnownIcelandIndexLocation.module.scss';
-import LocationText from './Location/LocationText';
-import LocationPhotos from './Location/LocationPhotos';
-import LocationBack from './Location/LocationBack';
+import LocationHeader from './Location/LocationHeader'
+import classes from './LesserKnownIcelandIndexLocation.module.scss'
+import LocationText from './Location/LocationText'
+import LocationPhotos from './Location/LocationPhotos'
+import LocationBack from './Location/LocationBack'
 
 const LesserKnownIcelandIndexLocation = (props) => {
-  const dtl = props.details;
+  const dtl = props.details
 
   return (
     <>
@@ -19,17 +19,11 @@ const LesserKnownIcelandIndexLocation = (props) => {
         <meta property='og:description' content={dtl.text.slice(0, 100)} />
         <meta name='twitter:description' content={dtl.text.slice(0, 100)} />
         <meta name='description' content={dtl.text.slice(0, 100)} />
-        <meta
-          property='og:image'
-          content={`/blogs/lesser-known-iceland/content/${dtl.slug}__${dtl.cover}.jpg`}
-        />
-        <meta
-          name='twitter:image'
-          content={`/blogs/lesser-known-iceland/content/${dtl.slug}__${dtl.cover}.jpg`}
-        />
-        <link rel='canonical' href={`https://tijsvl.net/blog/lesser-known-iceland/${dtl.slug}`} />
-        <meta property='og:url' content={`https://tijsvl.net/blog/lesser-known-iceland/${dtl.slug}`} />
-        <meta name='twitter:url' content={`https://tijsvl.net/blog/lesser-known-iceland/${dtl.slug}`} />
+        <meta property='og:image' content={`/blogs/lesser-known-iceland/content/${dtl.slug}__${dtl.cover}.jpg`} />
+        <meta name='twitter:image' content={`/blogs/lesser-known-iceland/content/${dtl.slug}__${dtl.cover}.jpg`} />
+        <link rel='canonical' href={`https://www.tijsvl.com/blog/lesser-known-iceland/${dtl.slug}`} />
+        <meta property='og:url' content={`https://www.tijsvl.com/blog/lesser-known-iceland/${dtl.slug}`} />
+        <meta name='twitter:url' content={`https://www.tijsvl.com/blog/lesser-known-iceland/${dtl.slug}`} />
       </Head>
       <section className={classes.location} id={dtl.slug}>
         <LocationBack />
@@ -54,7 +48,7 @@ const LesserKnownIcelandIndexLocation = (props) => {
         <LocationBack />
       </section>
     </>
-  );
-};
+  )
+}
 
-export default LesserKnownIcelandIndexLocation;
+export default LesserKnownIcelandIndexLocation

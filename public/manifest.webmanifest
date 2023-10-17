@@ -1,21 +1,21 @@
 {
-    "name": "tijsvl.net",
-    "short_name": "tijsvl",
-    "description": "Photography 'n stuff",
-    "start_url": ".",
-    "icons": [
-        {
-            "src": "/img/style/fav-256.png",
-            "sizes": "256x256",
-            "type": "image/png"
-        },
-        {
-            "src": "/img/style/fav-512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#111111",
-    "background_color": "#FDFDFD",
-    "display": "standalone"
+  "name": "tijsvl.com",
+  "short_name": "tijsvl",
+  "description": "Photography 'n stuff",
+  "start_url": ".",
+  "icons": [
+    {
+      "src": "/img/style/fav-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/style/fav-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#111111",
+  "background_color": "#FDFDFD",
+  "display": "standalone"
 }

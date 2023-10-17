@@ -24,16 +24,16 @@ const Gallery = ({ gallery, photos }) => {
     <>
       <Head>
         <title>@tijsvl | {title}</title>
-        <meta property="og:title" content={`@tijsvl | ${title}`} />
-        <meta name="twitter:title" content={`@tijsvl | ${title}`} />
-        <meta property="og:description" content={`Full gallery of ${title}`} />
-        <meta name="twitter:description" content={`Full gallery of ${title}`} />
-        <meta name="description" content={`Full gallery of ${title}`} />
-        <meta property="og:image" content={`https://tijsvl.net/static/galleries/${slug}/default-high.jpg`} />
-        <meta name="twitter:image" content={`https://tijsvl.net/static/galleries/${slug}/default-high.jpg`} />
-        <link rel="canonical" href={`https://tijsvl.net/gallery/${slug}`} />
-        <meta property="og:url" content={`https://tijsvl.net/gallery/${slug}`} />
-        <meta name="twitter:url" content={`https://tijsvl.net/gallery/${slug}`} />
+        <meta property='og:title' content={`@tijsvl | ${title}`} />
+        <meta name='twitter:title' content={`@tijsvl | ${title}`} />
+        <meta property='og:description' content={`Full gallery of ${title}`} />
+        <meta name='twitter:description' content={`Full gallery of ${title}`} />
+        <meta name='description' content={`Full gallery of ${title}`} />
+        <meta property='og:image' content={`https://www.tijsvl.com/static/galleries/${slug}/default-high.jpg`} />
+        <meta name='twitter:image' content={`https://www.tijsvl.com/static/galleries/${slug}/default-high.jpg`} />
+        <link rel='canonical' href={`https://www.tijsvl.com/gallery/${slug}`} />
+        <meta property='og:url' content={`https://www.tijsvl.com/gallery/${slug}`} />
+        <meta name='twitter:url' content={`https://www.tijsvl.com/gallery/${slug}`} />
       </Head>
       <article className={classes.gallery}>
         <h1>
@@ -50,9 +50,9 @@ const Gallery = ({ gallery, photos }) => {
               <li key={photo}>
                 {/* https://tijsvl.net/static/galleries/download.php?gallery=${gallery}&image=${photo} */}
                 <Link href={`https://tijsvl.net/static/galleries/${gallery}/h/${photo}`}>
-                  <a target="_blank" download>
+                  <a target='_blank' download>
                     <img
-                      loading="lazy"
+                      loading='lazy'
                       srcSet={`${`https://tijsvl.net/static/galleries/${gallery}/l/${photo}`} 600w, ${`https://tijsvl.net/static/galleries/${gallery}/m/${photo}`} 1200w, ${`https://tijsvl.net/static/galleries/${gallery}/h/${photo}`} 2400w`}
                       sizes={`(max-width: 600px) 300px, (max-width: 1200px) 600px, 1200px`}
                       src={`https://tijsvl.net/static/galleries/${gallery}/l/${photo}`}

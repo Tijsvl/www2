@@ -22,20 +22,20 @@ const Header = () => {
   return (
     <>
       <header className={classes.header}>
-        <Link href="/">
+        <Link href='/'>
           <a className={classes.logo} onClick={menuHide}>
             <span className={classes.flash + ' theme-light'}>
-              <Image layout="fill" src="/img/style/logo.gif" alt="Tijsvl Home" />
+              <Image layout='fill' src='/img/style/logo.gif' alt='Tijsvl Home' />
             </span>
             <span className={classes.flash + ' theme-dark'}>
-              <Image layout="fill" src="/img/style/logo-dark.gif" alt="Tijsvl Home" />
+              <Image layout='fill' src='/img/style/logo-dark.gif' alt='Tijsvl Home' />
             </span>
             TIJSVL
           </a>
         </Link>
-        <nav className={classes.nav} id="primary-navigation" aria-label="Main Navigation" data-identifier="layout-element">
+        <nav className={classes.nav} id='primary-navigation' aria-label='Main Navigation' data-identifier='layout-element'>
           <button
-            aria-controls="primary-navigation"
+            aria-controls='primary-navigation'
             aria-expanded={menu === 'show' ? 'true' : 'false'}
             className={(menu === 'show' ? classes.hide : classes.show) + ' ' + classes.hamburger}
             onClick={menuHandler}
@@ -44,27 +44,27 @@ const Header = () => {
           </button>
           <ul className={menu === 'hide' ? classes.hide : classes.show}>
             <li onClick={menuHide} className={isActive('/')}>
-              <Link href="/" title="tijsvl.net">
+              <Link href='/' title='tijsvl.com'>
                 Home
               </Link>
             </li>
             <li onClick={menuHide} className={isActive('/about')}>
-              <Link href="/about">About</Link>
+              <Link href='/about'>About</Link>
             </li>
             <li onClick={menuHide} className={isActive('/portfolio')}>
-              <Link href="/portfolio">Portfolio</Link>
+              <Link href='/portfolio'>Portfolio</Link>
             </li>
             {/* <li onClick={menuHide} className={isActive('/wallpapers')}>
               <Link href='/wallpapers'>Wallpapers</Link>
             </li> */}
             <li onClick={menuHide} className={isActive('/prints')}>
-              <Link href="/prints">Prints</Link>
+              <Link href='/prints'>Prints</Link>
             </li>
             <li onClick={menuHide} className={isActive('/blog')}>
-              <Link href="/blog">Blog</Link>
+              <Link href='/blog'>Blog</Link>
             </li>
             <li onClick={menuHide} className={isActive('/contact')}>
-              <Link href="/contact">Contact</Link>
+              <Link href='/contact'>Contact</Link>
             </li>
           </ul>
         </nav>
