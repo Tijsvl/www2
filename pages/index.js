@@ -3,7 +3,7 @@ import Router from 'next/router'
 import Head from 'next/head'
 
 import LoadingSpinner from '../components/UI/LoadingSpinner'
-import MusicPage from './portfolio/music/4'
+import MusicPage from './portfolio/music/3'
 
 const Index = () => {
   return (
