@@ -3,6 +3,92 @@ import Link from 'next/link'
 import { useEffect } from 'react'
 import classes from './QuickLinks.module.scss'
 
+// PUBLISDATE HAS ONE EXTRA NUMBER YYYYMMDD#
+// THE LAST NUMBER CAN BE USED TO PRIORITIZE IN CASE THERE'S MULTIPLE SHOWS ONE ONE DAY
+
+const VIDEOS = [
+  {
+    tag: 'Video',
+    artist: 'Knocked Loose',
+    slug: 'knocked-loose',
+    location: 'The Dome',
+    city: 'London',
+    country: 'England',
+    date: '20230824',
+    publishDate: '202308240',
+    url: 'https://www.youtube.com/watch?v=FkoiupXLB2g'
+  },
+  {
+    tag: 'Video',
+    artist: 'Stick To Your Guns',
+    slug: 'stick-to-your-guns',
+    location: 'The Dome',
+    city: 'London',
+    country: 'England',
+    date: '20230822',
+    publishDate: '202308220',
+    url: 'https://www.youtube.com/watch?v=I7Y17qdnwBw'
+  },
+  {
+    tag: 'Video',
+    artist: 'Stick To Your Guns',
+    slug: 'stick-to-your-guns',
+    location: 'Tells Bells Festival',
+    city: 'Villmar',
+    country: 'Germany',
+    date: '20230812',
+    publishDate: '202308121',
+    url: 'https://www.youtube.com/watch?v=TkK23M94qqw'
+  },
+  {
+    tag: 'Video',
+    artist: 'Drain',
+    slug: 'drain',
+    location: 'Tells Bells Festival',
+    city: 'Villmar',
+    country: 'Germany',
+    date: '20230812',
+    publishDate: '202308122',
+    url: 'https://www.youtube.com/watch?v=gjLWVBWqAv0'
+  },
+  {
+    tag: 'Video',
+    artist: 'Pennywise',
+    slug: 'pennywise',
+    location: 'Tells Bells Festival',
+    city: 'Villmar',
+    country: 'Germany',
+    date: '20230812',
+    publishDate: '202308123',
+    url: 'https://www.youtube.com/watch?v=-Wyx64TXdSU'
+  },
+  {
+    tag: 'Video',
+    artist: 'Scowl',
+    slug: 'scowl',
+    location: 'Blue Collar Hotel',
+    city: 'Eindhoven',
+    country: 'The Netherlands',
+    date: '20230813',
+    publishDate: '202308130',
+    url: 'https://www.youtube.com/watch?v=QurELo_DBdE'
+  }
+]
+
+const prettyDate = (inputDate) => {
+  // Parse the input date string into a JavaScript Date object
+  const year = inputDate.substring(0, 4)
+  const month = inputDate.substring(4, 6) - 1 // Subtract 1 from the month as it's zero-based
+  const day = inputDate.substring(6, 8)
+  const date = new Date(year, month, day)
+
+  // Define an array of month names for formatting
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  const formattedDate = `${monthNames[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
+
+  return formattedDate
+}
+
 const QuickLinks = () => {
   useEffect(() => {
     const elements = document.querySelectorAll('[data-identifier="layout-element"]')
@@ -13,22 +99,27 @@ const QuickLinks = () => {
   }, [])
 
   return (
-    <a>
+    <>
       <h1 className={classes.title}>Quick Links</h1>
       <ul className={classes.quicklinks}>
-        <li className={`${classes.link} ${classes.video}`}>
-          <a href='https://www.youtube.com/watch?v=TkK23M94qqw'>
-            <div className={classes.image}>
-              <img src='https://www.tijsvl.net/static/thumbnails/stick-to-your-guns-20230812-low.jpg' alt='Live Photo of Knocked Loose at The Dome, London 2023' />
-            </div>
-            <div className={classes.info}>
-              <span className={classes.artist}>Stick To Your Guns</span>
-              <span className={classes.detail}>Tells Bells Festival</span>
-              <span className={classes.detail}>August 12, 2023</span>
-              <span className={classes.tag}>Video</span>
-            </div>
-          </a>
-        </li>
+        {VIDEOS.sort((a, b) => b.publishDate - a.publishDate).map((item) => (
+          <li className={`${classes.link} ${classes.video}`}>
+            <a href={item.url}>
+              <div className={classes.image}>
+                <img
+                  src={`https://www.tijsvl.net/static/thumbnails/${item.slug}-${item.date}-low.jpg`}
+                  alt={`Live Photo of ${item.artist} at ${item.location}, ${item.city} ${item.date.slice(0, 4)}`}
+                />
+              </div>
+              <div className={classes.info}>
+                <span className={classes.artist}>{item.artist}</span>
+                <span className={classes.detail}>{item.location}</span>
+                <span className={classes.detail}>{prettyDate(item.date)}</span>
+                <span className={classes.tag}>{item.tag}</span>
+              </div>
+            </a>
+          </li>
+        ))}
         <li className={`${classes.link} ${classes.gallery}`}>
           <Link href='/gallery/knocked-loose-20230824'>
             <a>
@@ -171,7 +262,7 @@ const QuickLinks = () => {
           </Link>
         </li>
       </ul>
-    </a>
+    </>
   )
 }
 
