@@ -43,7 +43,6 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:image" key="ogImage" content="https://www.tijsvl.com/media/og/default.jpg" />
         <meta property="og:image:alt" content="https://www.tijsvl.com/media/og/default2.jpg" key="ogImageAlt" />
         <meta property="og:image:alt" content="https://www.tijsvl.com/img/p/w/iceland_2019.09.27_17.49.46__K7A8552-2000.jpg" key="ogImageAltB" />
-        <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/" />
         <meta property="og:type" content="page" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="tijsvl.com" />
