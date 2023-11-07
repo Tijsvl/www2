@@ -26,8 +26,8 @@ const Gallery = ({ gallery, photos }) => {
         <meta property="og:description" content={`Full gallery of ${title}`} />
         <meta name="twitter:description" content={`Full gallery of ${title}`} />
         <meta name="description" content={`Full gallery of ${title}`} />
-        <meta property="og:image" content={`https://www.tijsvl.com/static/galleries/${slug}/default-high.jpg`} key="ogImage" />
-        <meta name="twitter:image" content={`https://www.tijsvl.com/static/galleries/${slug}/default-high.jpg`} />
+        <meta property="og:image" content={`https://www.tijsvl.net/static/galleries/${slug}/default-high.jpg`} key="ogImage" />
+        <meta name="twitter:image" content={`https://www.tijsvl.net/static/galleries/${slug}/default-high.jpg`} />
         <link rel="canonical" href={`https://www.tijsvl.com/gallery/${slug}`} />
         <meta property="og:url" content={`https://www.tijsvl.com/gallery/${slug}`} />
         <meta name="twitter:url" content={`https://www.tijsvl.com/gallery/${slug}`} />
