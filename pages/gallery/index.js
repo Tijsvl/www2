@@ -79,6 +79,15 @@ export const GALLERIES_INFO = [
     city: 'London',
     date: '20230824',
     prettyDate: 'August 24, 2023'
+  },
+  {
+    slug: 'the-rumjacks-20231101',
+    artist: 'The Rumjacks',
+    country: 'The Netherlands',
+    location: 'Melkweg',
+    city: 'Amsterdam',
+    date: '20231101',
+    prettyDate: 'November 1, 2023'
   }
 ]
 
