@@ -12,7 +12,7 @@ const QuickLinksPage = () => {
         <meta property="og:description" content="Quick Links to current content on tijsvl.net" />
         <meta name="twitter:description" content="Quick Links to current content on tijsvl.net" />
         <meta name="description" content="Quick Links to current content on tijsvl.net" />
-        <meta property="og:image" content="https://tijsvl.net/img/og_default.jpg" />
+        <meta property="og:image" content="https://tijsvl.net/img/og_default.jpg" key="ogImage" />
         <meta name="twitter:image" content="https://tijsvl.net/img/og_default.jpg" />
         <link rel="canonical" href="https://tijsvl.net/quick-links" />
         <meta property="og:url" content="https://tijsvl.net/quick-links" />

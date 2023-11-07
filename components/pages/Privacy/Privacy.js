@@ -9,25 +9,25 @@ const Privacy = () => {
     <>
       <Head>
         <title>@tijsvl | Privacy</title>
-        <meta property='og:title' content='Privacy' />
-        <meta name='twitter:title' content='Privacy' />
+        <meta property="og:title" content="Privacy" />
+        <meta name="twitter:title" content="Privacy" />
         <meta
-          property='og:description'
-          content='This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.'
+          property="og:description"
+          content="This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You."
         />
         <meta
-          name='twitter:description'
-          content='This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.'
+          name="twitter:description"
+          content="This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You."
         />
         <meta
-          name='description'
-          content='This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.'
+          name="description"
+          content="This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You."
         />
-        <meta property='og:image' content='https://www.tijsvl.com/img/og_default.jpg' />
-        <meta name='twitter:image' content='https://www.tijsvl.com/img/og_default.jpg' />
-        <link rel='canonical' href='https://www.tijsvl.com/privacy' />
-        <meta property='og:url' content='https://www.tijsvl.com/privacy' />
-        <meta name='twitter:url' content='https://www.tijsvl.com/privacy' />
+        <meta property="og:image" content="https://www.tijsvl.com/img/og_default.jpg" key="ogImage" />
+        <meta name="twitter:image" content="https://www.tijsvl.com/img/og_default.jpg" />
+        <link rel="canonical" href="https://www.tijsvl.com/privacy" />
+        <meta property="og:url" content="https://www.tijsvl.com/privacy" />
+        <meta name="twitter:url" content="https://www.tijsvl.com/privacy" />
       </Head>
       <section>
         <h1>Privacy Policy</h1>
@@ -46,7 +46,7 @@ const Privacy = () => {
           <p>
             We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy
             Policy. This Privacy Policy has been created with the help of the{' '}
-            <a href='https://www.termsfeed.com/blog/sample-privacy-policy-template/' target='_blank'>
+            <a href="https://www.termsfeed.com/blog/sample-privacy-policy-template/" target="_blank">
               Privacy Policy Template
             </a>
             .
@@ -113,7 +113,7 @@ const Privacy = () => {
             <li>
               <p>
                 <strong>Website</strong> refers to tijsvl.tijsvl.net and/or tijsvl.com, accessible from{' '}
-                <a href='https://tijsvl.com' rel='external nofollow noopener' target='_blank'>
+                <a href="https://tijsvl.com" rel="external nofollow noopener" target="_blank">
                   https://tijsvl.com
                 </a>
               </p>
@@ -163,9 +163,9 @@ const Privacy = () => {
               preferences or Your activity on our Service. Flash Cookies are not managed by the same browser settings as those used for Browser Cookies. For more information on how
               You can delete Flash Cookies, please read &quot;Where can I change the settings for disabling, or deleting local shared objects?&quot; available at{' '}
               <a
-                href='https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_'
-                rel='external nofollow noopener'
-                target='_blank'
+                href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_"
+                rel="external nofollow noopener"
+                target="_blank"
               >
                 https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_
               </a>
@@ -179,7 +179,7 @@ const Privacy = () => {
           <p>
             Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while
             Session Cookies are deleted as soon as You close Your web browser. You can learn more about cookies here:{' '}
-            <a href='https://www.termsfeed.com/privacy-policy-generator/#faq-8' target='_blank'>
+            <a href="https://www.termsfeed.com/privacy-policy-generator/#faq-8" target="_blank">
               Cookies by TermsFeed Generator
             </a>
             .
@@ -373,7 +373,7 @@ const Privacy = () => {
         </div>
       </section>
 
-      <Form included='true' />
+      <Form included="true" />
     </>
   )
 }

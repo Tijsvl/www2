@@ -74,79 +74,79 @@ const ContactForm = (props) => {
       {!props.included && (
         <Head>
           <title>@tijsvl | Contact</title>
-          <meta property='og:title' content='@tijsvl | Contact' />
-          <meta name='twitter:title' content='@tijsvl | Contact' />
-          <meta property='og:description' content='Contact @tijsvl' />
-          <meta name='twitter:description' content='Contact @tijsvl' />
-          <meta name='description' content='Contact @tijsvl' />
-          <meta property='og:image' content='https://tijsvl.vercel.app/img/about__tijsvl-2000.jpg' />
-          <meta name='twitter:image' content='https://tijsvl.vercel.app/img/about__tijsvl-2000.jpg' />
-          <link rel='canonical' href='https://www.tijsvl.com/contact' />
-          <meta property='og:url' content='https://www.tijsvl.com/contact' />
-          <meta name='twitter:url' content='https://www.tijsvl.com/contact' />
+          <meta property="og:title" content="@tijsvl | Contact" />
+          <meta name="twitter:title" content="@tijsvl | Contact" />
+          <meta property="og:description" content="Contact @tijsvl" />
+          <meta name="twitter:description" content="Contact @tijsvl" />
+          <meta name="description" content="Contact @tijsvl" />
+          <meta property="og:image" content="https://tijsvl.vercel.app/img/about__tijsvl-2000.jpg" key="ogImage" />
+          <meta name="twitter:image" content="https://tijsvl.vercel.app/img/about__tijsvl-2000.jpg" />
+          <link rel="canonical" href="https://www.tijsvl.com/contact" />
+          <meta property="og:url" content="https://www.tijsvl.com/contact" />
+          <meta name="twitter:url" content="https://www.tijsvl.com/contact" />
         </Head>
       )}
       {props.included && <h1 className={classes.title}>Contact</h1>}
       {!props.included && <h1>Contact</h1>}
       {isLoading ? (
         <>
-          <LoadingSpinner message='Sending...' />
+          <LoadingSpinner message="Sending..." />
         </>
       ) : (
         !error &&
         status === 'initial' && (
-          <form onSubmit={onSubmitHandler} className={classes.form + ' ' + classes.contact} id='contact'>
-            <label htmlFor='name'>Your name* {nameInput.error && <span className={nameInput.message ? classes.red : ''}>{nameInput.message}</span>}</label>
+          <form onSubmit={onSubmitHandler} className={classes.form + ' ' + classes.contact} id="contact">
+            <label htmlFor="name">Your name* {nameInput.error && <span className={nameInput.message ? classes.red : ''}>{nameInput.message}</span>}</label>
             <input
               className={nameInput.message ? classes.red : ''}
-              type='text'
-              id='name'
-              name='name'
-              placeholder='Your name'
-              minLength='2'
-              maxLength='32'
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              minLength="2"
+              maxLength="32"
               onBlur={nameInputHandler}
               onChange={nameInputHandler}
               required
             />
-            <label htmlFor='userEmail'>Your email* {emailInput.error && <span className={emailInput.message ? classes.red : ''}>{emailInput.message}</span>}</label>
+            <label htmlFor="userEmail">Your email* {emailInput.error && <span className={emailInput.message ? classes.red : ''}>{emailInput.message}</span>}</label>
             <input
               className={emailInput.message ? classes.red : ''}
-              type='email'
-              id='userEmail'
-              name='email'
-              placeholder='example@domain.com'
-              minLength='6'
-              maxLength='64'
+              type="email"
+              id="userEmail"
+              name="email"
+              placeholder="example@domain.com"
+              minLength="6"
+              maxLength="64"
               onBlur={emailInputHandler}
               onChange={emailInputHandler}
               required
             />
-            <label htmlFor='subject'>Subject {subjectInput.error && <span className={subjectInput.message ? classes.red : ''}>{subjectInput.message}</span>}</label>
+            <label htmlFor="subject">Subject {subjectInput.error && <span className={subjectInput.message ? classes.red : ''}>{subjectInput.message}</span>}</label>
             <input
               className={subjectInput.message ? classes.red : ''}
-              type='text'
-              id='subject'
-              name='subject'
-              maxLength='64'
-              placeholder='Your subject'
+              type="text"
+              id="subject"
+              name="subject"
+              maxLength="64"
+              placeholder="Your subject"
               onBlur={subjectInputHandler}
               onChange={subjectInputHandler}
             />
-            <label htmlFor='message'>Your message* {messageInput.error && <span className={messageInput.message ? classes.red : ''}>{messageInput.message}</span>}</label>
+            <label htmlFor="message">Your message* {messageInput.error && <span className={messageInput.message ? classes.red : ''}>{messageInput.message}</span>}</label>
             <textarea
               className={messageInput.message ? classes.red : ''}
-              id='message'
-              name='message'
-              placeholder='What can I help you with?'
-              minLength='6'
-              maxLength='4096'
+              id="message"
+              name="message"
+              placeholder="What can I help you with?"
+              minLength="6"
+              maxLength="4096"
               onBlur={messageInputHandler}
               onChange={messageInputHandler}
               required
             ></textarea>
             {!nameInput.error && !emailInput.error && !messageInput.error && !subjectInput.error ? (
-              <button className={classes.submit} type='submit'>
+              <button className={classes.submit} type="submit">
                 Send Message
               </button>
             ) : (
@@ -170,7 +170,7 @@ const ContactForm = (props) => {
         <div className={classes.error}>
           <h3>Something went wrong :(</h3>
           <p>
-            Please send your message to <a href='mailto:info@tijsvl.net'>info@tijsvl.net</a>. Your message:
+            Please send your message to <a href="mailto:info@tijsvl.net">info@tijsvl.net</a>. Your message:
           </p>
           <textarea>{error}</textarea>
         </div>

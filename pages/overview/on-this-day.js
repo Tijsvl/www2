@@ -45,17 +45,17 @@ const OnThisDayPage = () => {
     <>
       <Head>
         <title>@tijsvl | On This Day</title>
-        <meta property='og:title' content='@tijsvl | On This Day' />
-        <meta name='twitter:title' content='@tijsvl | On This Day' />
-        <meta property='og:description' content='An overview of concerts and events on this day in the past' />
-        <meta name='twitter:description' content='An overview of concerts and events on this day in the past' />
-        <meta name='description' content='An overview of concerts and events on this day in the past' />
-        <meta property='og:image' content='https://www.tijsvl.com/img/prints__buy__noodles-middlefinger-1000.jpg' />
-        <meta property='og:image:alt' content='https://www.tijsvl.com/img/prints__item__deryck-whibley-1000.jpg' />
-        <meta name='twitter:image' content='https://www.tijsvl.com/img/prints__buy__noodles-middlefinger-1000.jpg' />
-        <link rel='canonical' href='https://www.tijsvl.com/overview/on-this-day' />
-        <meta property='og:url' content='https://www.tijsvl.com/overview/on-this-day' />
-        <meta name='twitter:url' content='https://www.tijsvl.com/overview/on-this-day' />
+        <meta property="og:title" content="@tijsvl | On This Day" />
+        <meta name="twitter:title" content="@tijsvl | On This Day" />
+        <meta property="og:description" content="An overview of concerts and events on this day in the past" />
+        <meta name="twitter:description" content="An overview of concerts and events on this day in the past" />
+        <meta name="description" content="An overview of concerts and events on this day in the past" />
+        <meta property="og:image" content="https://www.tijsvl.com/img/prints__buy__noodles-middlefinger-1000.jpg" key="ogImage" />
+        <meta property="og:image:alt" content="https://www.tijsvl.com/img/prints__item__deryck-whibley-1000.jpg" key="ogImageAlt" />
+        <meta name="twitter:image" content="https://www.tijsvl.com/img/prints__buy__noodles-middlefinger-1000.jpg" />
+        <link rel="canonical" href="https://www.tijsvl.com/overview/on-this-day" />
+        <meta property="og:url" content="https://www.tijsvl.com/overview/on-this-day" />
+        <meta name="twitter:url" content="https://www.tijsvl.com/overview/on-this-day" />
       </Head>
       <section>
         <h1>On This Day</h1>
@@ -63,7 +63,7 @@ const OnThisDayPage = () => {
         {isLoading && <LoadingSpinner />}
         {!isLoading && error.error && (
           <OnThisDay>
-            <div className='error-message'>{error.message}</div>
+            <div className="error-message">{error.message}</div>
           </OnThisDay>
         )}
         {!isLoading && !error.error && (

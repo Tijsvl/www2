@@ -13,17 +13,17 @@ const LesserKnownIcelandIndexLocation = (props) => {
     <>
       <Head>
         <title>{dtl.title} - Lesser Known Iceland | @lookwhatiso</title>
-        <meta name='author' content='@lookwhatiso' />
-        <meta property='og:title' content={`${dtl.title} - Lesser Known Iceland | @lookwhatiso`} />
-        <meta name='twitter:title' content={`${dtl.title} - Lesser Known Iceland | @lookwhatiso`} />
-        <meta property='og:description' content={dtl.text.slice(0, 100)} />
-        <meta name='twitter:description' content={dtl.text.slice(0, 100)} />
-        <meta name='description' content={dtl.text.slice(0, 100)} />
-        <meta property='og:image' content={`/blogs/lesser-known-iceland/content/${dtl.slug}__${dtl.cover}.jpg`} />
-        <meta name='twitter:image' content={`/blogs/lesser-known-iceland/content/${dtl.slug}__${dtl.cover}.jpg`} />
-        <link rel='canonical' href={`https://www.tijsvl.com/blog/lesser-known-iceland/${dtl.slug}`} />
-        <meta property='og:url' content={`https://www.tijsvl.com/blog/lesser-known-iceland/${dtl.slug}`} />
-        <meta name='twitter:url' content={`https://www.tijsvl.com/blog/lesser-known-iceland/${dtl.slug}`} />
+        <meta name="author" content="@lookwhatiso" />
+        <meta property="og:title" content={`${dtl.title} - Lesser Known Iceland | @lookwhatiso`} />
+        <meta name="twitter:title" content={`${dtl.title} - Lesser Known Iceland | @lookwhatiso`} />
+        <meta property="og:description" content={dtl.text.slice(0, 100)} />
+        <meta name="twitter:description" content={dtl.text.slice(0, 100)} />
+        <meta name="description" content={dtl.text.slice(0, 100)} />
+        <meta property="og:image" content={`/blogs/lesser-known-iceland/content/${dtl.slug}__${dtl.cover}.jpg`} key="ogImage" />
+        <meta name="twitter:image" content={`/blogs/lesser-known-iceland/content/${dtl.slug}__${dtl.cover}.jpg`} />
+        <link rel="canonical" href={`https://www.tijsvl.com/blog/lesser-known-iceland/${dtl.slug}`} />
+        <meta property="og:url" content={`https://www.tijsvl.com/blog/lesser-known-iceland/${dtl.slug}`} />
+        <meta name="twitter:url" content={`https://www.tijsvl.com/blog/lesser-known-iceland/${dtl.slug}`} />
       </Head>
       <section className={classes.location} id={dtl.slug}>
         <LocationBack />
