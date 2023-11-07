@@ -31,7 +31,7 @@ const LesserKnownIcelandPage = (props) => {
         <meta name="twitter:image" key="twitterImage" content={`https://www.tijsvl.com/blogs/${blog.slug}/${blog.image}-2000.jpg`} />
         <link rel="canonical" key="canonical" href={`https://www.tijsvl.com/blog/${blog.slug}`} />
         <meta property="og:url" key="ogUrl" content={`https://www.tijsvl.com/blog/${blog.slug}`} />
-        <meta name="twitter:url" key={twitterUrl} content={`https://www.tijsvl.com/blog/${blog.slug}`} />
+        <meta name="twitter:url" key="twitterUrl" content={`https://www.tijsvl.com/blog/${blog.slug}`} />
       </Head>
       <Blog>
         <BlogHeader

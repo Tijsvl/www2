@@ -28,7 +28,7 @@ const AboutPage = () => {
         <meta name="twitter:image" key="twitterImage" content="https://tijsvl.vercel.app/img/about__tijsvl-2000.jpg" />
         <link rel="canonical" key="canonical" href="https://www.tijsvl.com/about" />
         <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/about" />
-        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/about" />
+        <meta name="twitter:url" key="twitterUrl" content="https://www.tijsvl.com/about" />
       </Head>
       <section>
         <h1>About</h1>

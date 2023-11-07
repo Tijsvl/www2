@@ -20,7 +20,7 @@ const BlogPage = (props) => {
         <meta name="twitter:image" key="twitterImage" content="https://tijsvl.vercel.app/blogs/how-i-edit-my-photos/header-2000.jpg" />
         <link rel="canonical" key="canonical" href="https://www.tijsvl.com/blog" />
         <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/blog" />
-        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/blog" />
+        <meta name="twitter:url" key="twitterUrl" content="https://www.tijsvl.com/blog" />
       </Head>
       <BlogList blogs={blogs} />
     </>

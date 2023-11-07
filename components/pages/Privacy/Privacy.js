@@ -27,7 +27,7 @@ const Privacy = () => {
         <meta name="twitter:image" key="twitterImage" content="https://www.tijsvl.com/img/og_default.jpg" />
         <link rel="canonical" key="canonical" href="https://www.tijsvl.com/privacy" />
         <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/privacy" />
-        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/privacy" />
+        <meta name="twitter:url" key="twitterUrl" content="https://www.tijsvl.com/privacy" />
       </Head>
       <section>
         <h1>Privacy Policy</h1>

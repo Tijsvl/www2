@@ -33,7 +33,7 @@ const PrinsPage = () => {
         <meta name="twitter:image" key="twitterImage" content="/img/p/m/evergreen-terrace__august-10-2018-evergreen-terrace-villmar-germany__3R7A2713-2000.jpg" />
         <link rel="canonical" key="canonical" href="https://www.tijsvl.com/prints" />
         <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/prints" />
-        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/prints" />
+        <meta name="twitter:url" key="twitterUrl" content="https://www.tijsvl.com/prints" />
       </Head>
       <section>
         <h1>Prints</h1>

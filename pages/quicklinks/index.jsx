@@ -16,7 +16,7 @@ const QuickLinksPage = () => {
         <meta name="twitter:image" key="twitterImage" content="https://tijsvl.net/img/og_default.jpg" />
         <link rel="canonical" key="canonical" href="https://tijsvl.net/quick-links" />
         <meta property="og:url" key="ogUrl" content="https://tijsvl.net/quick-links" />
-        <meta name="twitter:url" key={twitterUrl} content="https://tijsvl.net/quick-links" />
+        <meta name="twitter:url" key="twitterUrl" content="https://tijsvl.net/quick-links" />
       </Head>
       <QuickLinks />
     </>

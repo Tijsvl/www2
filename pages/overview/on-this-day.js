@@ -55,7 +55,7 @@ const OnThisDayPage = () => {
         <meta name="twitter:image" key="twitterImage" content="https://www.tijsvl.com/img/prints__buy__noodles-middlefinger-1000.jpg" />
         <link rel="canonical" key="canonical" href="https://www.tijsvl.com/overview/on-this-day" />
         <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/overview/on-this-day" />
-        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/overview/on-this-day" />
+        <meta name="twitter:url" key="twitterUrl" content="https://www.tijsvl.com/overview/on-this-day" />
       </Head>
       <section>
         <h1>On This Day</h1>

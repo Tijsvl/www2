@@ -30,7 +30,7 @@ const Index = () => {
         <meta name="twitter:image" key="twitterImage" content="/img/p/m/evergreen-terrace__august-10-2018-evergreen-terrace-villmar-germany__3R7A2713-2000.jpg" />
         <link rel="canonical" key="canonical" href="https://www.tijsvl.com/portfolio/music" />
         <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/portfolio/music" />
-        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/portfolio/music" />
+        <meta name="twitter:url" key="twitterUrl" content="https://www.tijsvl.com/portfolio/music" />
         <meta name="facebook-domain-verification" content="2wrx1fif0w7nezmgf7s9cm4qsfdzhm" />
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
         <script

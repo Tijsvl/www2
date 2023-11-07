@@ -17,10 +17,10 @@ const PortfolioPage = () => {
         <meta property="og:image:alt" content="/portfolio__music-videography-2000.jpg" key="ogImageAltB" />
         <meta property="og:image:alt" content="/portfolio__music-world-2000.jpg" key="ogImageAltC" />
         <meta property="og:image:alt" content="/portfolio__music-developer-2000.jpg" key="ogImageAltD" />
-        <meta name="twitter:image" key="twitterImage" content="/portfolio__music-photography-2000.jpg" key="ogImageAldE" />
+        <meta name="twitter:image" key="twitterImage" content="/portfolio__music-photography-2000.jpg" />
         <link rel="canonical" key="canonical" href="https://www.tijsvl.com/portfolio/music" />
         <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/portfolio/music" />
-        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/portfolio/music" />
+        <meta name="twitter:url" key="twitterUrl" content="https://www.tijsvl.com/portfolio/music" />
       </Head>
 
       <section>

@@ -20,7 +20,7 @@ const ViewVideo = (props) => {
         <meta name="twitter:image" key="twitterImage" content={`https://tijsvl.com${props.image}`} />
         <link rel="canonical" key="canonical" href="https://www.tijsvl.com/portfolio/videography" />
         <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/portfolio/videography" />
-        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/portfolio/videography" />
+        <meta name="twitter:url" key="twitterUrl" content="https://www.tijsvl.com/portfolio/videography" />
       </Head>
       <div className={classes.modalContent} id={props.id}>
         <h3>{props.artist}</h3>

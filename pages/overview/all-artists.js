@@ -18,7 +18,7 @@ const ArtistsPage = (props) => {
         <meta name="twitter:image" key="twitterImage" content="https://www.tijsvl.com/img/prints__buy__noodles-middlefinger-1000.jpg" />
         <link rel="canonical" key="canonical" href="https://www.tijsvl.com/overview/artists" />
         <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/overview/artists" />
-        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/overview/artists" />
+        <meta name="twitter:url" key="twitterUrl" content="https://www.tijsvl.com/overview/artists" />
       </Head>
       <section>
         <h1>Artists</h1>

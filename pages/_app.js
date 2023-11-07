@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:title" key="twitterTitle" content="@tijsvl | Event Photography &amp; Web Developer" />
         <meta name="twitter:description" key="twitterDescription" content="On tour with your favorite band or at home coding what you'll never see." />
         <meta name="twitter:image" key="twitterImage" content="https://www.tijsvl.com/media/og/default.jpg" />
-        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/" />
+        <meta name="twitter:url" key="twitterUrl" content="https://www.tijsvl.com/" />
         <meta name="description" key="description" content="On tour with your favorite band or at home coding what you'll never see." />
         <link rel="canonical" key="canonical" href="https://www.tijsvl.com/" />
       </Head>

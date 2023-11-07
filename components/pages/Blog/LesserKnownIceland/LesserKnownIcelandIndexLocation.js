@@ -23,7 +23,7 @@ const LesserKnownIcelandIndexLocation = (props) => {
         <meta name="twitter:image" key="twitterImage" content={`/blogs/lesser-known-iceland/content/${dtl.slug}__${dtl.cover}.jpg`} />
         <link rel="canonical" key="canonical" href={`https://www.tijsvl.com/blog/lesser-known-iceland/${dtl.slug}`} />
         <meta property="og:url" key="ogUrl" content={`https://www.tijsvl.com/blog/lesser-known-iceland/${dtl.slug}`} />
-        <meta name="twitter:url" key={twitterUrl} content={`https://www.tijsvl.com/blog/lesser-known-iceland/${dtl.slug}`} />
+        <meta name="twitter:url" key="twitterUrl" content={`https://www.tijsvl.com/blog/lesser-known-iceland/${dtl.slug}`} />
       </Head>
       <section className={classes.location} id={dtl.slug}>
         <LocationBack />

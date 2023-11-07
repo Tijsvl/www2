@@ -83,7 +83,7 @@ const ContactForm = (props) => {
           <meta name="twitter:image" key="twitterImage" content="https://tijsvl.vercel.app/img/about__tijsvl-2000.jpg" />
           <link rel="canonical" key="canonical" href="https://www.tijsvl.com/contact" />
           <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/contact" />
-          <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/contact" />
+          <meta name="twitter:url" key="twitterUrl" content="https://www.tijsvl.com/contact" />
         </Head>
       )}
       {props.included && <h1 className={classes.title}>Contact</h1>}

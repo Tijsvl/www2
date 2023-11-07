@@ -30,7 +30,7 @@ const Gallery = ({ gallery, photos }) => {
         <meta name="twitter:image" key="twitterImage" content={`https://www.tijsvl.net/static/galleries/${slug}/default-high.jpg`} />
         <link rel="canonical" key="canonical" href={`https://www.tijsvl.com/gallery/${slug}`} />
         <meta property="og:url" key="ogUrl" content={`https://www.tijsvl.com/gallery/${slug}`} />
-        <meta name="twitter:url" key={twitterUrl} content={`https://www.tijsvl.com/gallery/${slug}`} />
+        <meta name="twitter:url" key="twitterUrl" content={`https://www.tijsvl.com/gallery/${slug}`} />
       </Head>
       <article className={classes.gallery}>
         <h1>

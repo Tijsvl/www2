@@ -17,7 +17,7 @@ const OverviewPage = () => {
         <meta name="twitter:image" key="twitterImage" content="https://www.tijsvl.com/img/prints__buy__noodles-middlefinger-1000.jpg" />
         <link rel="canonical" key="canonical" href="https://www.tijsvl.com/overview" />
         <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/overview" />
-        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/overview" />
+        <meta name="twitter:url" key="twitterUrl" content="https://www.tijsvl.com/overview" />
       </Head>
       <Overview />
     </>
