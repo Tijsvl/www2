@@ -15,10 +15,18 @@ const Index = () => {
         <meta property="og:description" key="ogDescription" content="On tour with your favorite band or at home coding what you'll never see." />
         <meta name="twitter:description" key="twitterDescription" content="On tour with your favorite band or at home coding what you'll never see." />
         <meta name="description" key="description" content="On tour with your favorite band or at home coding what you'll never see." />
-        <meta property="og:image" key="ogImage" content="/img/p/m/macklemore__august-17-2019-macklemore-st-polten-austria___K7A9724-2000.jpg" />
-        <meta property="og:image:alt" content="/img/p/m/sum-41__january-22-2020-sum-41-amsterdam-the-netherlands__3R7A7252-2000.jpg" key="ogImageAltA" />
-        <meta property="og:image:alt" content="/img/p/m/offspring__july-9-2018-the-offspring-fete-du-bruit-landerneau-france__3R7A9815-2000.jpg" key="ogImageAltB" />
-        <meta property="og:image:alt" content="/img/p/m/bullet-for-my-valentine__august-11-2019-bullet-for-my-valentine-eschwege-germany___K7A3790-2000.jpg" key="ogImageAltC" />
+        <meta property="og:image" key="ogImage" content="https://www.tijsvl.com/img/p/m/macklemore__august-17-2019-macklemore-st-polten-austria___K7A9724-2000.jpg" />
+        <meta property="og:image:alt" content="https://www.tijsvl.com/img/p/m/sum-41__january-22-2020-sum-41-amsterdam-the-netherlands__3R7A7252-2000.jpg" key="ogImageAltA" />
+        <meta
+          property="og:image:alt"
+          content="https://www.tijsvl.com/img/p/m/offspring__july-9-2018-the-offspring-fete-du-bruit-landerneau-france__3R7A9815-2000.jpg"
+          key="ogImageAltB"
+        />
+        <meta
+          property="og:image:alt"
+          content="https://www.tijsvl.com/img/p/m/bullet-for-my-valentine__august-11-2019-bullet-for-my-valentine-eschwege-germany___K7A3790-2000.jpg"
+          key="ogImageAltC"
+        />
         <meta name="twitter:image" key="twitterImage" content="/img/p/m/evergreen-terrace__august-10-2018-evergreen-terrace-villmar-germany__3R7A2713-2000.jpg" />
         <link rel="canonical" key="canonical" href="https://www.tijsvl.com/portfolio/music" />
         <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/portfolio/music" />
