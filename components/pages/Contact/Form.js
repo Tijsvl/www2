@@ -74,16 +74,16 @@ const ContactForm = (props) => {
       {!props.included && (
         <Head>
           <title>@tijsvl | Contact</title>
-          <meta property="og:title" content="@tijsvl | Contact" />
-          <meta name="twitter:title" content="@tijsvl | Contact" />
-          <meta property="og:description" content="Contact @tijsvl" />
-          <meta name="twitter:description" content="Contact @tijsvl" />
-          <meta name="description" content="Contact @tijsvl" />
-          <meta property="og:image" content="https://tijsvl.vercel.app/img/about__tijsvl-2000.jpg" key="ogImage" />
-          <meta name="twitter:image" content="https://tijsvl.vercel.app/img/about__tijsvl-2000.jpg" />
-          <link rel="canonical" href="https://www.tijsvl.com/contact" />
-          <meta property="og:url" content="https://www.tijsvl.com/contact" />
-          <meta name="twitter:url" content="https://www.tijsvl.com/contact" />
+          <meta property="og:title" key="ogTitle" content="@tijsvl | Contact" />
+          <meta name="twitter:title" key="twitterTitle" content="@tijsvl | Contact" />
+          <meta property="og:description" key="ogDescription" content="Contact @tijsvl" />
+          <meta name="twitter:description" key="twitterDescription" content="Contact @tijsvl" />
+          <meta name="description" key="description" content="Contact @tijsvl" />
+          <meta property="og:image" key="ogImage" content="https://tijsvl.vercel.app/img/about__tijsvl-2000.jpg" />
+          <meta name="twitter:image" key="twitterImage" content="https://tijsvl.vercel.app/img/about__tijsvl-2000.jpg" />
+          <link rel="canonical" key="canonical" href="https://www.tijsvl.com/contact" />
+          <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/contact" />
+          <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/contact" />
         </Head>
       )}
       {props.included && <h1 className={classes.title}>Contact</h1>}

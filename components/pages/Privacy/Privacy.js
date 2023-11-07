@@ -9,8 +9,8 @@ const Privacy = () => {
     <>
       <Head>
         <title>@tijsvl | Privacy</title>
-        <meta property="og:title" content="Privacy" />
-        <meta name="twitter:title" content="Privacy" />
+        <meta property="og:title" key="ogTitle" content="Privacy" />
+        <meta name="twitter:title" key="twitterTitle" content="Privacy" />
         <meta
           property="og:description"
           content="This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You."
@@ -23,11 +23,11 @@ const Privacy = () => {
           name="description"
           content="This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You."
         />
-        <meta property="og:image" content="https://www.tijsvl.com/img/og_default.jpg" key="ogImage" />
-        <meta name="twitter:image" content="https://www.tijsvl.com/img/og_default.jpg" />
-        <link rel="canonical" href="https://www.tijsvl.com/privacy" />
-        <meta property="og:url" content="https://www.tijsvl.com/privacy" />
-        <meta name="twitter:url" content="https://www.tijsvl.com/privacy" />
+        <meta property="og:image" key="ogImage" content="https://www.tijsvl.com/img/og_default.jpg" />
+        <meta name="twitter:image" key="twitterImage" content="https://www.tijsvl.com/img/og_default.jpg" />
+        <link rel="canonical" key="canonical" href="https://www.tijsvl.com/privacy" />
+        <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/privacy" />
+        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/privacy" />
       </Head>
       <section>
         <h1>Privacy Policy</h1>

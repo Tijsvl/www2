@@ -13,8 +13,8 @@ const HowIEditMyPhotosPage = (props) => {
     <>
       <Head>
         <title>@tijsvl | {blog.title}</title>
-        <meta property="og:title" content={`@tijsvl | ${blog.title}`} />
-        <meta name="twitter:title" content={`@tijsvl | ${blog.title}`} />
+        <meta property="og:title" key="ogTitle" content={`@tijsvl | ${blog.title}`} />
+        <meta name="twitter:title" key="twitterTitle" content={`@tijsvl | ${blog.title}`} />
         <meta
           property="og:description"
           content="Watch over my shoulder and learn my secrets! From time to time I will add a photo to Lightroom Discover revealing step by step how I edit my photos from its original shot to the final product."
@@ -27,11 +27,11 @@ const HowIEditMyPhotosPage = (props) => {
           name="description"
           content="Watch over my shoulder and learn my secrets! From time to time I will add a photo to Lightroom Discover revealing step by step how I edit my photos from its original shot to the final product."
         />
-        <meta property="og:image" content={`https://www.tijsvl.com/blogs/${blog.slug}/${blog.image}-2000.jpg`} key="ogImage" />
-        <meta name="twitter:image" content={`https://www.tijsvl.com/blogs/${blog.slug}/${blog.image}-2000.jpg`} />
-        <link rel="canonical" href={`https://www.tijsvl.com/blog/${blog.slug}`} />
-        <meta property="og:url" content={`https://www.tijsvl.com/blog/${blog.slug}`} />
-        <meta name="twitter:url" content={`https://www.tijsvl.com/blog/${blog.slug}`} />
+        <meta property="og:image" key="ogImage" content={`https://www.tijsvl.com/blogs/${blog.slug}/${blog.image}-2000.jpg`} />
+        <meta name="twitter:image" key="twitterImage" content={`https://www.tijsvl.com/blogs/${blog.slug}/${blog.image}-2000.jpg`} />
+        <link rel="canonical" key="canonical" href={`https://www.tijsvl.com/blog/${blog.slug}`} />
+        <meta property="og:url" key="ogUrl" content={`https://www.tijsvl.com/blog/${blog.slug}`} />
+        <meta name="twitter:url" key={twitterUrl} content={`https://www.tijsvl.com/blog/${blog.slug}`} />
       </Head>
       <Blog>
         <BlogHeader

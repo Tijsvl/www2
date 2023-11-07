@@ -1,22 +1,22 @@
-import { useContext } from 'react';
+import { useContext } from 'react'
 
-import { useRouter } from 'next/router';
-import Head from 'next/head';
+import { useRouter } from 'next/router'
+import Head from 'next/head'
 
-import AuthContext from '../../store/auth-context';
-import InstagramHead from '../../components/pages/User/Instagram/InstagramHead';
+import AuthContext from '../../store/auth-context'
+import InstagramHead from '../../components/pages/User/Instagram/InstagramHead'
 
 const InstagramPlannerPage = () => {
-  const { isLoggedIn } = useContext(AuthContext);
-  const router = useRouter();
+  const { isLoggedIn } = useContext(AuthContext)
+  const router = useRouter()
 
-  if (!isLoggedIn) return <div className="error-message">Not Logged In.</div>;
+  if (!isLoggedIn) return <div className="error-message">Not Logged In.</div>
 
   return (
     <>
       <Head>
         <title>@tijsvl | Instagram Planner</title>
-        <meta name="description" content="Instagram Planner" />
+        <meta name="description" key="description" content="Instagram Planner" />
       </Head>
       <div suppressHydrationWarning={true}>
         <section>
@@ -24,7 +24,7 @@ const InstagramPlannerPage = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default InstagramPlannerPage;
+export default InstagramPlannerPage

@@ -9,16 +9,28 @@ const Copyright = () => {
     <>
       <Head>
         <title>@tijsvl | Copyright</title>
-        <meta property="og:title" content="Copyright" />
-        <meta name="twitter:title" content="Copyright" />
-        <meta property="og:description" content="I hold all copyrights to all photos on this website unless mentioned otherwise. Photos may only be used with written consent." />
-        <meta name="twitter:description" content="I hold all copyrights to all photos on this website unless mentioned otherwise. Photos may only be used with written consent." />
-        <meta name="description" content="I hold all copyrights to all photos on this website unless mentioned otherwise. Photos may only be used with written consent." />
-        <meta property="og:image" content="https://www.tijsvl.com/img/og_default.jpg" key="ogImage" />
-        <meta name="twitter:image" content="https://www.tijsvl.com/img/og_default.jpg" />
-        <link rel="canonical" href="https://www.tijsvl.com/copyright" />
-        <meta property="og:url" content="https://www.tijsvl.com/copyright" />
-        <meta name="twitter:url" content="https://www.tijsvl.com/copyright" />
+        <meta property="og:title" key="ogTitle" content="Copyright" />
+        <meta name="twitter:title" key="twitterTitle" content="Copyright" />
+        <meta
+          property="og:description"
+          key="ogDescription"
+          content="I hold all copyrights to all photos on this website unless mentioned otherwise. Photos may only be used with written consent."
+        />
+        <meta
+          name="twitter:description"
+          key="twitterDescription"
+          content="I hold all copyrights to all photos on this website unless mentioned otherwise. Photos may only be used with written consent."
+        />
+        <meta
+          name="description"
+          key="description"
+          content="I hold all copyrights to all photos on this website unless mentioned otherwise. Photos may only be used with written consent."
+        />
+        <meta property="og:image" key="ogImage" content="https://www.tijsvl.com/img/og_default.jpg" />
+        <meta name="twitter:image" key="twitterImage" content="https://www.tijsvl.com/img/og_default.jpg" />
+        <link rel="canonical" key="canonical" href="https://www.tijsvl.com/copyright" />
+        <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/copyright" />
+        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/copyright" />
       </Head>
       <section>
         <h1>Copyright</h1>

@@ -38,21 +38,21 @@ function MyApp({ Component, pageProps }) {
         <meta name="author" content="Tijs van Leur" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="tijsvl.com" />
-        <meta property="og:title" content="@tijsvl | Event Photography &amp; Web Developer" />
-        <meta property="og:description" content="On tour with your favorite band or at home coding what you'll never see." />
-        <meta property="og:image" content="https://www.tijsvl.com/media/og/default.jpg" key="ogImage" />
+        <meta property="og:title" key="ogTitle" content="@tijsvl | Event Photography &amp; Web Developer" />
+        <meta property="og:description" key="ogDescription" content="On tour with your favorite band or at home coding what you'll never see." />
+        <meta property="og:image" key="ogImage" content="https://www.tijsvl.com/media/og/default.jpg" />
         <meta property="og:image:alt" content="https://www.tijsvl.com/media/og/default2.jpg" key="ogImageAlt" />
         <meta property="og:image:alt" content="https://www.tijsvl.com/img/p/w/iceland_2019.09.27_17.49.46__K7A8552-2000.jpg" key="ogImageAltB" />
-        <meta property="og:url" content="https://www.tijsvl.com/" />
+        <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/" />
         <meta property="og:type" content="page" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="tijsvl.com" />
-        <meta name="twitter:title" content="@tijsvl | Event Photography &amp; Web Developer" />
-        <meta name="twitter:description" content="On tour with your favorite band or at home coding what you'll never see." />
-        <meta name="twitter:image" content="https://www.tijsvl.com/media/og/default.jpg" />
-        <meta name="twitter:url" content="https://www.tijsvl.com/" />
-        <meta name="description" content="On tour with your favorite band or at home coding what you'll never see." />
-        <link rel="canonical" href="https://www.tijsvl.com/" />
+        <meta name="twitter:title" key="twitterTitle" content="@tijsvl | Event Photography &amp; Web Developer" />
+        <meta name="twitter:description" key="twitterDescription" content="On tour with your favorite band or at home coding what you'll never see." />
+        <meta name="twitter:image" key="twitterImage" content="https://www.tijsvl.com/media/og/default.jpg" />
+        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/" />
+        <meta name="description" key="description" content="On tour with your favorite band or at home coding what you'll never see." />
+        <link rel="canonical" key="canonical" href="https://www.tijsvl.com/" />
       </Head>
       <Layout>
         <Component {...pageProps} />

@@ -11,16 +11,16 @@ const ViewVideo = (props) => {
         <title>
           @tijsvl | {props.artist} - {props.title}
         </title>
-        <meta property="og:title" content={`@tijsvl | ${props.artist} - ${props.title}`} />
-        <meta name="twitter:title" content={`@tijsvl | ${props.artist} - ${props.title}`} />
-        <meta property="og:description" content={`${props.artist} - ${props.title} video by @tijsvl`} />
-        <meta name="twitter:description" content={`${props.artist} - ${props.title} video by @tijsvl`} />
-        <meta name="description" content={`${props.artist} - ${props.title} video by @tijsvl`} />
-        <meta property="og:image" content={`https://tijsvl.com${props.image}`} key="ogImage" />
-        <meta name="twitter:image" content={`https://tijsvl.com${props.image}`} />
-        <link rel="canonical" href="https://www.tijsvl.com/portfolio/videography" />
-        <meta property="og:url" content="https://www.tijsvl.com/portfolio/videography" />
-        <meta name="twitter:url" content="https://www.tijsvl.com/portfolio/videography" />
+        <meta property="og:title" key="ogTitle" content={`@tijsvl | ${props.artist} - ${props.title}`} />
+        <meta name="twitter:title" key="twitterTitle" content={`@tijsvl | ${props.artist} - ${props.title}`} />
+        <meta property="og:description" key="ogDescription" content={`${props.artist} - ${props.title} video by @tijsvl`} />
+        <meta name="twitter:description" key="twitterDescription" content={`${props.artist} - ${props.title} video by @tijsvl`} />
+        <meta name="description" key="description" content={`${props.artist} - ${props.title} video by @tijsvl`} />
+        <meta property="og:image" key="ogImage" content={`https://tijsvl.com${props.image}`} />
+        <meta name="twitter:image" key="twitterImage" content={`https://tijsvl.com${props.image}`} />
+        <link rel="canonical" key="canonical" href="https://www.tijsvl.com/portfolio/videography" />
+        <meta property="og:url" key="ogUrl" content="https://www.tijsvl.com/portfolio/videography" />
+        <meta name="twitter:url" key={twitterUrl} content="https://www.tijsvl.com/portfolio/videography" />
       </Head>
       <div className={classes.modalContent} id={props.id}>
         <h3>{props.artist}</h3>
