@@ -102,6 +102,21 @@ const QuickLinks = () => {
     <>
       <h1 className={classes.title}>Quick Links</h1>
       <ul className={classes.quicklinks}>
+        <li className={`${classes.link} ${classes.gallery}`}>
+          <Link href="/gallery/the-rumjacks-20231101">
+            <a>
+              <div className={classes.image}>
+                <img src="https://www.tijsvl.net/static/galleries/the-rumjacks-20231101/default-low.jpg" alt="Live Photo of The Rumjacks at Melkweg, Amsterdam 2023" />
+              </div>
+              <div className={classes.info}>
+                <span className={classes.artist}>The Rumjacks</span>
+                <span className={classes.detail}>Melkweg, Amsterdam</span>
+                <span className={classes.detail}>November 1, 2023</span>
+                <span className={classes.tag}>Gallery</span>
+              </div>
+            </a>
+          </Link>
+        </li>
         {VIDEOS.sort((a, b) => b.publishDate - a.publishDate).map((item) => (
           <li className={`${classes.link} ${classes.video}`} key={item.artist + item.date}>
             <a href={item.url}>
