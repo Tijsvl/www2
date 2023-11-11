@@ -9,6 +9,17 @@ import classes from './QuickLinks.module.scss'
 const VIDEOS = [
   {
     tag: 'Video',
+    artist: 'The Rumjacks',
+    slug: 'the-rumjacks',
+    location: 'Melkweg',
+    city: 'Amsterdam',
+    country: 'The Netherlands',
+    date: '20231101',
+    publishDate: '20231111',
+    url: 'https://www.youtube.com/watch?v=EGOP6n9YsHk'
+  },
+  {
+    tag: 'Video',
     artist: 'Knocked Loose',
     slug: 'knocked-loose',
     location: 'The Dome',
@@ -75,6 +86,99 @@ const VIDEOS = [
   }
 ]
 
+const GALLERIES = [
+  {
+    tag: 'Gallery',
+    artist: 'The Rumjacks',
+    slug: 'the-rumjacks',
+    location: 'Melkweg',
+    city: 'Amsterdam',
+    country: 'The Netherlands',
+    date: '20231101',
+    publishDate: '20231109'
+  },
+  {
+    tag: 'Gallery',
+    artist: 'Knocked Loose',
+    slug: 'knocked-loose',
+    location: 'The Dome',
+    city: 'London',
+    country: 'England',
+    date: '20230824',
+    publishDate: '20230824'
+  },
+  {
+    tag: 'Gallery',
+    artist: 'Stick To Your Guns',
+    slug: 'stick-to-your-guns',
+    location: 'The Dome',
+    city: 'London',
+    country: 'England',
+    date: '20230822',
+    publishDate: '20230822'
+  },
+  {
+    tag: 'Gallery',
+    artist: 'Scowl',
+    slug: 'scowl',
+    location: 'Blue Collar Hotel',
+    city: 'Eindhoven',
+    country: 'The Netherlands',
+    date: '20230813',
+    publishDate: '20230813'
+  },
+  {
+    tag: 'Gallery',
+    artist: 'Death Before Dishonor',
+    slug: 'death-before-dishonor',
+    location: 'Tells Bells Festival',
+    city: 'Villmar',
+    country: 'Germany',
+    date: '20230812',
+    publishDate: '20230812'
+  },
+  {
+    tag: 'Gallery',
+    artist: 'Scowl',
+    slug: 'scowl',
+    location: 'Tells Bells Festival',
+    city: 'Villmar',
+    country: 'Germany',
+    date: '20230812',
+    publishDate: '20230812'
+  },
+  {
+    tag: 'Gallery',
+    artist: 'Deez Nuts',
+    slug: 'deez-nuts',
+    location: 'Tells Bells Festival',
+    city: 'Villmar',
+    country: 'Germany',
+    date: '20230812',
+    publishDate: '20230812'
+  },
+  {
+    tag: 'Gallery',
+    artist: 'Stick To Your Guns',
+    slug: 'stick-to-your-guns',
+    location: 'Tells Bells Festival',
+    city: 'Villmar',
+    country: 'Germany',
+    date: '20230812',
+    publishDate: '20230812'
+  },
+  {
+    tag: 'Gallery',
+    artist: 'Drain',
+    slug: 'drain',
+    location: 'Tells Bells Festival',
+    city: 'Villmar',
+    country: 'Germany',
+    date: '20230812',
+    publishDate: '20230812'
+  }
+]
+
 const prettyDate = (inputDate) => {
   // Parse the input date string into a JavaScript Date object
   const year = inputDate.substring(0, 4)
@@ -92,9 +196,7 @@ const prettyDate = (inputDate) => {
 const QuickLinks = () => {
   useEffect(() => {
     const elements = document.querySelectorAll('[data-identifier="layout-element"]')
-
     elements.forEach((el) => el.classList.add('displayNone'))
-
     return () => elements.forEach((el) => el.classList.remove('displayNone'))
   }, [])
 
@@ -102,180 +204,49 @@ const QuickLinks = () => {
     <>
       <h1 className={classes.title}>Quick Links</h1>
       <ul className={classes.quicklinks}>
-        <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/the-rumjacks-20231101">
-            <a>
-              <div className={classes.image}>
-                <img src="https://www.tijsvl.net/static/galleries/the-rumjacks-20231101/default-low.jpg" alt="Live Photo of The Rumjacks at Melkweg, Amsterdam 2023" />
-              </div>
-              <div className={classes.info}>
-                <span className={classes.artist}>The Rumjacks</span>
-                <span className={classes.detail}>Melkweg, Amsterdam</span>
-                <span className={classes.detail}>November 1, 2023</span>
-                <span className={classes.tag}>Gallery</span>
-              </div>
-            </a>
-          </Link>
-        </li>
-        {VIDEOS.sort((a, b) => b.publishDate - a.publishDate).map((item) => (
-          <li className={`${classes.link} ${classes.video}`} key={item.artist + item.date}>
-            <a href={item.url}>
-              <div className={classes.image}>
-                <img
-                  src={`https://www.tijsvl.net/static/thumbnails/${item.slug}-${item.date}-low.jpg`}
-                  alt={`Live Photo of ${item.artist} at ${item.location}, ${item.city} ${item.date.slice(0, 4)}`}
-                />
-              </div>
-              <div className={classes.info}>
-                <span className={classes.artist}>{item.artist}</span>
-                <span className={classes.detail}>{item.location}</span>
-                <span className={classes.detail}>{prettyDate(item.date)}</span>
-                <span className={classes.tag}>{item.tag}</span>
-              </div>
-            </a>
-          </li>
-        ))}
-        <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/knocked-loose-20230824">
-            <a>
-              <div className={classes.image}>
-                <img src="https://www.tijsvl.net/static/galleries/knocked-loose-20230824/default-low.jpg" alt="Live Photo of Knocked Loose at The Dome, London 2023" />
-              </div>
-              <div className={classes.info}>
-                <span className={classes.artist}>Knocked Loose</span>
-                <span className={classes.detail}>The Dome, London</span>
-                <span className={classes.detail}>August 24, 2023</span>
-                <span className={classes.tag}>Gallery</span>
-              </div>
-            </a>
-          </Link>
-        </li>
-        <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/stick-to-your-guns-20230822">
-            <a>
-              <div className={classes.image}>
-                <img src="https://www.tijsvl.net/static/galleries/stick-to-your-guns-20230822/default-low.jpg" alt="Live Photo of Stick To Your Guns at The Dome, London 2023" />
-              </div>
-              <div className={classes.info}>
-                <span className={classes.artist}>Stick To Your Guns</span>
-                <span className={classes.detail}>The Dome, London</span>
-                <span className={classes.detail}>August 22, 2023</span>
-                <span className={classes.tag}>Gallery</span>
-              </div>
-            </a>
-          </Link>
-        </li>
-        <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/scowl-20230813">
-            <a>
-              <div className={classes.image}>
-                <img src="https://www.tijsvl.net/static/galleries/scowl-20230813/default-low.jpg" alt="Live Photo of Scowl at Blue Collar Hotel, Eindhoven 2023" />
-              </div>
-              <div className={classes.info}>
-                <span className={classes.artist}>Scowl</span>
-                <span className={classes.detail}>Blue Collar Hotel, Eindhoven</span>
-                <span className={classes.detail}>August 13, 2023</span>
-                <span className={classes.tag}>Gallery</span>
-              </div>
-            </a>
-          </Link>
-        </li>
-        <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/death-before-dishonor-20230812">
-            <a>
-              <div className={classes.image}>
-                <img
-                  src="https://www.tijsvl.net/static/galleries/death-before-dishonor-20230812/default-low.jpg"
-                  alt="Live Photo of Death Before Dishonor at Tells Bells festival 2023"
-                />
-              </div>
-              <div className={classes.info}>
-                <span className={classes.artist}>Death Before Dishonor</span>
-                <span className={classes.detail}>Tells Bells Festival</span>
-                <span className={classes.detail}>August 12, 2023</span>
-                <span className={classes.tag}>Gallery</span>
-              </div>
-            </a>
-          </Link>
-        </li>
-        <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/scowl-20230812">
-            <a>
-              <div className={classes.image}>
-                <img src="https://www.tijsvl.net/static/galleries/scowl-20230812/default-low.jpg" alt="Live Photo of Scowl at Tells Bells festival 2023" />
-              </div>
-              <div className={classes.info}>
-                <span className={classes.artist}>Scowl</span>
-                <span className={classes.detail}>Tells Bells Festival</span>
-                <span className={classes.detail}>August 12, 2023</span>
-                <span className={classes.tag}>Gallery</span>
-              </div>
-            </a>
-          </Link>
-        </li>
-        <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/pennywise-20230812">
-            <a>
-              <div className={classes.image}>
-                <img src="https://www.tijsvl.net/static/galleries/pennywise-20230812/default-low.jpg" alt="Live Photo of Pennywise at Tells Bells festival 2023" />
-              </div>
-              <div className={classes.info}>
-                <span className={classes.artist}>Pennywise</span>
-                <span className={classes.detail}>Tells Bells Festival</span>
-                <span className={classes.detail}>August 12, 2023</span>
-                <span className={classes.tag}>Gallery</span>
-              </div>
-            </a>
-          </Link>
-        </li>
-        <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/deez-nuts-20230812">
-            <a>
-              <div className={classes.image}>
-                <img src="https://www.tijsvl.net/static/galleries/deez-nuts-20230812/default-low.jpg" alt="Live Photo of Deez Nuts at Tells Bells festival 2023" />
-              </div>
-              <div className={classes.info}>
-                <span className={classes.artist}>Deez Nuts</span>
-                <span className={classes.detail}>Tells Bells Festival</span>
-                <span className={classes.detail}>August 12, 2023</span>
-                <span className={classes.tag}>Gallery</span>
-              </div>
-            </a>
-          </Link>
-        </li>
-        <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/stick-to-your-guns-20230812">
-            <a>
-              <div className={classes.image}>
-                <img
-                  src="https://www.tijsvl.net/static/galleries/stick-to-your-guns-20230812/default-low.jpg"
-                  alt="Live Photo of Sticky To Your Guns at Tells Bells festival 2023"
-                />
-              </div>
-              <div className={classes.info}>
-                <span className={classes.artist}>Stick To Your Guns</span>
-                <span className={classes.detail}>Tells Bells Festival</span>
-                <span className={classes.detail}>August 12, 2023</span>
-                <span className={classes.tag}>Gallery</span>
-              </div>
-            </a>
-          </Link>
-        </li>
-        <li className={`${classes.link} ${classes.gallery}`}>
-          <Link href="/gallery/drain-20230812">
-            <a>
-              <div className={classes.image}>
-                <img src="https://www.tijsvl.net/static/galleries/drain-20230812/default-low.jpg" alt="Live Photo of Drain at Tells Bells festival 2023" />
-              </div>
-              <div className={classes.info}>
-                <span className={classes.artist}>Drain</span>
-                <span className={classes.detail}>Tells Bells Festival</span>
-                <span className={classes.detail}>August 12, 2023</span>
-                <span className={classes.tag}>Gallery</span>
-              </div>
-            </a>
-          </Link>
-        </li>
+        {[...VIDEOS, ...GALLERIES]
+          .sort((a, b) => b.publishDate.localeCompare(a.publishDate))
+          .map((item) =>
+            item.tag === 'Video' ? (
+              <li className={`${classes.link} ${classes.video}`} key={item.artist + item.date}>
+                <a href={item.url}>
+                  <div className={classes.image}>
+                    <img
+                      src={`https://www.tijsvl.net/static/thumbnails/${item.slug}-${item.date}-low.jpg`}
+                      alt={`Live Photo of ${item.artist} at ${item.location}, ${item.city} ${item.date.slice(0, 4)}`}
+                    />
+                  </div>
+                  <div className={classes.info}>
+                    <span className={classes.artist}>{item.artist}</span>
+                    <span className={classes.detail}>{item.location}</span>
+                    <span className={classes.detail}>{prettyDate(item.date)}</span>
+                    <span className={classes.tag}>{item.tag}</span>
+                  </div>
+                </a>
+              </li>
+            ) : (
+              <li className={`${classes.link} ${classes.gallery}`}>
+                <Link href={`/gallery/${item.slug}-${item.date}`}>
+                  <a>
+                    <div className={classes.image}>
+                      <img
+                        src={`https://www.tijsvl.net/static/galleries/${item.slug}-${item.date}/default-low.jpg`}
+                        alt={`Live Photo of ${item.artist} at ${item.venue}, ${item.city} ${prettyDate(item.date)}`}
+                      />
+                    </div>
+                    <div className={classes.info}>
+                      <span className={classes.artist}>{item.artist}</span>
+                      <span className={classes.detail}>
+                        {item.location}, {item.city}
+                      </span>
+                      <span className={classes.detail}>{prettyDate(item.date)}</span>
+                      <span className={classes.tag}>{item.tag}</span>
+                    </div>
+                  </a>
+                </Link>
+              </li>
+            )
+          )}
       </ul>
     </>
   )
