@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
-import { useEffect } from 'react'
+import { Fragment, useEffect } from 'react'
 import classes from './QuickLinks.module.scss'
 
 // PUBLISDATE HAS ONE EXTRA NUMBER YYYYMMDD#
@@ -206,47 +206,49 @@ const QuickLinks = () => {
       <ul className={classes.quicklinks}>
         {[...VIDEOS, ...GALLERIES]
           .sort((a, b) => b.publishDate.localeCompare(a.publishDate))
-          .map((item) =>
-            item.tag === 'Video' ? (
-              <li className={`${classes.link} ${classes.video}`} key={item.artist + item.date}>
-                <a href={item.url}>
-                  <div className={classes.image}>
-                    <img
-                      src={`https://www.tijsvl.net/static/thumbnails/${item.slug}-${item.date}-low.jpg`}
-                      alt={`Live Photo of ${item.artist} at ${item.location}, ${item.city} ${item.date.slice(0, 4)}`}
-                    />
-                  </div>
-                  <div className={classes.info}>
-                    <span className={classes.artist}>{item.artist}</span>
-                    <span className={classes.detail}>{item.location}</span>
-                    <span className={classes.detail}>{prettyDate(item.date)}</span>
-                    <span className={classes.tag}>{item.tag}</span>
-                  </div>
-                </a>
-              </li>
-            ) : (
-              <li className={`${classes.link} ${classes.gallery}`}>
-                <Link href={`/gallery/${item.slug}-${item.date}`}>
-                  <a>
+          .map((item) => (
+            <Fragment key={item.artist + item.date + item.tag}>
+              {item.tag === 'Video' ? (
+                <li className={`${classes.link} ${classes.video}`}>
+                  <a href={item.url}>
                     <div className={classes.image}>
                       <img
-                        src={`https://www.tijsvl.net/static/galleries/${item.slug}-${item.date}/default-low.jpg`}
-                        alt={`Live Photo of ${item.artist} at ${item.venue}, ${item.city} ${prettyDate(item.date)}`}
+                        src={`https://www.tijsvl.net/static/thumbnails/${item.slug}-${item.date}-low.jpg`}
+                        alt={`Live Photo of ${item.artist} at ${item.location}, ${item.city} ${item.date.slice(0, 4)}`}
                       />
                     </div>
                     <div className={classes.info}>
                       <span className={classes.artist}>{item.artist}</span>
-                      <span className={classes.detail}>
-                        {item.location}, {item.city}
-                      </span>
+                      <span className={classes.detail}>{item.location}</span>
                       <span className={classes.detail}>{prettyDate(item.date)}</span>
                       <span className={classes.tag}>{item.tag}</span>
                     </div>
                   </a>
-                </Link>
-              </li>
-            )
-          )}
+                </li>
+              ) : (
+                <li className={`${classes.link} ${classes.gallery}`}>
+                  <Link href={`/gallery/${item.slug}-${item.date}`}>
+                    <a>
+                      <div className={classes.image}>
+                        <img
+                          src={`https://www.tijsvl.net/static/galleries/${item.slug}-${item.date}/default-low.jpg`}
+                          alt={`Live Photo of ${item.artist} at ${item.venue}, ${item.city} ${prettyDate(item.date)}`}
+                        />
+                      </div>
+                      <div className={classes.info}>
+                        <span className={classes.artist}>{item.artist}</span>
+                        <span className={classes.detail}>
+                          {item.location}, {item.city}
+                        </span>
+                        <span className={classes.detail}>{prettyDate(item.date)}</span>
+                        <span className={classes.tag}>{item.tag}</span>
+                      </div>
+                    </a>
+                  </Link>
+                </li>
+              )}
+            </Fragment>
+          ))}
       </ul>
     </>
   )
