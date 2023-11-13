@@ -159,6 +159,16 @@ const GALLERIES = [
   },
   {
     tag: 'Gallery',
+    artist: 'Pennywise',
+    slug: 'pennywise',
+    location: 'Tells Bells Festival',
+    city: 'Villmar',
+    country: 'Germany',
+    date: '20230812',
+    publishDate: '20230812'
+  },
+  {
+    tag: 'Gallery',
     artist: 'Stick To Your Guns',
     slug: 'stick-to-your-guns',
     location: 'Tells Bells Festival',
