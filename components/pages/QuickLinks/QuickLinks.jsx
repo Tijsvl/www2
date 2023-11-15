@@ -186,6 +186,16 @@ const GALLERIES = [
     country: 'Germany',
     date: '20230812',
     publishDate: '20230812'
+  },
+  {
+    tag: 'Gallery',
+    artist: 'Corey Taylor',
+    slug: 'corey-taylour',
+    location: 'Eventim Apollo',
+    city: 'London',
+    country: 'England',
+    date: '20231114',
+    publishDate: '20231114'
   }
 ]
 
