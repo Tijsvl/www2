@@ -190,7 +190,7 @@ const GALLERIES = [
   {
     tag: 'Gallery',
     artist: 'Corey Taylor',
-    slug: 'corey-taylour',
+    slug: 'corey-taylor',
     location: 'Eventim Apollo',
     city: 'London',
     country: 'England',
