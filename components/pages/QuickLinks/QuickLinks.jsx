@@ -196,6 +196,16 @@ const GALLERIES = [
     country: 'England',
     date: '20231114',
     publishDate: '20231114'
+  },
+  {
+    tag: 'Gallery',
+    artist: 'Oxymorrons',
+    slug: 'oxymorrons',
+    location: 'Eventim Apollo',
+    city: 'London',
+    country: 'England',
+    date: '20231114',
+    publishDate: '20231114'
   }
 ]
 

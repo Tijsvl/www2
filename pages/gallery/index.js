@@ -97,6 +97,15 @@ export const GALLERIES_INFO = [
     city: 'London',
     date: '20231114',
     prettyDate: 'November 14, 2023'
+  },
+  {
+    slug: 'oxymorrons-20231114',
+    artist: 'Oxymorrons',
+    country: 'England',
+    location: 'Eventim Apollo',
+    city: 'London',
+    date: '20231114',
+    prettyDate: 'November 14, 2023'
   }
 ]
 
