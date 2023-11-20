@@ -207,7 +207,6 @@ const GALLERIES = [
     date: '20231114',
     publishDate: '20231114'
   },
-  ,
   {
     tag: 'Gallery',
     artist: 'Corey Taylor',
