@@ -206,6 +206,17 @@ const GALLERIES = [
     country: 'England',
     date: '20231114',
     publishDate: '20231114'
+  },
+  ,
+  {
+    tag: 'Gallery',
+    artist: 'Corey Taylor',
+    slug: 'corey-taylor',
+    location: '013',
+    city: 'Tilburg',
+    country: 'The Netherlands',
+    date: '20231118',
+    publishDate: '20231118'
   }
 ]
 

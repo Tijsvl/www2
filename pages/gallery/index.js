@@ -106,6 +106,15 @@ export const GALLERIES_INFO = [
     city: 'London',
     date: '20231114',
     prettyDate: 'November 14, 2023'
+  },
+  {
+    slug: 'corey-taylor-20231118',
+    artist: 'Corey Taylor',
+    country: 'The Netherlands',
+    location: '013',
+    city: 'Tilburg',
+    date: '20231118',
+    prettyDate: 'November 18, 2023'
   }
 ]
 
