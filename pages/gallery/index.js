@@ -115,6 +115,15 @@ export const GALLERIES_INFO = [
     city: 'Tilburg',
     date: '20231118',
     prettyDate: 'November 18, 2023'
+  },
+  {
+    slug: 'oxymorrons-20231118',
+    artist: 'Oxymorrons',
+    country: 'The Netherlands',
+    location: '013',
+    city: 'Tilburg',
+    date: '20231118',
+    prettyDate: 'November 18, 2023'
   }
 ]
 

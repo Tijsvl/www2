@@ -216,6 +216,16 @@ const GALLERIES = [
     country: 'The Netherlands',
     date: '20231118',
     publishDate: '20231118'
+  },
+  {
+    tag: 'Gallery',
+    artist: 'Oxymorrons',
+    slug: 'oxymorrons',
+    location: '013',
+    city: 'Tilburg',
+    country: 'The Netherlands',
+    date: '20231118',
+    publishDate: '20231118'
   }
 ]
 
