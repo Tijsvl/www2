@@ -1,6 +1,6 @@
 export const GALLERIES_INFO = [
   {
-    slug: 'drain-20230812',
+    slug: 'drain-20231121',
     artist: 'Drain',
     country: 'Germany',
     location: 'Tells Bells Festival',
@@ -124,6 +124,15 @@ export const GALLERIES_INFO = [
     city: 'Tilburg',
     date: '20231118',
     prettyDate: 'November 18, 2023'
+  },
+  {
+    slug: 'death-before-dishonor-20231121',
+    artist: 'Death Before Dishonor',
+    country: 'England',
+    location: 'New Cross Inn',
+    city: 'London',
+    date: '20231121',
+    prettyDate: 'November 21, 2023'
   }
 ]
 

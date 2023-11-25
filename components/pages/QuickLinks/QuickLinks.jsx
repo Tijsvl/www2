@@ -226,6 +226,16 @@ const GALLERIES = [
     country: 'The Netherlands',
     date: '20231118',
     publishDate: '20231118'
+  },
+  {
+    tag: 'Gallery',
+    artist: 'Death Before Dishonor',
+    slug: 'death-before-dishonor',
+    location: 'New Cross Inn',
+    city: 'London',
+    country: 'England',
+    date: '20231121',
+    publishDate: '20231121'
   }
 ]
 
