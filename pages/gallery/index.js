@@ -1,6 +1,6 @@
 export const GALLERIES_INFO = [
   {
-    slug: 'drain-20231121',
+    slug: 'drain-20230812',
     artist: 'Drain',
     country: 'Germany',
     location: 'Tells Bells Festival',
