@@ -9,6 +9,17 @@ import classes from './QuickLinks.module.scss'
 const VIDEOS = [
   {
     tag: 'Video',
+    artist: 'Oxymorrons',
+    slug: 'oxymorrons',
+    location: '013',
+    city: 'Tilburg',
+    country: 'The Netherlands',
+    date: '20231118',
+    publishDate: '20231118',
+    url: 'https://www.youtube.com/watch?v=zWghSZ1Ty_w'
+  },
+  {
+    tag: 'Video',
     artist: 'The Rumjacks',
     slug: 'the-rumjacks',
     location: 'Melkweg',
