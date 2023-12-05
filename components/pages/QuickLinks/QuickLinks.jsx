@@ -247,6 +247,16 @@ const GALLERIES = [
     country: 'England',
     date: '20231121',
     publishDate: '20231121'
+  },
+  {
+    tag: 'Gallery',
+    artist: 'Get The Shot',
+    slug: 'get-the-shot',
+    location: 'Tivoli Vredenburg',
+    city: 'Utrecht',
+    country: 'The Netherlands',
+    date: '20231204',
+    publishDate: '20231205'
   }
 ]
 

@@ -133,6 +133,15 @@ export const GALLERIES_INFO = [
     city: 'London',
     date: '20231121',
     prettyDate: 'November 21, 2023'
+  },
+  {
+    slug: 'get-the-shot-20231204',
+    artist: 'Get The Shot',
+    country: 'The Netherlands',
+    location: 'Tivoli Vredenburg',
+    city: 'Utrecht',
+    date: '20231204',
+    prettyDate: 'December 4, 2023'
   }
 ]
 
