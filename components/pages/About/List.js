@@ -48,6 +48,7 @@ const List = () => {
       <div>
         <h3>MY GEAR</h3>
         <ul>
+          <li className={classes.head}>Canon EOS R6 Mark II</li>
           <li className={classes.head}>Canon EOS 5D Mark III</li>
           <li className={classes.head}>Canon EOS 5D Mark IV</li>
           <li>Samyang 12mm ƒ/2.8 Fish-eye</li>
